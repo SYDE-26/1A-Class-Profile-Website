@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import dynamic from 'next/dynamic';
-const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
+// const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <BarGraph datatype="Drugs"  width = {950} height ={550} />
+        {/* <BarGraph datatype="Drugs"  width = {950} height ={550} /> */}
         <a
           className="App-link"
           href="https://reactjs.org"
