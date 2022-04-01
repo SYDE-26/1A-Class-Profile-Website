@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { db } from '../../firebase-config.js';
 import { Bar } from 'react-chartjs-2';
 //import 'chartjs-subtitle';
-import React from 'react'
+import React from 'react';
 
 export default function BarGraph(props) {
 
