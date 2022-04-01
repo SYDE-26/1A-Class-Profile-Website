@@ -90,6 +90,10 @@ caption {
     color: #fff;
 }
 
+.aboutAvatar {
+    border: 3px solid var(--gradient-2);
+}
+
 @media screen and (max-width: 1600px) {
     :root {
         font-size: 18px;
