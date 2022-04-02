@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .containerOnTop {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .header h2 {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    max-width: 450px;
+  }
+  
+  .descriptionOnTop {
+    max-width: 100%;
+    padding-right: 2.25rem;
+    margin-bottom: 3rem;
+  }
+  
+  .graph {
+    width: 500px;
+    height: 100%;
+    margin-top: 4rem;
+  }
+  
+  .graphOnTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    min-width: 350px;
+    height: 100%;
+    min-height: 300px;
+  
+    canvas {
+      width: 100%;
+      min-width: 450px;
+      min-height: 450px;
+    }
+  }
+  
+  .graphContainer {
+    min-width: 350px;
+  }
+  
+  @media (max-width: 1050px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .description {
+      max-width: 100%;
+    }
+  
+    .graph {
+      width: 50%;
+      min-width: 350px;
+      height: 100%;
+    }
+  
+    .graphOnTop {
+      flex-direction: column;
+      width: 50%;
+      min-width: 350px;
+      height: 100%;
+      margin: auto;
+      margin-bottom: -3rem;
+  
+      div {
+        margin-bottom: 2rem;
+      }
+  
+      canvas {
+        min-width: 100%;
+        min-height: 100%;
+      }
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .graph {
+      min-width: 100%;
+    }
+    
+    .graphOnTop {
+      min-width: 100%;
+    }
+  }

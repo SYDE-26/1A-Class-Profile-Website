@@ -35,4 +35,34 @@
   to {
     transform: rotate(360deg);
   }
-} */
+}
+
+h1.demographics {
+  background: linear-gradient(90deg, #FF76A5 0%,#C067E2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1.lifestyle {
+  background: linear-gradient(109.91deg, #749BFF 22.98%, #FFCD20 93.33%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1.coop {
+  background: linear-gradient(251.34deg, #FE8C5A 9.78%, #F7BF00 84.54%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1.academics {
+  background: linear-gradient(245.1deg, #FF76A5 5.86%, #FE8C5A 74.16%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1.admissions {
+  background: linear-gradient(114.13deg, #C067E2 24.52%, #749BFF 93.58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
