@@ -1,12 +1,12 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { db } from '../../firebase-config.js';
+import { doc, getDoc } from 'firebase/firestore';
 import { Bar } from 'react-chartjs-2';
-//import 'chartjs-subtitle';
-import React from 'react';
+import Chart from 'chart.js/auto';
+import 'chartjs-subtitle';
 
 export default function BarGraph(props) {
-
-    console.log(db.collection);
     const [data, setData] = useState({
         val: [],
         label: [],
@@ -16,37 +16,36 @@ export default function BarGraph(props) {
     const [id, setId] = useState(0);
 
     useEffect(() => {
-        if (id <= 0) {
-            db.collection('1A Data')
-                .doc(props.datatype)
-                .onSnapshot(
-                    async (snapshot) => {
-                        let data = {
-                            val: [],
-                            label: [],
-                            color: '',
-                            title: '',
-                            xAxes: '',
-                            yAxes: '',
-                            n: '',
-                        };
-                        await snapshot.data().x.values.forEach((element) => {
-                            data.val.push(element.value);
-                            data.label.push(element.index);
-                        });
-                        data.color = snapshot.data().x.color;
-                        data.title = snapshot.data().title;
-                        data.xAxis = snapshot.data().x.label;
-                        data.yAxis = snapshot.data().y.label;
-                        data.n = snapshot.data().n
-                        setId(id + 1);
-                        setData(data);
-                    },
-                    (err) => {
-                        console.log('Error fetching firebase snapshot! ' + err);
-                    }
-                );
-        }
+        getDoc(doc(db, "1A Data", props.datatype)).then(docSnap => {
+            if (docSnap.exists()) {
+                console.log("Document data:", docSnap.data());
+
+                let data = {
+                    val: [],
+                    label: [],
+                    color: '',
+                    title: '',
+                    xAxes: '',
+                    yAxes: '',
+                    n: '',
+                };
+
+                docSnap.data().x.values.forEach((element) => {
+                    data.val.push(element.value);
+                    data.label.push(element.index);
+                });
+
+                data.color = docSnap.data().x.color;
+                data.title = docSnap.data().title;
+                data.xAxis = docSnap.data().x.label;
+                data.yAxis = docSnap.data().y.label;
+                data.n = docSnap.data().n
+                setId(id + 1);
+                setData(data);
+            } else {
+                console.log("No such document!");
+            }
+        })
     });
 
     if (data.color[0] === undefined) {
@@ -56,7 +55,7 @@ export default function BarGraph(props) {
     var x = 0;
     var len = data.val.length;
     while (x < len) {
-        data.val[x] = data.val[x].toFixed(2);
+        data.val[x] = Number(data.val[x]).toFixed(2);
         x++;
     }
 
@@ -100,7 +99,7 @@ export default function BarGraph(props) {
                                     gridLines: {
                                         zeroLineColor: '#fff',
                                         color: 'rgba(255, 255, 255, 0.05)',
-                                        lineWidth: 1 // Don't add a comma on this line lol, it breaks the graphs ¯\_(ツ)_/¯
+                                        lineWidth: 1,
                                     },
                                     scaleLabel: {
                                         display: true,
