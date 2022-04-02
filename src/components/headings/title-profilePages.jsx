@@ -1,4 +1,5 @@
 import React from "react"
+import './headings.scss';
 
 export default function ProfileTitle(props) {
     return (
@@ -7,4 +8,4 @@ export default function ProfileTitle(props) {
 }
 
 // ensure the section props passed in are one of: demographics, lifestyle, coop, academics, admissions so 
-// CSS styles them appropriately 
+// SCSS styles them appropriately 

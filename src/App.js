@@ -1,6 +1,5 @@
 import React from 'react'
 import logo from './logo.svg';
-import './App.css';
 import Footer from './components/Footer/Footer';
 
 import dynamic from 'next/dynamic';
@@ -10,9 +9,7 @@ import dynamic from 'next/dynamic';
 
 function App() {
   return (
-    <div className="App">
-      <Footer navBack="Go back" navForward="Go forward" />
-    </div>
+    <Footer navBack="Go back" navForward="Go forward" />
   );
 }
 
