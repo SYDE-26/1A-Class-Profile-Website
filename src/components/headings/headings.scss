@@ -1,0 +1,39 @@
+p.graphDescription {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 1.33em;
+}
+
+h1.demographics {
+    background: linear-gradient(90deg, var(--pink) 0%, var(--purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1.lifestyle {
+    background: linear-gradient(109.91deg, var(--blue) 22.98%, #FFCD20 93.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1.coop {
+    background: linear-gradient(251.34deg, var(--orange) 9.78%, #F7BF00 84.54%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1.academics {
+    background: linear-gradient(245.1deg, var(--pink) 5.86%, var(--orange) 74.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1.admissions {
+    background: linear-gradient(114.13deg, var(--purple) 24.52%, var(--blue) 93.58%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3.sectionHeader {
+    padding-bottom: 0.66em;
+}

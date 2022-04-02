@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import logo from './logo.svg';
 import Navbar from './components/navigation';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 import dynamic from 'next/dynamic';
@@ -17,6 +18,7 @@ function App() {
         {/* <BoxPlot datatype="SYDE 121 Average vs Software Coop"  width={400} height={450}/> */}
       </header>
     </div>
+    // <Footer navBack="Go back" navForward="Go forward" />
   );
 }
 
