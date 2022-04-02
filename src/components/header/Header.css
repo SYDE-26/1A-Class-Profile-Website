@@ -4,12 +4,13 @@
     align-items: center;
 }
 
-.main-logo {
+.header-logo {
     margin-top: 50px;
     margin-left: 50px;
+    margin-right: 1248px;
 }
 
-.menu-item {
+.menu-button {
     margin-top: 60px;
     margin-right: 50px;
     margin-left: auto;
