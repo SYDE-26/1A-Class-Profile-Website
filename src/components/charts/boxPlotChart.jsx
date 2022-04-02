@@ -1,7 +1,10 @@
+import React from 'react';
 import { useState, useEffect, Component, createRef } from 'react';
+import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../firebase-config.js';
+import Chart from 'chart.js/auto';
 import 'chartjs-chart-box-and-violin-plot/build/Chart.BoxPlot.js';
-// import 'chartjs-subtitle';
+import 'chartjs-subtitle';
 
 class BoxPlotChart extends Component {
     constructor(props) {
@@ -129,50 +132,47 @@ export default function BoxPlot(props) {
     const [id, setId] = useState(0);
 
     useEffect(() => {
-        if (id <= 0) {
-            db.collection('1A Data')
-                .doc(props.datatype)
-                .get()
-                .then(
-                    (snapshot) => {
-                        let data = {
-                            val: [],
-                            label: [],
-                            color: '',
-                            title: '',
-                            xAxes: '',
-                            yAxes: '',
-                            ymin: '',
-                            ymax: '',
-                            n: '',
-                        };
-                        snapshot.data().x.values.forEach((element) => {
-                            for (var i = 0; i < element.plotValues.length; i++) {
-                                element.plotValues[i] = parseFloat(
-                                    element.plotValues[i].toFixed(2)
-                                );
-                            }
-                            data.val.push(element.plotValues);
-                            data.label.push(element.index);
-                        });
-                        data.color = snapshot.data().x.color;
-                        data.title = snapshot.data().title;
-                        data.xAxis = snapshot.data().x.label;
-                        data.yAxis = snapshot.data().y.label;
-                        data.ymin = snapshot.data().yLimit.min;
-                        data.ymax = snapshot.data().yLimit.max;
-                        data.n = snapshot.data().n;
-                        setId(id + 1);
-                        setData(data);
-                    },
-                    (err) => {
-                        console.log('Error fetching firebase snapshot! ' + err);
+        getDoc(doc(db, "1A Data", props.datatype)).then(docSnap => {
+            if (docSnap.exists()) {
+                console.log("Document data:", docSnap.data());
+                let data = {
+                    val: [],
+                    label: [],
+                    color: '',
+                    title: '',
+                    xAxes: '',
+                    yAxes: '',
+                    ymin: '',
+                    ymax: '',
+                    n: '',
+                };
+                docSnap.data().x.values.forEach((element) => {
+                    for (var i = 0; i < element.plotValues.length; i++) {
+                        element.plotValues[i] = parseFloat(
+                            element.plotValues[i].toFixed(2)
+                        );
                     }
-                );
-        }
+                    data.val.push(element.plotValues);
+                    data.label.push(element.index);
+                });
+                data.color = docSnap.data().x.color;
+                data.title = docSnap.data().title;
+                data.xAxis = docSnap.data().x.label;
+                data.yAxis = docSnap.data().y.label;
+                data.ymin = docSnap.data().yLimit.min;
+                data.ymax = docSnap.data().yLimit.max;
+                data.n = docSnap.data().n;
+                setId(id + 1);
+                setData(data);
+                console.log(data.val[0][0]);
+            } else {
+                console.log('No such document!');
+            }
+        })
     });
+    console.log(data);
 
-    if (Number.isInteger(data.label[0])) {
+    if (Number.isInteger(data.val[0][0])) {
         var arrayData = data.label.map(function (d, i) {
             return {
                 label: d,
