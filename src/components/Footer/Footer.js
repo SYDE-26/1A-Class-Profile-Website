@@ -1,7 +1,17 @@
-import './Footer.css'
 import Button from '@mui/material/Button';
+import './Footer.css'
+import { ReactComponent as Heart } from './Heart.svg';
 
 const Footer = ({ navBack, navForward }) => {
+  let navBackID
+  let navForwardID
+  if (navBack === "Go back") {
+    navBackID = "one"
+  }
+  if (navForward === "Go forward") {
+    navForwardID = "two"
+  }
+  console.log(navBackID)
   return (
     <div className="body">
       <div style={{ height: "100vh", backgroundColor: "grey" }}></div>
@@ -27,24 +37,33 @@ const Footer = ({ navBack, navForward }) => {
       Numquam ex assumenda quia itaque praesentium quidem aspernatur culpa magni ratione nam exercitationem ea sed dolores illum voluptate excepturi labore fuga placeat soluta, facere eveniet inventore neque quibusdam. Sint, distinctio?
       <div className="Footer">
         <div className="NavigationalButtons">
-          <Button sx={{
-            borderColor: "linear-gradient(122.18deg, #C067E2 13.81%, #749BFF 85.95%)",
-            color: "white"
-          }} variant="outlined">&larr; {navBack}</Button>
-          <Button sx={{
-            borderColor: "linear-gradient(122.18deg, #C067E2 13.81%, #749BFF 85.95%)",
-            color: "white"
-          }} variant="outlined">{navForward} &rarr;</Button>
+          <div className="Wrapper" id={navBackID}>
+            <Button sx={{
+              backgroundColor: "#27313B",
+              color: "white",
+              padding: "16px",
+              borderRadius: "18px"
+            }} variant="outline">&larr; {navBack}</Button>
+          </div>
+          <div className="Wrapper" id={navForwardID}>
+            <Button sx={{
+              backgroundColor: "#27313B",
+              color: "white",
+              padding: "16px",
+              borderRadius: "18px"
+            }} variant="outline">{navForward} &rarr;</Button>
+          </div>
         </div>
         <div className="CreatedBy">
-          <p>Created with love by SYDE 2026</p>
+          <p>Created with <Heart /> by SYDE 2026</p>
         </div>
-        <span className="ScrollToTop">
+        <div className="Wrapper" id="ScrollToTop">
           <Button onClick={topFunction} sx={{
-            borderColor: "linear-gradient(122.18deg, #C067E2 13.81%, #749BFF 85.95%)",
-            color: "white"
-          }} variant="outlined">&uarr;</Button>
-        </span>
+            backgroundColor: "#27313B",
+            color: "white",
+            borderRadius: "18px"
+          }} variant="outline">&uarr;</Button>
+        </div>
       </div>
     </div>
   );
