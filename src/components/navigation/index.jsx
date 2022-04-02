@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../navigation/navbar.scss';
+import Overlay from '../overlay';
 import logo from '../../images/navbar-logo.png';
 import menuItem from '../../images/navbar-menu-item.svg';
 

@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
 import logo from './logo.svg';
 import Navbar from './components/navigation';
-import Footer from './components/Footer/Footer';
-import './App.css';
+// import Footer from './components/Footer/Footer';
 
 import dynamic from 'next/dynamic';
 // const BoxPlot = dynamic(() => import('./components/charts/boxPlotChart.jsx'));
