@@ -1,6 +1,10 @@
 import React from "react"
 
-export default function Circle() {
+export default function CircleImage(props) {
     // falls back to the first letter of alt in case of error with loading image 
-    <Avatar alt="Name" src="file path" className="aboutAvatar"/>
+    return (
+        <div className="circleImageRow">
+            <Avatar alt={props.name} src={props.imagePath} className="aboutAvatar"/>
+        </div>
+    )
 }

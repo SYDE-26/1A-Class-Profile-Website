@@ -37,6 +37,13 @@
   }
 }
 
+.aboutAvatar {
+  border: 2px solid var(--gradient-2);
+  width: 90px;
+  height: 90px;
+  padding: 0px 34px 53px 34px;
+}
+
 h1.demographics {
   background: linear-gradient(90deg, #FF76A5 0%,#C067E2 100%);
   -webkit-background-clip: text;
