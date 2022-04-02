@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from './logo.svg';
+import Navbar from './components/navigation';
 import './App.css';
 
 import dynamic from 'next/dynamic';
@@ -10,6 +11,7 @@ import dynamic from 'next/dynamic';
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {/* <BoxPlot datatype="SYDE 121 Average vs Software Coop"  width={400} height={450}/> */}
