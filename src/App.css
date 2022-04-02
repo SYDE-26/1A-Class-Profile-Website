@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.aboutAvatar {
+  border: 2px solid var(--gradient-2);
+  width: 90px;
+  height: 90px;
+  padding: 0px 34px 53px 34px;
+}
