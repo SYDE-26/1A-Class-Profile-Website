@@ -1,13 +1,12 @@
 import React from 'react'
 import logo from './logo.svg';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 
 import dynamic from 'next/dynamic';
-import Navigation from '../src/components/navigation/index';
 const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
 
-/*
+function App() {
+  return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -26,15 +25,6 @@ const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
         </a>
       </header>
     </div>
-*/
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Navigation />}/>
-      </Routes>
-    </Router>
   );
 }
 
