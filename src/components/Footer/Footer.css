@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&family=Montserrat&display=swap');
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #27313B;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: 'Montserrat';
+  font-style: normal;
+}
+
+.Footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #fff
+}
+
+.NavigationalButtons {
+  /*FlexBox*/
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 64px 243px 100px 243px
+}
+
+.CreatedBy {
+  margin: 0px auto 0px auto;
+  width: 50%;
+  padding: 0px 0px 40px 0px;
+  text-align: center;
+}
+
+.CreatedBy p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Wrapper {
+  border: 0px hidden transparent;
+  border-radius: 20px;
+  padding: 2px;
+  margin: 0px
+}
+
+#one {
+  background-image: linear-gradient(122.18deg, #C067E2 13.81%, #749BFF 85.95%);
+  background-color: #C067E2;
+}
+
+#two {
+  background-image: linear-gradient(230.6deg, #FF76A5 13.56%, #FE8C5A 87.82%)
+}
+
+#ScrollToTop {
+  background-image: linear-gradient(116.42deg, #749BFF 22.88%, #FFCD20 91.67%);
+  display: inline-block;
+}
