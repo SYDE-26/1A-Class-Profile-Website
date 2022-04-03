@@ -24,16 +24,18 @@
 .Wrapper {
     display: flex;
     flex-direction: row;
+    transition: 2s;
 }
 
 .CircleWrapper {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    // background-color: #fff;
     width: 310px;
     height: 310px;
     border-radius: 50%;
     justify-content: center;
+    transition: 2s;
 }
 
 .CoopGradient {
@@ -94,6 +96,7 @@
     height: 260px;
     border-radius: 50%;
     margin-top: 2vh;
+    transition: 2s;
 }
 
 .Text {
@@ -103,4 +106,90 @@
     font-weight: 600;
     align-self: center;
     color: var(--main-text);
+    // display: flex;
+    // align-items: center;
+    // padding-left: 60px;
+    // padding-right: 50px;
+    // text-align: center;
+    text-align: center;
+    margin: 0 auto;
+    // position: relative;
+    
+}
+
+// .Center{
+//     background-color: #ffffff;
+// }
+
+section:first-child{
+    margin-top:20%;
+    margin-left: 2%;
+    z-index: 0;
+    margin-right: -5%;
+    padding-left: 9%;
+}
+
+section:nth-of-type(2){
+    margin-top: 15%;
+    // padding-right: 10%;
+    z-index: 5;
+    margin-right: -5%;
+}
+
+section:nth-of-type(3){
+   margin-top: 10%;
+   z-index: 10;
+}
+
+section:nth-of-type(4){
+    margin-top: 15%;
+    z-index: 5;
+    margin-left: -5%;
+}
+
+section:last-child{
+    margin-top:20%;
+    z-index: 0;
+    margin-left: -5%;
+}
+
+.Blurb{
+    font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.CircleWrapper.Active .Co-op.BlackCircle{
+    background: linear-gradient(242.5deg, #FE8C5A 25.46%, #F7BF00 89.55%);
+    mix-blend-mode: normal;
+    transition: 2s;
+    
+}
+
+.CircleWrapper.Active .Demographics.BlackCircle{
+    background: linear-gradient(180deg, #FF76A5 0%, #C067E2 100%);
+mix-blend-mode: normal;
+transition: 2s;
+}
+
+.CircleWrapper.Active .High.School.BlackCircle{
+    background: linear-gradient(122.18deg, #C067E2 13.81%, #749BFF 85.95%);
+mix-blend-mode: normal;
+    mix-blend-mode: normal;
+    transition: 2s;
+}
+
+.CircleWrapper.Active .Lifestyle.BlackCircle{
+    background: linear-gradient(116.42deg, #749BFF 19.89%, #FFCD20 91.67%);
+    mix-blend-mode: normal;
+    transition: 2s;
+}
+
+.CircleWrapper.Active .Academics.BlackCircle {
+    background: linear-gradient(230.6deg, #FF76A5 13.56%, #FE8C5A 87.82%);
+    mix-blend-mode: normal;
+    transition: 2s;
 }
