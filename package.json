@@ -21,6 +21,7 @@
     "react-scripts": "5.0.0",
     "sass": "^1.49.11",
     "scc": "^0.1.3",
+    "styled-components": "^5.3.5",
     "use-state-if-mounted": "^1.0.4",
     "web-vitals": "^2.1.4"
   },

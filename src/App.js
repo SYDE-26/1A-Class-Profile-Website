@@ -1,19 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import logo from './logo.svg';
-import Footer from './components/Footer/Footer';
-
+import Footer from './components/footer/Footer';
+import Navbar from './components/navbar';
+import Overlay from './components/overlay';
 import dynamic from 'next/dynamic';
 import Navigation from '../src/components/navigation/index';
 const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
 
 function App() {
+  const [showOverlay, setShowOverlay] = useState(false);
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Navigation />}/>
-      </Routes>
-    </Router>
+    <div>
+      <Navbar
+        showOverlay={showOverlay}
+        setShowOverlay={setShowOverlay}
+      />
+      <Overlay
+        showOverlay={showOverlay}
+        setShowOverlay={setShowOverlay}
+      />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Navigation />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
