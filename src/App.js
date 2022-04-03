@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import logo from './logo.svg';
 import Footer from './components/footer/Footer';
@@ -20,11 +20,6 @@ function App() {
         showOverlay={showOverlay}
         setShowOverlay={setShowOverlay}
       />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Navigation />} />
-        </Routes>
-      </Router>
     </div>
   );
 }
@@ -33,6 +28,11 @@ function App() {
 function App() {
   return (
     <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Navigation />} />
+        </Routes>
+      </Router>
       <Footer navBack="Go back" navForward="Go forward" />
     </div>
   );

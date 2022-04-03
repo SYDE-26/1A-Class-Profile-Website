@@ -1,11 +1,45 @@
 import React from 'react';
 import '../overlay/overlay.scss';
-import styled from 'styled-components';
+import closeIcon from '../../images/close-icon.svg';
 
 export default function Overlay(props) {
-    return ((props.showOverlay ?
+    function toggleOverlay() {
+        props.setShowOverlay(prev => !prev)
+    }
+
+    return ((props.showOverlay ? (
         <div className="overlay">
-            placeholder
+            <div className="overlay-content">
+                <button onClick={toggleOverlay} className="close-button">
+                    <img
+                        src={closeIcon}
+                        alt="Close Icon"
+                        className="close-icon"
+                    />
+                </button>
+                <button>
+
+                </button>
+                <div>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+                <button>
+
+                </button>
+                <button>
+
+                </button>
+                <button>
+
+                </button>
+                <button>
+
+                </button>
+            </div>
         </div>
-    : null))
+    ) : null))
 }
