@@ -1,12 +1,23 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import logo from './logo.svg';
 import Footer from './components/Footer/Footer';
 
 import dynamic from 'next/dynamic';
-// const BoxPlot = dynamic(() => import('./components/charts/boxPlotChart.jsx'));
-// const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
+import Navigation from '../src/components/navigation/index';
+const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
 
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navigation />}/>
+      </Routes>
+    </Router>
+  );
+}
 
+/*
 function App() {
   return (
     <div>
@@ -14,5 +25,6 @@ function App() {
     </div>
   );
 }
+*/
 
 export default App;
