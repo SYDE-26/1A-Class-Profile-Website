@@ -20,6 +20,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
     "use-state-if-mounted": "^1.0.4",
+    "sass": "^1.49.11",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
