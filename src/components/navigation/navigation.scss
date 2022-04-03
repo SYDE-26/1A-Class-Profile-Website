@@ -30,7 +30,6 @@
 .CircleWrapper {
     display: flex;
     flex-direction: column;
-    // background-color: #fff;
     width: 310px;
     height: 310px;
     border-radius: 50%;
@@ -38,18 +37,18 @@
     transition: 2s;
 }
 
-.CoopGradient {
+.CoopGradient, .CoopChange {
     display: flex;
     background: linear-gradient(242.5deg, #FE8C5A 25.46%, #F7BF00 89.55%);;
     mix-blend-mode: normal;
     width: 290px;
     height: 290px;
     border-radius: 50%;
-    margin-top: 1vh;
     justify-content: center;
+    transition: 2s;
 }
 
-.AcademicsGradient {
+.AcademicsGradient, .AcademicsChange {
     display: flex;
     background: linear-gradient(230.6deg, #FF76A5 13.56%, #FE8C5A 87.82%);
     mix-blend-mode: normal;
@@ -57,9 +56,10 @@
     height: 290px;
     border-radius: 50%;
     justify-content: center;
+    transition: 2s;
 }
 
-.DemographicsGradient {
+.DemographicsGradient, .DemographicsChange {
     display: flex;
     background: linear-gradient(180deg, #FF76A5 0%, #C067E2 100%);
     mix-blend-mode: normal;
@@ -67,9 +67,10 @@
     height: 290px;
     border-radius: 50%;
     justify-content: center;
+    transition: 2s;
 }
 
-.HighSchoolGradient {
+.HighSchoolGradient, .HighSchoolChange {
     display: flex;
     background: linear-gradient(122.18deg, #C067E2 13.81%, #749BFF 85.95%);
     mix-blend-mode: normal;
@@ -77,9 +78,10 @@
     height: 290px;
     border-radius: 50%;
     justify-content: center;
+    transition: 2s;
 }
 
-.LifeStyleGradient {
+.LifeStyleGradient, .LifeStyleChange {
     display: flex;
     background: linear-gradient(116.42deg, #749BFF 22.88%, #FFCD20 91.67%);
     mix-blend-mode: normal;
@@ -87,6 +89,7 @@
     height: 290px;
     border-radius: 50%;
     justify-content: center;
+    transition: 2s;
 }
 
 .BlackCircle {
@@ -116,10 +119,6 @@
     // position: relative;
     
 }
-
-// .Center{
-//     background-color: #ffffff;
-// }
 
 section:first-child{
     margin-top:20%;
@@ -155,41 +154,9 @@ section:last-child{
 
 .Blurb{
     font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 22px;
-padding-left: 10px;
-padding-right: 10px;
-}
-
-.CircleWrapper.Active .Co-op.BlackCircle{
-    background: linear-gradient(242.5deg, #FE8C5A 25.46%, #F7BF00 89.55%);
-    mix-blend-mode: normal;
-    transition: 2s;
-    
-}
-
-.CircleWrapper.Active .Demographics.BlackCircle{
-    background: linear-gradient(180deg, #FF76A5 0%, #C067E2 100%);
-mix-blend-mode: normal;
-transition: 2s;
-}
-
-.CircleWrapper.Active .High.School.BlackCircle{
-    background: linear-gradient(122.18deg, #C067E2 13.81%, #749BFF 85.95%);
-mix-blend-mode: normal;
-    mix-blend-mode: normal;
-    transition: 2s;
-}
-
-.CircleWrapper.Active .Lifestyle.BlackCircle{
-    background: linear-gradient(116.42deg, #749BFF 19.89%, #FFCD20 91.67%);
-    mix-blend-mode: normal;
-    transition: 2s;
-}
-
-.CircleWrapper.Active .Academics.BlackCircle {
-    background: linear-gradient(230.6deg, #FF76A5 13.56%, #FE8C5A 87.82%);
-    mix-blend-mode: normal;
-    transition: 2s;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
