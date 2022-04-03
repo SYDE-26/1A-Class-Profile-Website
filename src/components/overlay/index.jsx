@@ -19,24 +19,47 @@ export default function Overlay(props) {
                         />
                     </button>
                 </div>
+
                 <button className="profile-button">
-
+                    <h3 className="number-text">01</h3>
+                    <h1 className="page-text">Profile</h1>
                 </button>
+
                 <div className="profile-subsection">
-                    <button className="profile-demographics-button"></button>
-                    <button className="profile-hs-button"></button>
-                    <button className="profile-academics-button"></button>
-                    <button className="profile-coop-button"></button>
-                    <button className="profile-lifestyle-button"></button>
+                    <button className="demographics-button">
+                        <h2 className="section-text">Demographics</h2>
+                    </button>
+
+                    <button className="hs-button">
+                        <h2 className="section-text">High School</h2>
+                    </button>
+
+                    <button className="academics-button">
+                        <h2 className="section-text">Academics</h2>
+                    </button>
+
+                    <button className="coop-button">
+                        <h2 className="section-text">Coop</h2>
+                    </button>
+
+                    <button className="lifestyle-button">
+                        <h2 className="section-text">Lifestyle</h2>
+                    </button>
                 </div>
+
                 <button className="about-button">
-
+                    <h3 className="number-text">02</h3>
+                    <h1 className="page-text">About</h1>
                 </button>
+
                 <button className="photo-gallery-button">
-
+                    <h3 className="number-text">03</h3>
+                    <h1 className="page-text">Photo Gallery</h1>
                 </button>
-                <button className="meme-page-button">
 
+                <button className="meme-page-button">
+                    <h3 className="number-text">04</h3>
+                    <h1 className="page-text">Meme Page</h1>
                 </button>
             </div>
         </div>
