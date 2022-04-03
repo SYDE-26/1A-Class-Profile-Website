@@ -17,12 +17,20 @@
     flex-direction: column;
 }
 
+.close-section {
+    display: flex;
+    height: 20%;
+    width: 100%;
+
+}
+
 .close-button {
     border: none;
     background: none;
-    margin-top: 50px;
+    margin-top: 4em;
     margin-left: auto;
     margin-right: 65px;
+    margin-bottom: auto;
     max-height: 40px;
     max-width: 40px;
     padding: none;
@@ -31,4 +39,61 @@
 .close-icon {
     padding: none;
     margin: none;
+}
+
+.profile-button {
+    height: 16%;
+    border: none;
+    background: none;
+}
+
+.profile-subsection {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    background: none;
+}
+
+.profile-demographics-button {
+    border: none;
+    background: none;
+}
+
+.profile-hs-button {
+    border: none;
+    background: none;
+}
+
+.profile-academics-button {
+    border: none;
+    background: none;
+}
+
+.profile-coop-button {
+    border: none;
+    background: none;
+}
+
+.profile-lifestyle-button {
+    border: none;
+    background: none;
+}
+
+.about-button {
+    height: 18%;
+    border: none;
+    background: none;
+}
+
+.photo-gallery-button {
+    height: 18%;
+    border: none;
+    background: none;
+}
+
+.meme-page-button {
+    height: 18%;
+    border: none;
+    background: none;
 }

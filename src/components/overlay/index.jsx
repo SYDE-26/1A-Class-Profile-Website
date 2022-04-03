@@ -10,33 +10,32 @@ export default function Overlay(props) {
     return ((props.showOverlay ? (
         <div className="overlay">
             <div className="overlay-content">
-                <button onClick={toggleOverlay} className="close-button">
-                    <img
-                        src={closeIcon}
-                        alt="Close Icon"
-                        className="close-icon"
-                    />
-                </button>
-                <button>
-
-                </button>
-                <div>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
+                <div className="close-section">
+                    <button onClick={toggleOverlay} className="close-button">
+                        <img
+                            src={closeIcon}
+                            alt="Close Icon"
+                            className="close-icon"
+                        />
+                    </button>
                 </div>
-                <button>
+                <button className="profile-button">
 
                 </button>
-                <button>
+                <div className="profile-subsection">
+                    <button className="profile-demographics-button"></button>
+                    <button className="profile-hs-button"></button>
+                    <button className="profile-academics-button"></button>
+                    <button className="profile-coop-button"></button>
+                    <button className="profile-lifestyle-button"></button>
+                </div>
+                <button className="about-button">
 
                 </button>
-                <button>
+                <button className="photo-gallery-button">
 
                 </button>
-                <button>
+                <button className="meme-page-button">
 
                 </button>
             </div>
