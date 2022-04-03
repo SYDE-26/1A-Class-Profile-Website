@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Overlay() {
+export default function Overlay(props) {
     return (
-        <h1>placeholder</h1>
+        (props.showOverlay ? <h1>placeholder</h1> : null)
     )
 }
