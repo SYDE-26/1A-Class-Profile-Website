@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
+/*
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import logo from './logo.svg';
+*/
 import Navbar from './components/navigation';
 import Overlay from './components/overlay';
 // import Footer from './components/Footer/Footer';
