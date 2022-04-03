@@ -1,5 +1,5 @@
 import Button from '@mui/material/Button';
-import './Footer.scss'
+import './footer.scss'
 import { ReactComponent as Heart } from './Heart.svg';
 
 const Footer = ({ navBack, navForward }) => {
