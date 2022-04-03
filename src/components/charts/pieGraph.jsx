@@ -1,6 +1,10 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { db } from '../../firebase-config.js';
+import { doc, getDoc } from 'firebase/firestore';
 import { Pie } from 'react-chartjs-2';
+import Chart from 'chart.js/auto';
+import 'chartjs-subtitle';
 
 export default function PieChart(props) {
     const [data, setData] = useState({
@@ -12,32 +16,31 @@ export default function PieChart(props) {
     const [id, setId] = useState(0);
 
     useEffect(() => {
-        if (id <= 0) {
-            db.collection('1A Data')
-                .doc(props.datatype)
-                .onSnapshot(
-                    async (snapshot) => {
-                        let data = {
-                            val: [],
-                            label: [],
-                            color: [],
-                            title: '',
-                        };
 
-                        await snapshot.data().x.forEach((element) => {
-                            data.val.push(element.value);
-                            data.label.push(element.index);
-                            data.color.push(element.color);
-                        });
-                        data.title = snapshot.data().title;
-                        setId(id + 1);
-                        setData(data);
-                    },
-                    (err) => {
-                        console.log('Error fetching firebase snapshot! ' + err);
-                    }
-                );
-        }
+        getDoc(doc(db, "1A Data", props.datatype)).then(docSnap => {
+            if (docSnap.exists()) {
+                console.log("Document data:", docSnap.data());
+
+                let data = {
+                    val: [],
+                    label: [],
+                    color: [],
+                    title: '',
+                };
+
+                docSnap.data().x.forEach((element) => {
+                    data.val.push(element.value);
+                    data.label.push(element.index);
+                    data.color.push(element.color);
+                });
+                data.title = docSnap.data().title;
+                setId(id + 1);
+                setData(data);
+
+            } else {
+                console.log('No such document!');
+            }
+        })
     });
 
     return (

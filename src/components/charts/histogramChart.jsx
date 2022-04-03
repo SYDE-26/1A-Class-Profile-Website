@@ -1,6 +1,10 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { db } from '../../firebase-config.js';
+import { doc, getDoc } from 'firebase/firestore';
 import { Bar } from 'react-chartjs-2';
+import Chart from 'chart.js/auto';
+import 'chartjs-subtitle';
 
 const HistogramPercent = (props) => {
     const [data, setData] = useState({
@@ -12,48 +16,44 @@ const HistogramPercent = (props) => {
     const [id, setId] = useState(0);
 
     useEffect(() => {
-        if (id <= 0) {
-            db.collection('1A Data')
-                .doc(props.datatype)
-                .onSnapshot(
-                    async (snapshot) => {
-                        let data = {
-                            val: [],
-                            label: [],
-                            color: [],
-                            title: '',
-                            xAxes: '',
-                            yAxes: '',
-                            n: '',
-                        };
+        getDoc(doc(db, "1A Data", props.datatype)).then(docSnap => {
+            if (docSnap.exists()) {
+                console.log("Document data:", docSnap.data());
 
-                        let values = [];
-                        let allData = await snapshot.data();
+                let data = {
+                    val: [],
+                    label: [],
+                    color: '',
+                    title: '',
+                    xAxes: '',
+                    yAxes: '',
+                    n: '',
+                };
 
-                        await allData.x.values.forEach((element) => {
-                            values.push(element);
-                        });
+                let values = [];
+                let allData = docSnap.data();
 
-                        await allData.xLimit.enums.forEach((element) => {
-                            //need to take in all of the values, sort them,
-                            let value = values.filter((x) => x === element.value).length;
-                            data.val.push((value * 100 / values.length).toFixed(2)); //VALUE NEEDS TO BE DETERMINED BY TAKING IN ALL OF THE VALUES AND CALCULATING IT
-                            data.label.push(element.index);
-                        });
+                allData.x.values.forEach((element) => {
+                    values.push(element);
+                });
 
-                        data.title = allData.title;
-                        data.xAxis = allData.x.label;
-                        data.yAxis = allData.y.label;
-                        data.color = allData.x.color;
-                        data.n = allData.n;
-                        setId(id + 1);
-                        setData(data);
-                    },
-                    (err) => {
-                        console.log('Error fetching firebase snapshot! ' + err);
-                    }
-                );
-        }
+                allData.xLimit.enums.forEach((element) => {
+                    let value = values.filter((x) => x === element.value).length;
+                    data.val.push((value * 100 / values.length).toFixed(2)); //VALUE NEEDS TO BE DETERMINED BY TAKING IN ALL OF THE VALUES AND CALCULATING IT
+                    data.label.push(element.index);
+                });
+
+                data.title = allData.title;
+                data.xAxis = allData.x.label;
+                data.yAxis = allData.y.label;
+                data.color = allData.x.color;
+                data.n = allData.n;
+                setId(id + 1);
+                setData(data);
+            } else {
+                console.log('No such document!');
+            }
+        })
     });
 
     if (data.color === undefined) {
@@ -62,9 +62,6 @@ const HistogramPercent = (props) => {
 
     return (
         <div>
-            {/* <div className="header">
-        <h1 className="title">Doughnut</h1>
-      </div> */}
             <div className="chart">
                 <Bar
                     data={{
@@ -155,85 +152,80 @@ const HistogramCount = (props) => {
     const [id, setId] = useState(0);
 
     useEffect(() => {
-        if (id <= 0) {
-            db.collection('1A Data')
-                .doc(props.datatype)
-                .onSnapshot(
-                    async (snapshot) => {
-                        let data = {
-                            val: [],
-                            label: [],
-                            color: '',
-                            title: '',
-                            xAxes: '',
-                            yAxes: '',
-                            n: '',
-                        };
+        getDoc(doc(db, "1A Data", props.datatype)).then(docSnap => {
+            if (docSnap.exists()) {
+                console.log("Document data:", docSnap.data());
+                console.log('Hargun');
 
-                        let values = [];
-                        let allData = snapshot.data();
+                let data = {
+                    val: [],
+                    label: [],
+                    color: '',
+                    title: '',
+                    xAxes: '',
+                    yAxes: '',
+                    n: '',
+                };
 
-                        allData.x.values.forEach((element) => {
-                            values.push(parseInt(element.toFixed(2)));
-                        });
+                let values = [];
+                let allData = docSnap.data();
 
-                        values.sort((a, b) => {
-                            //sorted in numerical value
-                            return a - b;
-                        });
+                allData.x.values.forEach((element) => {
+                    values.push(parseInt(element.toFixed(2)));
+                });
 
-                        let min = allData.xLimit.min;
-                        let max = allData.xLimit.max;
+                values.sort((a, b) => {
+                    return a - b;
+                });
 
-                        for (let i = min; i <= max; i++) {
-                            data.label.push(i);
-                            data.val.push(0); //for each element, will push a 0 value which will be changed later
+                let min = allData.xLimit.min;
+                let max = allData.xLimit.max;
+
+                for (let i = min; i <= max; i++) {
+                    data.label.push(i);
+                    data.val.push(0); //for each element, will push a 0 value which will be changed later
+                }
+
+                //need to go through all of the grades
+                //need to check that grade is inbetween itself and its num + 1
+                let counter = 0;
+                let valueptr = 0;
+
+                try {
+                    while (valueptr < values.length) {
+                        if (valueptr >= values.length) {
+                            break;
                         }
-
-                        //need to go through all of the grades
-                        //need to check that grade is inbetween itself and its num + 1
-                        let counter = 0;
-                        let valueptr = 0;
-
-                        try {
-                            while (valueptr < values.length) {
-                                if (valueptr >= values.length) {
-                                    break;
-                                }
-                                if (
-                                    values[valueptr] >= data.label[counter] &&
-                                    values[valueptr] < data.label[counter] + 1
-                                ) {
-                                    valueptr += 1;
-                                    data.val[counter] += 1;
-                                } else {
-                                    counter += 1;
-                                }
-                            }
-                        } catch (err) {
-                            console.log(err);
+                        if (
+                            values[valueptr] >= data.label[counter] &&
+                            values[valueptr] < data.label[counter] + 1
+                        ) {
+                            valueptr += 1;
+                            data.val[counter] += 1;
+                        } else {
+                            counter += 1;
                         }
-
-                        data.title = allData.title;
-                        data.xAxis = allData.x.label;
-                        data.yAxis = allData.y.label;
-                        data.color = allData.x.color;
-                        data.n = allData.n;
-                        setId(id + 1);
-                        setData(data);
-                    },
-                    (err) => {
-                        console.log('Error fetching firebase snapshot! ' + err);
                     }
-                );
-        }
+                } catch (err) {
+                    console.log(err);
+                }
+
+                data.title = allData.title;
+                data.xAxis = allData.x.label;
+                data.yAxis = allData.y.label;
+                data.color = allData.x.color;
+                data.n = allData.n;
+                setId(id + 1);
+                setData(data);
+
+            } else {
+                console.log('No such document!');
+            }
+        })
     });
 
     return (
         <div>
-            {/* <div className="header">
-        <h1 className="title">Doughnut</h1>
-      </div> */}
             <div className="chart">
                 <Bar
                     data={{
