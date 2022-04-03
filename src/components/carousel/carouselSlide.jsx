@@ -38,7 +38,7 @@ export default function Slider() {
             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
           >
             <img
-              alt="Photos from 1A" src={`src/images/imageCarousel/${index + 1}.jpeg`}
+              alt="Photos from 1A" src={`../imageCarousel/img${index + 1}.jpeg`}
             />
           </div>
         )
