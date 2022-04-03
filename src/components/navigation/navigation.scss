@@ -24,7 +24,7 @@
 .Wrapper {
     display: flex;
     flex-direction: row;
-    transition: 2s;
+    // transition: 2s;
 }
 
 .CircleWrapper {
@@ -34,8 +34,12 @@
     height: 310px;
     border-radius: 50%;
     justify-content: center;
-    transition: 2s;
+    // transition: 2s;
 }
+
+// .CircleWrapper:hover{
+//     transition: 2s;
+// }
 
 .CoopGradient, .CoopChange {
     display: flex;
@@ -45,7 +49,7 @@
     height: 290px;
     border-radius: 50%;
     justify-content: center;
-    transition: 2s;
+    // transition: 2s;
 }
 
 .AcademicsGradient, .AcademicsChange {
@@ -56,7 +60,7 @@
     height: 290px;
     border-radius: 50%;
     justify-content: center;
-    transition: 2s;
+    // transition: 2s;
 }
 
 .DemographicsGradient, .DemographicsChange {
@@ -67,7 +71,7 @@
     height: 290px;
     border-radius: 50%;
     justify-content: center;
-    transition: 2s;
+    // transition: 2s;
 }
 
 .HighSchoolGradient, .HighSchoolChange {
@@ -78,7 +82,7 @@
     height: 290px;
     border-radius: 50%;
     justify-content: center;
-    transition: 2s;
+    // transition: 2s;
 }
 
 .LifeStyleGradient, .LifeStyleChange {
@@ -89,8 +93,9 @@
     height: 290px;
     border-radius: 50%;
     justify-content: center;
-    transition: 2s;
+    // transition: 2s;
 }
+
 
 .BlackCircle {
     display: flex;
@@ -126,6 +131,7 @@ section:first-child{
     z-index: 0;
     margin-right: -5%;
     padding-left: 9%;
+    // transition: 2s;
 }
 
 section:nth-of-type(2){
@@ -133,23 +139,28 @@ section:nth-of-type(2){
     // padding-right: 10%;
     z-index: 5;
     margin-right: -5%;
+    // transition: 2s;
 }
 
 section:nth-of-type(3){
    margin-top: 10%;
    z-index: 10;
+   
+//    transition: 2s;
 }
 
 section:nth-of-type(4){
     margin-top: 15%;
     z-index: 5;
     margin-left: -5%;
+    // transition: 2s;
 }
 
 section:last-child{
     margin-top:20%;
     z-index: 0;
     margin-left: -5%;
+    // transition: 2s;
 }
 
 .Blurb{
@@ -157,6 +168,40 @@ section:last-child{
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 19% !important;
+    margin-right: 19% !important;
 }
+
+// .CircleWrapper:active{
+//     transition: 2s;
+// }
+
+.DemographicsGradient .Blurb, .DemographicsChange .Blurb{
+    margin-left: 16% !important;
+    margin-right: 16% !important;
+}
+
+// .BlackCircle.transition{
+//     transition: 2s;
+// }
+// .Coop.Change{
+//     background: #fff;
+// }
+
+// .Change{
+//     width: 260px;
+//     height: 260px;
+// // }
+
+// .Coop.Change{
+//     width: 260px;
+//     height: 260px;
+// }
+
+div[class*="Change"] {
+    transform: scale(1.25);
+    transition: 2s;
+    
+    // width: 270px;
+    // height: 270px;
+  }

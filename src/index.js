@@ -4,6 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// const div1 = document.getElementByClassName("Co-op");
+// const div2 = document.getElementByClassName("Academics");
+// const div3 = document.getElementByClassName("Demographics");
+
+// div2.after(div1);
+// div2.before(div3);
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
