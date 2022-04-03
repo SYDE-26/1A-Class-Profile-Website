@@ -9,7 +9,9 @@ import dynamic from 'next/dynamic';
 
 function App() {
   return (
-    <Footer navBack="Go back" navForward="Go forward" />
+    <div>
+      <Footer navBack="Go back" navForward="Go forward" />
+    </div>
   );
 }
 
