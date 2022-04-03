@@ -13,6 +13,7 @@
     "chartjs-chart-box-and-violin-plot": "^4.0.0",
     "chartjs-subtitle": "^0.2.0",
     "firebase": "^9.6.10",
+    "jquery": "^3.6.0",
     "next": "^12.1.4",
     "react": "^17.0.2",
     "react-chartjs-2": "^4.0.1",
