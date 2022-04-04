@@ -164,13 +164,11 @@ export default function BoxPlot(props) {
                 data.n = docSnap.data().n;
                 setId(id + 1);
                 setData(data);
-                console.log(data.val[0][0]);
             } else {
                 console.log('No such document!');
             }
         })
-    });
-    console.log(data);
+    }, []);
 
     if (Number.isInteger(data.val[0][0])) {
         var arrayData = data.label.map(function (d, i) {
