@@ -3,20 +3,22 @@ import './navigation.scss';
 import $ from 'jquery';
 import { Link } from 'react-router-dom';
 
-const Pages = [
-    { id: 1, text: 'Co-op', link: '../../pages/coop', blurb: 'Class average, courses, attendance, etc.' },
-    { id: 2, text: 'Academics', link: '../../pages/academics', blurb: 'Balance between co-op \n and academics, etc.' },
-    { id: 3, text: 'Demographics', link: '../../pages/demographics', blurb: 'Gender, ethnicities, \n hometown, etc.' },
-    { id: 4, text: 'High School', link: '../../pages/highschool', blurb: 'Admissions, \n extracurriculars, advice \n from the cohort, etc.' },
-    { id: 5, text: 'Lifestyle', link: '../../pages/lifestyles', blurb: 'Mental health, sleep, social life, etc.' }
-]
 
-const GradientSelection = ['CoopGradient', 'AcademicsGradient', 'DemographicsGradient', 'HighSchoolGradient', 'LifeStyleGradient'];
-
-const ClickGradient = ['CoopChange', 'AcademicsChange', 'DemographicsChange', 'HighSchoolChange', 'LifeStyleChange']; 
 
 const GradientBackground = () => {
     const [onClickChange, setOnClickChange] = useState('');   
+
+    const Pages = [
+        { id: 1, text: 'Co-op', link: '../../pages/coop', blurb: 'Class average, courses, attendance, etc.' },
+        { id: 2, text: 'Academics', link: '../../pages/academics', blurb: 'Balance between co-op \n and academics, etc.' },
+        { id: 3, text: 'Demographics', link: '../../pages/demographics', blurb: 'Gender, ethnicities, \n hometown, etc.' },
+        { id: 4, text: 'High School', link: '../../pages/highschool', blurb: 'Admissions, \n extracurriculars, advice \n from the cohort, etc.' },
+        { id: 5, text: 'Lifestyle', link: '../../pages/lifestyles', blurb: 'Mental health, sleep, social life, etc.' }
+    ]
+    
+    const GradientSelection = ['CoopGradient', 'AcademicsGradient', 'DemographicsGradient', 'HighSchoolGradient', 'LifeStyleGradient'];
+    
+    const ClickGradient = ['CoopChange', 'AcademicsChange', 'DemographicsChange', 'HighSchoolChange', 'LifeStyleChange']; 
 
     const toggleClass = (Pages, index) => {
         setOnClickChange(ClickGradient[index])
