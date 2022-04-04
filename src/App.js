@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import logo from './logo.svg';
-/*
-import Footer from './components/footer/footer';
-*/
+import Footer from './components/Footer/Footer';
 import Navbar from './components/navbar';
 import Overlay from './components/overlay';
 import dynamic from 'next/dynamic';
-import Navigation from '../src/components/navigation/index';
+import Navigation from './components/navigation/index';
 //const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
 //const ScatterPlot = dynamic(() => import('./components/charts/scatterPlot.jsx'));
 //const StackedBar = dynamic(() => import('./components/charts/stackedBar.jsx'));
@@ -39,14 +37,14 @@ function App() {
     </div>
   );
 }
-
+ 
 /*
 function App() {
   return (
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<Navigation />} />
+          <Route path='/' element={<Navigation />} />
         </Routes>
       </Router>
       <Footer navBack="Go back" navForward="Go forward" />
@@ -54,5 +52,5 @@ function App() {
   );
 }
 */
-
+ 
 export default App;
