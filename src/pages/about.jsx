@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Academics() {
+function About() {
     return (
         <div>
  
@@ -8,4 +8,4 @@ function Academics() {
     );
 }
 
-export default Academics;
+export default About;
