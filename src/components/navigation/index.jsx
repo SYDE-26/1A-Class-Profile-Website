@@ -1,6 +1,6 @@
 import {React, useState} from 'react';
 import './navigation.scss';
-import $ from 'jquery';
+//import $ from 'jquery';
 
 
 const GradientBackground = () => {

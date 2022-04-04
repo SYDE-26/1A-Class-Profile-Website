@@ -1,6 +1,7 @@
 import React from 'react';
 import '../overlay/overlay.scss';
 import closeIcon from '../../images/close-icon.svg';
+import lockIcon from '../../images/lock-icon.svg';
 
 export default function Overlay(props) {
     function toggleOverlay() {
@@ -60,6 +61,11 @@ export default function Overlay(props) {
                 <button className="meme-page-button">
                     <h3 className="number-text">04</h3>
                     <h1 className="page-text">Meme Page</h1>
+                    <img
+                        src={lockIcon}
+                        alt="Lock Icon"
+                        className="lock-icon"
+                    />
                 </button>
             </div>
         </div>
