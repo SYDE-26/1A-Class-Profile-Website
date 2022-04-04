@@ -14,7 +14,6 @@ import HighSchool from './pages/highschool';
 import Lifestyles from './pages/lifestyles';
 import PhotoGallery from './pages/photoGallery';
 import Insyder from './pages/insyderPage';
-const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
 //const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
 //const ScatterPlot = dynamic(() => import('./components/charts/scatterPlot.jsx'));
 //const StackedBar = dynamic(() => import('./components/charts/stackedBar.jsx'));
@@ -38,30 +37,28 @@ function App() {
         showOverlay={showOverlay}
         setShowOverlay={setShowOverlay}
       />
-      <Router>
-        <Routes>
-          <Route path='/' element={<Navigation />} />
-          {/* 
-          <Route path='/academics' element={<Academics />} />
-          <Route path='/coop' element={<Coop />} />
-          <Route path='/demographics' element={<Demographics />} />
-          <Route path='/highschool' element={<HighSchool />} />
-          <Route path='/lifestyles' element={<Lifestyles />} />
-          <Route path='/gallery' element={<PhotoGallery />} />
-          */}
-        </Routes>
-      </Router>
     </div>
   );
 }
  
 /*
 function App() {
- return (
-   <div>
-     <Footer navBack="Go back" navForward="Go forward" />
-   </div>
- );
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Navigation />} />
+          <Route path='/academics' element={<Academics />} />
+          <Route path='/coop' element={<Coop />} />
+          <Route path='/demographics' element={<Demographics />} />
+          <Route path='/highschool' element={<HighSchool />} />
+          <Route path='/lifestyles' element={<Lifestyles />} />
+          <Route path='/gallery' element={<PhotoGallery />} />
+        </Routes>
+      </Router>
+      <Footer navBack="Go back" navForward="Go forward" />
+    </div>
+  );
 }
 */
  
