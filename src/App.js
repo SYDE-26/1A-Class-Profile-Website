@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import logo from './logo.svg';
-import Footer from './components/Footer/Footer';
+import Footer from './components/footer/footer';
 import Navbar from './components/navbar';
 import Overlay from './components/overlay';
 import dynamic from 'next/dynamic';
