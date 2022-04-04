@@ -3,7 +3,9 @@ import './headings.scss';
 
 export default function ProfileTitle(props) {
     return (
-        <h1 className={props.section}>{props.title}</h1>
+        <div>
+            <h1 className={props.section}>{props.title}</h1>
+        </div>
     )
 }
 
