@@ -31,6 +31,11 @@ function App() {
         showOverlay={showOverlay}
         setShowOverlay={setShowOverlay}
       />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Navigation />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
