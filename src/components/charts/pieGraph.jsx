@@ -41,7 +41,7 @@ export default function PieChart(props) {
                 console.log('No such document!');
             }
         })
-    });
+    }, []);
 
     return (
         <div>
@@ -62,11 +62,13 @@ export default function PieChart(props) {
                     options={{
                         responsive: true,
                         maintainAspectRatio: false,
-                        legend: { display: false },
-                        title: {
-                            display: true,
-                            text: data.title,
-                        },
+                        plugins: {
+                            legend: { display: true },
+                            title: {
+                                display: true,
+                                text: data.title,
+                            },
+                        }
                     }}
                     height="450px"
                     width="450px"

@@ -54,7 +54,7 @@ const HistogramPercent = (props) => {
                 console.log('No such document!');
             }
         })
-    });
+    }, []);
 
     if (data.color === undefined) {
         data.color = 'rgb(255, 99, 132)';
@@ -80,60 +80,61 @@ const HistogramPercent = (props) => {
                     options={{
                         responsive: true,
                         maintainAspectRatio: true,
-                        legend: { display: false },
-                        title: {
-                            display: true,
-                            text: data.title,
-                            fontColor: '#ffffff',
-                            fontSize: 15,
-                            padding: 14,
-                        },
                         plugins: {
-                            chartJsPluginSubtitle: {
+                            legend: { display: false },
+                            title: {
+                                display: true,
+                                text: data.title,
+                                fontColor: '#ffffff',
+                                fontSize: 15,
+                                padding: 14,
+                            },
+                            subtitle: {
                                 display: true,
                                 fontSize: 13,
                                 text: 'number of respondents:' + data.n,
-                            }
-                        },
-                        scales: {
-                            xAxes: [
-                                {
-                                    gridLines: {
-                                        zeroLineColor: '#fff',
-                                        color: 'rgba(255, 255, 255, 0.05)',
-                                        lineWidth: 1,
+                            },
+                            scales: {
+                                xAxes: [
+                                    {
+                                        gridLines: {
+                                            zeroLineColor: '#fff',
+                                            color: 'rgba(255, 255, 255, 0.05)',
+                                            lineWidth: 1,
+                                        },
+                                        scaleLabel: {
+                                            display: true,
+                                            labelString: data.xAxis,
+                                            fontColor: '#ffffff',
+                                            fontSize: 15,
+                                        },
+                                        ticks: {
+                                            fontColor: '#ffffff',
+                                        },
                                     },
-                                    scaleLabel: {
-                                        display: true,
-                                        labelString: data.xAxis,
-                                        fontColor: '#ffffff',
-                                        fontSize: 15,
+                                ],
+                                yAxes: [
+                                    {
+                                        gridLines: {
+                                            zeroLineColor: '#fff',
+                                            color: 'rgba(255, 255, 255, 0.05)',
+                                            lineWidth: 1,
+                                        },
+                                        scaleLabel: {
+                                            display: true,
+                                            labelString: data.yAxis,
+                                            fontColor: '#ffffff',
+                                            fontSize: 15,
+                                        },
+                                        ticks: {
+                                            beginAtZero: true,
+                                            fontColor: '#ffffff',
+                                        },
                                     },
-                                    ticks: {
-                                        fontColor: '#ffffff',
-                                    },
-                                },
-                            ],
-                            yAxes: [
-                                {
-                                    gridLines: {
-                                        zeroLineColor: '#fff',
-                                        color: 'rgba(255, 255, 255, 0.05)',
-                                        lineWidth: 1,
-                                    },
-                                    scaleLabel: {
-                                        display: true,
-                                        labelString: data.yAxis,
-                                        fontColor: '#ffffff',
-                                        fontSize: 15,
-                                    },
-                                    ticks: {
-                                        beginAtZero: true,
-                                        fontColor: '#ffffff',
-                                    },
-                                },
-                            ],
-                        },
+                                ],
+                            },
+                        }
+                        
                     }}
                     height={props.height ? props.height : '100%'}
                     width={props.width ? props.width : '100%'}
@@ -222,7 +223,7 @@ const HistogramCount = (props) => {
                 console.log('No such document!');
             }
         })
-    });
+    }, []);
 
     return (
         <div>
@@ -245,61 +246,60 @@ const HistogramCount = (props) => {
                     options={{
                         responsive: true,
                         maintainAspectRatio: true,
-                        legend: { display: false },
-                        title: {
-                            display: true,
-                            text: data.title,
-                            fontColor: '#ffffff',
-                            fontSize: 15,
-                            padding: 14,
-                        },
                         plugins: {
-                            chartJsPluginSubtitle: {
+                            legend: { display: false },
+                            title: {
+                                display: true,
+                                text: data.title,
+                                fontColor: '#ffffff',
+                                fontSize: 15,
+                                padding: 14,
+                            },
+                            subtitle: {
                                 display: true,
                                 fontSize: 13,
                                 text: 'number of respondents:' + data.n,
-                            }
-                        },
-
-                        scales: {
-                            xAxes: [
-                                {
-                                    gridLines: {
-                                        zeroLineColor: '#fff',
-                                        color: 'rgba(255, 255, 255, 0.05)',
-                                        lineWidth: 1,
+                            },
+                            scales: {
+                                xAxes: [
+                                    {
+                                        gridLines: {
+                                            zeroLineColor: '#fff',
+                                            color: 'rgba(255, 255, 255, 0.05)',
+                                            lineWidth: 1,
+                                        },
+                                        scaleLabel: {
+                                            display: true,
+                                            labelString: data.xAxis,
+                                            fontColor: '#ffffff',
+                                            fontSize: 15,
+                                        },
+                                        ticks: {
+                                            fontColor: '#ffffff',
+                                        },
                                     },
-                                    scaleLabel: {
-                                        display: true,
-                                        labelString: data.xAxis,
-                                        fontColor: '#ffffff',
-                                        fontSize: 15,
+                                ],
+                                yAxes: [
+                                    {
+                                        gridLines: {
+                                            zeroLineColor: '#fff',
+                                            color: 'rgba(255, 255, 255, 0.05)',
+                                            lineWidth: 1,
+                                        },
+                                        scaleLabel: {
+                                            display: true,
+                                            labelString: data.yAxis,
+                                            fontColor: '#ffffff',
+                                            fontSize: 15,
+                                        },
+                                        ticks: {
+                                            beginAtZero: true,
+                                            fontColor: '#ffffff',
+                                        },
                                     },
-                                    ticks: {
-                                        fontColor: '#ffffff',
-                                    },
-                                },
-                            ],
-                            yAxes: [
-                                {
-                                    gridLines: {
-                                        zeroLineColor: '#fff',
-                                        color: 'rgba(255, 255, 255, 0.05)',
-                                        lineWidth: 1,
-                                    },
-                                    scaleLabel: {
-                                        display: true,
-                                        labelString: data.yAxis,
-                                        fontColor: '#ffffff',
-                                        fontSize: 15,
-                                    },
-                                    ticks: {
-                                        beginAtZero: true,
-                                        fontColor: '#ffffff',
-                                    },
-                                },
-                            ],
-                        },
+                                ],
+                            },
+                        },   
                     }}
                     height={props.height ? props.height : '100%'}
                     width={props.width ? props.width : '100%'}

@@ -6,7 +6,16 @@ import Navbar from './components/navbar';
 import Overlay from './components/overlay';
 import dynamic from 'next/dynamic';
 import Navigation from '../src/components/navigation/index';
-const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
+//const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
+//const ScatterPlot = dynamic(() => import('./components/charts/scatterPlot.jsx'));
+//const StackedBar = dynamic(() => import('./components/charts/stackedBar.jsx'));
+// const HistogramCount = dynamic(() =>
+//   import('./components/charts/histogramChart.jsx').then(
+//     (mod) => mod.HistogramCount
+//   )
+// );
+// const PieChart = dynamic(() => import('./components/charts/pieGraph.jsx'));
+const BoxPlot = dynamic(() => import('./components/charts/boxPlotChart.jsx'));
 
 function App() {
   const [showOverlay, setShowOverlay] = useState(false);
