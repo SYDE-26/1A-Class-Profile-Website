@@ -8,6 +8,10 @@
     // background-color: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(116, 155, 255, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%);
     width: 90px;
     height: 90px;
-    display: flex;
-    align-items: center;
+    display: inline-block;
+}
+
+.frame {
+    margin: 53px 34px;
+    display: inline-block;
 }
