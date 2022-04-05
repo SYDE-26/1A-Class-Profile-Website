@@ -6,14 +6,14 @@ import Navbar from './components/navbar';
 import Overlay from './components/overlay';
 import dynamic from 'next/dynamic';
 import Navigation from './components/navigation/index';
-import Coop from './pages/coopFolder/coop';
-import Academics from './pages/academicFolder/academics';
-import Demographics from './pages/demographicsFolder/demographics';
-import Highschool from './pages/highschoolFolder/highschool';
-import Lifestyles from './pages/lifestyleFolder/lifestyles';
-import About from './pages/aboutFolder/about';
-import PhotoPage from './pages/photoGalleryFolder/photoGallery';
-import InsyderPage from './pages/insyderFolder/insyderPage';
+import Coop from './components/profilePages/coopFolder/coop';
+import Academics from './components/profilePages/academicFolder/academics';
+import Demographics from './components/profilePages/demographicsFolder/demographics';
+import Highschool from './components/profilePages/highschoolFolder/highschool';
+import Lifestyles from './components/profilePages/lifestyleFolder/lifestyles';
+import About from './components/profilePages/aboutFolder/about';
+import PhotoPage from './components/profilePages/photoGalleryFolder/photoGallery';
+import InsyderPage from './components/profilePages/insyderFolder/insyderPage';
 //const BarGraph = dynamic(() => import('./components/charts/barGraph.jsx'));
 //const ScatterPlot = dynamic(() => import('./components/charts/scatterPlot.jsx'));
 //const StackedBar = dynamic(() => import('./components/charts/stackedBar.jsx'));
@@ -29,6 +29,7 @@ function App() {
   const [showOverlay, setShowOverlay] = useState(false);
   return (
     <div>
+      <Router>
       <Navbar
         showOverlay={showOverlay}
         setShowOverlay={setShowOverlay}
@@ -37,17 +38,16 @@ function App() {
         showOverlay={showOverlay}
         setShowOverlay={setShowOverlay}
       />
-      <Router>
         <Routes>
           <Route path="/" element={<Navigation />} />
-          <Route path="/pages/coop" element={<Coop />} />
-          <Route path="/pages/academics" element={<Academics />} />
-          <Route path="/pages/demographics" element={<Demographics />} />
-          <Route path="/pages/highschool" element={<Highschool />} />
-          <Route path="/pages/lifestyles" element={<Lifestyles />} />
-          <Route path="/pages/about" element={<About />} />
-          <Route path="/pages/photoGallery" element={<PhotoPage />} />
-          <Route path="/pages/insyderPage" element={<InsyderPage />} />
+          <Route path="/coop" element={<Coop />} />
+          <Route path="/academics" element={<Academics />} />
+          <Route path="/demographics" element={<Demographics />} />
+          <Route path="/highschool" element={<Highschool />} />
+          <Route path="/lifestyles" element={<Lifestyles />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/photoGallery" element={<PhotoPage />} />
+          <Route path="/insyderPage" element={<InsyderPage />} />
         </Routes>
       </Router>
     </div>

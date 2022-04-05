@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import '../overlay/overlay.scss';
 import closeIcon from '../../images/close-icon.svg';
 import lockIcon from '../../images/lock-icon.svg';
@@ -21,52 +22,71 @@ export default function Overlay(props) {
                     </button>
                 </div>
 
-                <button className="profile-button">
-                    <h3 className="number-text">01</h3>
-                    <h1 className="page-text">Profile</h1>
-                </button>
+                <Link to="/">
+                    <button className="profile-button">
+                        <h3 className="number-text">01</h3>
+                        <h1 className="page-text">Profile</h1>
+                    </button>
+                </Link>
 
                 <div className="profile-subsection">
-                    <button className="demographics-button">
-                        <h2 className="section-text">Demographics</h2>
-                    </button>
+                    <Link to="/demographics">
+                        <button className="demographics-button">
+                            <h2 className="section-text">Demographics</h2>
+                        </button>
+                    </Link>
 
-                    <button className="hs-button">
-                        <h2 className="section-text">High School</h2>
-                    </button>
+                    <Link to="/highschool">
+                        <button className="hs-button">
+                            <h2 className="section-text">High School</h2>
+                        </button>
+                    </Link>
 
-                    <button className="academics-button">
-                        <h2 className="section-text">Academics</h2>
-                    </button>
+                    <Link to="/academics">
+                        <button className="academics-button">
+                            <h2 className="section-text">Academics</h2>
+                        </button>
+                    </Link>
 
-                    <button className="coop-button">
-                        <h2 className="section-text">Coop</h2>
-                    </button>
+                    <Link to="/coop">
+                        <button className="coop-button">
+                            <h2 className="section-text">Coop</h2>
+                        </button>
+                    </Link>
 
-                    <button className="lifestyle-button">
-                        <h2 className="section-text">Lifestyle</h2>
-                    </button>
+                    <Link to="/lifestyles">
+                        <button className="lifestyle-button">
+                            <h2 className="section-text">Lifestyle</h2>
+                        </button>
+                    </Link>
+
                 </div>
 
-                <button className="about-button">
-                    <h3 className="number-text">02</h3>
-                    <h1 className="page-text">About</h1>
-                </button>
+                <Link to="/about">
+                    <button className="about-button">
+                        <h3 className="number-text">02</h3>
+                        <h1 className="page-text">About</h1>
+                    </button>
+                </Link>
 
-                <button className="photo-gallery-button">
-                    <h3 className="number-text">03</h3>
-                    <h1 className="page-text">Photo Gallery</h1>
-                </button>
+                <Link to="/photoGallery">
+                    <button className="photo-gallery-button">
+                        <h3 className="number-text">03</h3>
+                        <h1 className="page-text">Photo Gallery</h1>
+                    </button>
+                </Link>
 
-                <button className="meme-page-button">
-                    <h3 className="number-text">04</h3>
-                    <h1 className="page-text">Meme Page</h1>
-                    <img
-                        src={lockIcon}
-                        alt="Lock Icon"
-                        className="lock-icon"
-                    />
-                </button>
+                <Link to="/insyderPage">
+                    <button className="meme-page-button">
+                        <h3 className="number-text">04</h3>
+                        <h1 className="page-text">Meme Page</h1>
+                        <img
+                            src={lockIcon}
+                            alt="Lock Icon"
+                            className="lock-icon"
+                        />
+                    </button>
+                </Link>
             </div>
         </div>
     ) : null))
