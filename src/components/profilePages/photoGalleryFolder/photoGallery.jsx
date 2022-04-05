@@ -1,4 +1,5 @@
 import React from 'react';
+import './photoGallery.scss';
 
 function PhotoGallery() {
     return (
@@ -20,7 +21,7 @@ function PhotoGallery() {
             </div>
             <div className="container right">
                 <div className="content">
-                    
+
                 </div>
             </div>
         </div>
