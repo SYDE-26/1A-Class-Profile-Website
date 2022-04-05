@@ -1,3 +1,9 @@
+:root {
+    --bg-colour: #27313B;
+    --gradient: linear-gradient(116.42deg, #749BFF 22.88%, #FFCD20 91.67%);
+    --pink: #C067E2;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -13,11 +19,11 @@
 .timeline::after {
     content: '';
     position: absolute;
-    width: 6px;
-    background-color: white;
+    width: 1rem;
+    background: var(--gradient);
     top: 0;
     bottom: 0;
-    left: 50%;
+    left: 49.6%;
     margin-left: -3px;
     border-radius: 10px;
 }
@@ -37,8 +43,8 @@
     width: 25px;
     height: 25px;
     right: -17px;
-    background-color: white;
-    border: 4px solid #FF9F55;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border: 4px solid;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
