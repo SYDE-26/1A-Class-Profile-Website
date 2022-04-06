@@ -1,0 +1,74 @@
+.classPic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 934px;
+    margin-top: 1.7em;
+}
+
+.heading {
+    color: #fff;
+    margin-top: 1.65em;
+}
+
+.descriptions{
+    display: flex;
+    width: 50%;
+    max-width: 934px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    max-width: 440px;
+}
+
+.textBox {
+    width: 100%;
+    max-width: 440px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 1em;
+}
+
+.two {
+    margin-left: 3em;
+}
+
+.credit {
+    margin-top: 3.55em;
+}
+
+.creditHeader{
+    color: white;
+    display: block;
+    width: 50%;
+    max-width: 934px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.creditHeader {
+    margin-bottom: 1.1em;
+}
+
+.data, .design, .software {
+    display: block;
+    margin-left: 25%;
+    margin-block: 0;
+}
+
+.team {
+    margin-block: 0;
+    display: inline;
+}
+
+.avatars {
+    display: inline;
+    margin-left: 30px;
+}
