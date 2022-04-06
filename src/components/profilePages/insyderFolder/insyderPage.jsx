@@ -8,6 +8,9 @@ import '../../headings/headings.scss';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Box from '@mui/material/Box';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
 
 // function srcset(image: string, size: number, rows = 1, cols = 1) {
 //     return {
@@ -17,28 +20,92 @@ import Box from '@mui/material/Box';
 //       }&fit=crop&auto=format&dpr=2 2x`,
 //     };
 //   }
+
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      mobile: 0,
+      bigMobile: 350,
+      tablet: 650,
+      desktop: 900
+    }
+  }
+});
   
+// let width = screen.width;
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowDimensions;
+}
 
 function Insyderpage() {
+
+  // const width = window.innerWidth;
+  // const cols = 0;
+  // if (width > 600){
+  //   cols = 3;
+  // }
+  // else {
+  //   cols = 1;
+  // }
+
+  // const { height, width } = useWindowDimensions();
+  // const col = 0;
+  
+
     return (
         <div>
             {/* <h1>Test</h1> */}
             <ProfileTitle title = "Insyder Page"/>
             {/* <Footer /> */}
-            <Box sx={{ width: 900, height: 5000, overflowY: 'scroll' }} className = "box">
-      <ImageList variant="masonry" cols={3} gap={8}>
+            <div className = "insyder">
+            <Box sx={{ 
+              // display: "grid",
+              // gridTemplateColumns: {
+              //   mobile: "repeat(1, 1fr)",
+              //   bigMobile: "repeat(2, 1fr)",
+              //   tablet: "repeat(3, 1fr)",
+              //   desktop: "repeat(4, 1fr)"
+              // },
+              width: 850, 
+              height: 5000, 
+              overflowY: 'scroll' }} className = "box">
+      <ImageList variant="masonry" cols={ 3} gap={8} className = "image-list">
         {itemData.map((item) => (
-          <ImageListItem key={item.img}>
+          <ImageListItem key={item.img} className = "image-list-item">
             <img
               src={`${item.img}?w=248&fit=crop&auto=format`}
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt=''
               loading="lazy"
             />
+            <a style = {{display: 'none'}}>{item.title}</a>
           </ImageListItem>
         ))}
       </ImageList>
     </Box>
+    </div>
         </div>
     );
 }
@@ -115,23 +182,79 @@ const itemData = [
         title: 'Coffee table',
       },
       {
-        img: '../insyderMemes/74BA30A0-9B2A-4B75-89BF-0C9825196EAE - Shushawn Saha.jpeg',
+        img: '../insyderMemes/AFE32FDF-E064-43DC-87EC-59103C5A8B02 - Shushawn Saha.jpeg',
         title: 'Coffee table',
       },
       {
-        img: '../insyderMemes/74BA30A0-9B2A-4B75-89BF-0C9825196EAE - Shushawn Saha.jpeg',
+        img: '../insyderMemes/C0249AAA-A903-4A5B-8660-ED7DD1175E7B - Serena Li.jpeg',
         title: 'Coffee table',
       },
       {
-        img: '../insyderMemes/74BA30A0-9B2A-4B75-89BF-0C9825196EAE - Shushawn Saha.jpeg',
+        img: '../insyderMemes/C867D3A9-05A2-4EEB-9F48-4040C3014DE3 - Shushawn Saha.jpeg',
         title: 'Coffee table',
       },
       {
-        img: '../insyderMemes/74BA30A0-9B2A-4B75-89BF-0C9825196EAE - Shushawn Saha.jpeg',
+        img: '../insyderMemes/CE7559F1-FDCB-4934-BA1E-FDBD784742FC - Shushawn Saha.jpeg',
         title: 'Coffee table',
       },
       {
-        img: '../insyderMemes/74BA30A0-9B2A-4B75-89BF-0C9825196EAE - Shushawn Saha.jpeg',
+        img: '../insyderMemes/DA96C41A-12CB-4150-A806-58B3462E405A - Shushawn Saha.jpeg',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/DC6BE4A8-0878-4D5B-A0BC-6B91DBBAF57B - Shushawn Saha.jpeg',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/E748DCE8-7166-42A5-BDE1-EA8B054DAD40 - Shushawn Saha.jpeg',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/F217B6A7-D600-4C1D-999A-BAAA39CE3E15 - Shushawn Saha.jpeg',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/FB5B428B-6512-4223-A60F-87DC27BCC0F4 - Shushawn Saha.jpeg',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/IMG_2658 - Ananya Jaikumar.JPG',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/IMG_7575 - boya zhang.PNG',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/IMG_8566 - boya zhang.jpg',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/kate - Matthew Ng.jpg',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/kate banana - Matthew Ng.jpg',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/kate cake - Matthew Ng.jpg',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/physics - Hargun Sibal.jpg',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/PXL_20211102_222822982.PORTRAIT - Hargun Sibal.jpg',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/rosie red - Matthew Ng.jpg',
+        title: 'Coffee table',
+      },
+      {
+        img: '../insyderMemes/Snapchat-1537388837 - Hargun Sibal.jpg',
         title: 'Coffee table',
       },
   ];
