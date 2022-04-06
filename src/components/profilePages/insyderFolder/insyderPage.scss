@@ -1,0 +1,44 @@
+// h1{
+//     margin-left: 5%;
+// }
+:root {
+    --bg-colour: #27313B;
+    --gradient-1: linear-gradient(180deg, #FF76A5 0%, #C067E2 100%);
+    --gradient-2: linear-gradient(122.18deg, #C067E2 13.81%, #749BFF 85.95%);
+    --gradient-3: linear-gradient(230.6deg, #FF76A5 13.56%, #FE8C5A 87.82%);
+    --gradient-4: linear-gradient(242.5deg, #FE8C5A 25.46%, #F7BF00 89.55%);
+    --gradient-5: linear-gradient(116.42deg, #749BFF 22.88%, #FFCD20 91.67%);
+    --blue: #749BFF;
+    --purple: #C067E2;
+    --pink: #FF76A5;
+    --orange: #FE8C5A;
+    --yellow: #FFCE1F;
+    --main-text: #fff;
+    
+    // font-size: 18px;
+    // line-height: 22px;
+    // font-family: 'Montserrat';
+    // font-style: normal;
+    
+    // scroll-behavior: smooth;
+    // background-color: var(--bg-colour);
+}
+
+h1{
+    margin-left: 22%;
+}
+
+// body{
+//     overflow: hidden;
+//     // margin-left: 22%;
+// }
+
+.box{
+    margin-left: 22%;
+    margin-right: 22%;
+    // width: 200%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
