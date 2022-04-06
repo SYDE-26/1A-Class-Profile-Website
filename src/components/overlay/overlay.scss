@@ -19,6 +19,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .close-section {
@@ -87,7 +88,7 @@
     align-items: center;
     height: 10%;
     width: 100%;
-    margin-top: 1.5%;
+    margin-top: 0;
     margin-bottom: 0;
 }
 
@@ -96,6 +97,8 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 25%;
 }
 
 .demographics-button {
@@ -107,8 +110,7 @@
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 250%;
-        line-height: 100%;
+        font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
@@ -129,8 +131,9 @@
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 250%;
+        font-size: 1.75vmax;
         text-align: center;
+        line-height: normal;
         margin-top: 0;
         margin-bottom: auto;
     }
@@ -150,7 +153,7 @@
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 250%;
+        font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
@@ -172,7 +175,7 @@
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 250%;
+        font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
@@ -192,7 +195,7 @@
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 250%;
+        font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
@@ -254,6 +257,7 @@
         font-weight: 300;
         margin-left: 2.5%;
         margin-right: auto;
+        flex-shrink: 1;
     }
 }
 
