@@ -30,36 +30,37 @@ export default function Overlay(props) {
                 </Link>
 
                 <div className="profile-subsection">
-                    <Link to="/demographics">
-                        <button onClick={toggleOverlay} className="demographics-button">
-                            <h2 className="section-text">Demographics</h2>
-                        </button>
-                    </Link>
+                    <div className="profile-flexbox">
+                        <Link to="/demographics">
+                            <button onClick={toggleOverlay} className="demographics-button">
+                                <h2 className="section-text">Demographics</h2>
+                            </button>
+                        </Link>
 
-                    <Link to="/highschool">
-                        <button onClick={toggleOverlay} className="hs-button">
-                            <h2 className="section-text">High School</h2>
-                        </button>
-                    </Link>
+                        <Link to="/highschool">
+                            <button onClick={toggleOverlay} className="hs-button">
+                                <h2 className="section-text">High School</h2>
+                            </button>
+                        </Link>
 
-                    <Link to="/academics">
-                        <button onClick={toggleOverlay} className="academics-button">
-                            <h2 className="section-text">Academics</h2>
-                        </button>
-                    </Link>
+                        <Link to="/academics">
+                            <button onClick={toggleOverlay} className="academics-button">
+                                <h2 className="section-text">Academics</h2>
+                            </button>
+                        </Link>
 
-                    <Link to="/coop">
-                        <button onClick={toggleOverlay} className="coop-button">
-                            <h2 className="section-text">Coop</h2>
-                        </button>
-                    </Link>
+                        <Link to="/coop">
+                            <button onClick={toggleOverlay} className="coop-button">
+                                <h2 className="section-text">Coop</h2>
+                            </button>
+                        </Link>
 
-                    <Link to="/lifestyles">
-                        <button onClick={toggleOverlay} className="lifestyle-button">
-                            <h2 className="section-text">Lifestyle</h2>
-                        </button>
-                    </Link>
-
+                        <Link to="/lifestyles">
+                            <button onClick={toggleOverlay} className="lifestyle-button">
+                                <h2 className="section-text">Lifestyle</h2>
+                            </button>
+                        </Link>
+                    </div>
                 </div>
 
                 <Link to="/about">

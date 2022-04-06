@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
     z-index: 20;
 }
 
@@ -65,6 +65,7 @@
 
     .page-text {
         color: white;
+        font-size: 500%;
         font-weight: 300;
         margin-left: 2.5%;
         margin-right: auto;
@@ -77,29 +78,34 @@
 }
 
 .profile-subsection {
-    height: 10%;
-    width: 100%;
     border: none;
     display: flex;
+    flex-direction: column;
     background: none;
     align-items: center;
-    padding-top: 1%;
-    padding-left: 7.5%;
-    padding-right: 7.5%;
+    height: 10%;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 0;
+}
+
+.profile-flexbox {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 .demographics-button {
     background: none;
     border: none;
-    max-height: 75%;
-    min-width: 16%;
     margin-top: 0;
     margin-bottom: auto;
 
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 75%;
+        font-size: 250%;
         line-height: 100%;
         text-align: center;
         margin-top: 0;
@@ -115,16 +121,13 @@
 .hs-button {
     background: none;
     border: none;
-    max-height: 75%;
-    min-width: 16%;
     margin-top: 0;
     margin-bottom: auto;
 
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 75%;
-        line-height: 100%;
+        font-size: 250%;
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
@@ -139,16 +142,13 @@
 .academics-button {
     background: none;
     border: none;
-    max-height: 75%;
-    min-width: 16%;
     margin-top: 0;
     margin-bottom: auto;
 
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 75%;
-        line-height: 100%;
+        font-size: 250%;
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
@@ -162,8 +162,6 @@
 .coop-button {
     background: none;
     border: none;
-    max-height: 75%;
-    min-width: 8%;
     margin-top: 0;
     margin-bottom: auto;
     margin-left: 0;
@@ -172,8 +170,7 @@
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 75%;
-        line-height: 100%;
+        font-size: 250%;
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
@@ -187,16 +184,13 @@
 .lifestyle-button {
     background: none;
     border: none;
-    max-height: 75%;
-    min-width: 16%;
     margin-top: 0;
     margin-bottom: auto;
 
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 75%;
-        line-height: 100%;
+        font-size: 250%;
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
@@ -223,6 +217,7 @@
 
     .page-text {
         color: white;
+        font-size: 500%;
         font-weight: 300;
         margin-left: 2.5%;
         margin-right: auto;
@@ -249,6 +244,7 @@
 
     .page-text {
         color: white;
+        font-size: 500%;
         font-weight: 300;
         margin-left: 2.5%;
         margin-right: auto;
@@ -275,6 +271,7 @@
 
     .page-text {
         color: white;
+        font-size: 500%;
         font-weight: 300;
         margin-left: 2.5%;
     }
