@@ -27,3 +27,4 @@ yarn-error.log*
 /insyderMemes
 insyderMemes/
 public/insyderMemes
+/public/insyderMemes/*
