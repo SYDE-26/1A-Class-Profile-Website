@@ -30,14 +30,10 @@ function App() {
   return (
     <div>
       <Router>
-      <Navbar
-        showOverlay={showOverlay}
-        setShowOverlay={setShowOverlay}
-      />
-      <Overlay
-        showOverlay={showOverlay}
-        setShowOverlay={setShowOverlay}
-      />
+        <Navbar
+          showOverlay={showOverlay}
+          setShowOverlay={setShowOverlay}
+        />
         <Routes>
           <Route path="/" element={<Navigation />} />
           <Route path="/coop" element={<Coop />} />
@@ -49,11 +45,15 @@ function App() {
           <Route path="/photoGallery" element={<PhotoPage />} />
           <Route path="/insyderPage" element={<InsyderPage />} />
         </Routes>
+        <Overlay
+          showOverlay={showOverlay}
+          setShowOverlay={setShowOverlay}
+        />
       </Router>
     </div>
   );
 }
- 
+
 /*
 function App() {
   return (
@@ -68,5 +68,5 @@ function App() {
   );
 }
 */
- 
+
 export default App;
