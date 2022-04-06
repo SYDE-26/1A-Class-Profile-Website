@@ -6,11 +6,12 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: #27313B;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
+    backdrop-filter: blur(8px);
 }
 
 .overlay-content {
