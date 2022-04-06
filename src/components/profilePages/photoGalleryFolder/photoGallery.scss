@@ -10,7 +10,45 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
+.headingRight {
+    color: #FFFFFF;
+    margin-top: 1.65em;
+    margin-right: 20em;
+    position: absolute;
+    left: 120%;
+    top: 15%;
+}
+
+.headingLeft {
+    color: #FFFFFF;
+    margin-top: 1.65em;
+    margin-right: 20em;
+    position: absolute;
+    right: 40%;
+    top: 15%;
+}
+
+.buttons {
+    right: 14%;
+    position: absolute;
+    top: 15%;
+    display: flex;
+    gap: 13px;
+}
+
+.textButton {
+    font-family: 'Montserrat';
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    color: #a5a5a5;
+    font-size: 2.1vh;
+    cursor: pointer;
+}
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
@@ -48,8 +86,8 @@
     width: 25px;
     height: 25px;
     right: -17px;
-    background: radial-gradient(80.69% 208.78% at 108.28% 112.58%, #EABFFF 0%, rgb(113, 127, 253) 100%),
-    radial-gradient(80.38% 222.5% at -13.75% -12.36%, #5d88f5 0%, rgb(255, 255, 255) 100%);
+    background: radial-gradient(80.69% 208.78% at 108.28% 112.58%, #EABFFF 0%, rgb(77, 109, 156) 100%),
+    radial-gradient(80.38% 222.5% at -13.75% -12.36%, #5c82e4 0%, rgb(230, 207, 207) 100%);
     border: 4px solid #749BFF;
     top: 150px;
     border-radius: 50%;
@@ -70,16 +108,6 @@
 .right::after {
     left: -16px;
 }
-
-/* The actual content */
-// .content {
-//     padding: 30px 30px;
-//     background-color: rgba(148,187,233,1);
-//     background-image: radial-gradient(80.69% 208.78% at 108.28% 112.58%, #EABFFF 0%, rgba(135, 38, 183, 0) 100%),
-//     radial-gradient(80.38% 222.5% at -13.75% -12.36%, #749BFF 0%, rgba(255, 255, 255, 0) 100%);
-//     position: relative;
-//     border-radius: 10px;
-// }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
@@ -113,5 +141,21 @@
     /* Make all right containers behave like the left ones */
     .right {
         left: 0%;
+    }
+
+    .headingRight {
+        margin-top: 1.65em;
+        margin-right: 1em;
+        position: absolute;
+        left: 15%;
+        top: 15%;
+    }
+    
+    .headingLeft {
+        margin-top: 1.65em;
+        margin-right: 20em;
+        position:absolute;
+        right: -25%;
+        top: 15%;
     }
 }
