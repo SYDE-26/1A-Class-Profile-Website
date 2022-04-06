@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(8px);
+    z-index: 20;
 }
 
 .overlay-content {
