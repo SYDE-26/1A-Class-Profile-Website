@@ -19,6 +19,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .close-section {
@@ -61,13 +62,15 @@
         color: white;
         font-weight: 300;
         margin-left: 5%;
+        margin-top: 0;
+        margin-bottom: min(60px,8%);
     }
 
     .page-text {
         color: white;
-        font-size: 500%;
+        font-size: 3.5vmax;
         font-weight: 300;
-        margin-left: 2.5%;
+        margin-left: max(40px,2.5%);
         margin-right: auto;
         line-height: 0;
     }
@@ -85,8 +88,8 @@
     align-items: center;
     height: 10%;
     width: 100%;
-    margin-top: 1%;
-    margin-bottom: 0;
+    margin-top: 0.5%;
+    margin-bottom: 1.5%;
 }
 
 .profile-flexbox {
@@ -94,6 +97,7 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .demographics-button {
@@ -105,8 +109,7 @@
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 250%;
-        line-height: 100%;
+        font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
@@ -127,8 +130,9 @@
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 250%;
+        font-size: 1.75vmax;
         text-align: center;
+        line-height: normal;
         margin-top: 0;
         margin-bottom: auto;
     }
@@ -148,7 +152,7 @@
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 250%;
+        font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
@@ -170,7 +174,7 @@
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 250%;
+        font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
@@ -190,7 +194,7 @@
     .section-text {
         color: white;
         font-weight: 100;
-        font-size: 250%;
+        font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
@@ -213,13 +217,15 @@
         color: white;
         font-weight: 300;
         margin-left: 5%;
+        margin-top: 1%;
+        margin-bottom: auto;
     }
 
     .page-text {
         color: white;
-        font-size: 500%;
+        font-size: 3.5vmax;
         font-weight: 300;
-        margin-left: 2.5%;
+        margin-left: max(40px,2.5%);
         margin-right: auto;
     }
 }
@@ -240,14 +246,17 @@
         color: white;
         font-weight: 300;
         margin-left: 5%;
+        margin-top: 1%;
+        margin-bottom: auto;
     }
 
     .page-text {
         color: white;
-        font-size: 500%;
+        font-size: 3.5vmax;
         font-weight: 300;
-        margin-left: 2.5%;
+        margin-left: max(40px,2.5%);
         margin-right: auto;
+        flex-shrink: 1;
     }
 }
 
@@ -267,18 +276,23 @@
         color: white;
         font-weight: 300;
         margin-left: 5%;
+        margin-top: 1%;
+        margin-bottom: auto;
     }
 
     .page-text {
         color: white;
-        font-size: 500%;
+        font-size: 3.5vmax;
         font-weight: 300;
-        margin-left: 2.5%;
+        margin-left: max(40px,2.5%);
     }
 
     .lock-icon {
-        margin-left: 1%;
+        margin-left: min(25px,5%);
         margin-right: auto;
+        margin-bottom: 10px;
+        max-width: 10vw;
+        max-height: 10vh;
     }
 }
 

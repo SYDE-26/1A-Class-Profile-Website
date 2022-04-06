@@ -30,6 +30,10 @@ function App() {
   return (
     <div>
       <Router>
+        <Overlay
+          showOverlay={showOverlay}
+          setShowOverlay={setShowOverlay}
+        />
         <Navbar
           showOverlay={showOverlay}
           setShowOverlay={setShowOverlay}
@@ -45,10 +49,6 @@ function App() {
           <Route path="/photoGallery" element={<PhotoPage />} />
           <Route path="/insyderPage" element={<InsyderPage />} />
         </Routes>
-        <Overlay
-          showOverlay={showOverlay}
-          setShowOverlay={setShowOverlay}
-        />
       </Router>
     </div>
   );
