@@ -1,7 +1,7 @@
 @import 'styles/globals.scss';
 
 .overlay {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     right: 0;
@@ -285,10 +285,10 @@
         font-size: 3.5vmax;
         font-weight: 300;
         margin-left: max(40px,2.5%);
+        margin-right: min(25px, 5%);
     }
 
     .lock-icon {
-        margin-left: min(25px,5%);
         margin-right: auto;
         margin-bottom: 10px;
         max-width: 10vw;
