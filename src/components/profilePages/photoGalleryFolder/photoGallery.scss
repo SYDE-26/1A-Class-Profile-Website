@@ -13,6 +13,13 @@
 html {
     scroll-behavior: smooth;
 }
+.circle {
+    position: absolute;
+    background-size: cover;
+    margin-top: 0vh;
+    filter: blur(8px);
+    -webkit-filter: blur(80px);
+}
 
 .headingRight {
     color: #FFFFFF;
