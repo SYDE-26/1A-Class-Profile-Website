@@ -1,9 +1,9 @@
 :root {
     --bg-colour: #27313B;
-    --main-gradient: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    --main-gradient: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     --gradient-1: linear-gradient(180deg, #FF76A5 0%, #C067E2 100%);
     --gradient-2: radial-gradient(80.69% 208.78% at 108.28% 112.58%, #EABFFF 0%, rgba(135, 38, 183, 0) 100%),
-    radial-gradient(80.38% 222.5% at -13.75% -12.36%, #749BFF 0%, rgba(255, 255, 255, 0) 100%);
+        radial-gradient(80.38% 222.5% at -13.75% -12.36%, #749BFF 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 * {
@@ -32,6 +32,15 @@ html {
     top: 15%;
 }
 
+.headingLeftDec {
+    color: #FFFFFF;
+    margin-top: 1.65em;
+    margin-right: 20em;
+    position: absolute;
+    right: 40%;
+    top: 15%;
+}
+
 .buttons {
     right: 14%;
     position: absolute;
@@ -43,7 +52,7 @@ html {
 .textButton {
     font-family: 'Montserrat';
     background-color: Transparent;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     border: none;
     color: #a5a5a5;
     font-size: 2.1vh;
@@ -63,7 +72,7 @@ html {
     position: absolute;
     width: 1rem;
     background-image: radial-gradient(80.69% 208.78% at 108.28% 112.58%, #EABFFF 0%, rgba(135, 38, 183, 0) 100%),
-    radial-gradient(80.38% 222.5% at -13.75% -12.36%, #749BFF 0%, rgba(255, 255, 255, 0) 100%);
+        radial-gradient(80.38% 222.5% at -13.75% -12.36%, #749BFF 0%, rgba(255, 255, 255, 0) 100%);
     top: 0;
     bottom: 0;
     left: 49.6%;
@@ -87,7 +96,7 @@ html {
     height: 25px;
     right: -17px;
     background: radial-gradient(80.69% 208.78% at 108.28% 112.58%, #EABFFF 0%, rgb(77, 109, 156) 100%),
-    radial-gradient(80.38% 222.5% at -13.75% -12.36%, #5c82e4 0%, rgb(230, 207, 207) 100%);
+        radial-gradient(80.38% 222.5% at -13.75% -12.36%, #5c82e4 0%, rgb(230, 207, 207) 100%);
     border: 4px solid #749BFF;
     top: 150px;
     border-radius: 50%;
@@ -124,18 +133,18 @@ html {
         padding-right: 25px;
     }
 
-    /* Make sure that all arrows are pointing leftwards */
-    .container::before {
-        left: 60px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
+    .buttons {
+        right: 47%;
+        position: absolute;
+        top: 28%;
+        display: flex;
+        gap: 13px;
     }
 
     /* Make sure all circles are at the same spot */
     .left::after,
     .right::after {
-        left: 15px;
+        left: 18px;
     }
 
     /* Make all right containers behave like the left ones */
@@ -147,15 +156,23 @@ html {
         margin-top: 1.65em;
         margin-right: 1em;
         position: absolute;
-        left: 15%;
+        left: 17%;
         top: 15%;
     }
-    
+
     .headingLeft {
         margin-top: 1.65em;
-        margin-right: 20em;
-        position:absolute;
-        right: -25%;
+        margin-right: 116%;
+        position: absolute;
+        right: -71%;
+        top: 15%;
+    }
+
+    .headingLeftDec {
+        margin-top: 1.65em;
+        margin-right: 109%;
+        position: absolute;
+        right: -71%;
         top: 15%;
     }
 }

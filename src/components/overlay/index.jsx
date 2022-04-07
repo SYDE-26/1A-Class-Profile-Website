@@ -80,7 +80,7 @@ export default function Overlay(props) {
                 <Link to="/insyderPage">
                     <button onClick={toggleOverlay} className="meme-page-button">
                         <h3 className="number-text">04</h3>
-                        <h1 className="page-text">Meme Page</h1>
+                        <h1 className="page-text">Insyder Page</h1>
                         <img
                             src={lockIcon}
                             alt="Lock Icon"

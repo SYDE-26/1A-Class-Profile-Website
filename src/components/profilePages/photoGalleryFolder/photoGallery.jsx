@@ -13,6 +13,10 @@ function PhotoGallery() {
     return (
         <div>
             <ProfileTitle title="1A Photo Gallery" />
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <div className="buttons">
                 <Link activeClass="active" to="1" spy={true} smooth={true} className="textButton">Sept</Link>
                 <Link to="2" spy={true} smooth={true} className="textButton">Oct</Link>
@@ -39,7 +43,7 @@ function PhotoGallery() {
                     </div>
                 </div>
                 <div className="container right" id="4">
-                    <h3 className="headingLeft">December 2021</h3>
+                    <h3 className="headingLeftDec">December 2021</h3>
                     <div className="content">
                         <SliderDec/>
                     </div>
