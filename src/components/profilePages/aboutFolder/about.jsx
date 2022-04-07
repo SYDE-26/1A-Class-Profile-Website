@@ -2,8 +2,23 @@ import React from 'react';
 import CircleImage from '../../circleImage'
 import ClassPic from './classPic.png'
 import './about.scss'
+// import {designTeam} from './avatarInfo.js'
+// import {dataTeam} from './avatarInfo.js'
+// import {softwareTeam} from './avatarInfo.js'
 
 function About() {
+    // const designAvatars = designTeam.map(item => {
+    //     return <CircleImage name={item.name} linkedin={item.linkedin} imagePath={`./credit/design/img${item.id}.jpeg`}/>
+    // })
+
+    // const dataAvatars = dataTeam.map(item => {
+    //     return <CircleImage name={item.name} linkedin={item.linkedin} imagePath={`./credit/data/img${item.id}.jpeg`}/>
+    // })
+
+    // const softwareAvatars = softwareTeam.map(item => {
+    //     return <CircleImage name={item.name} linkedin={item.linkedin} imagePath={`./credit/software/img${item.id}.jpeg`}/>
+    // })
+    
     const designAvatars = []
     const dataAvatars = []
     const softwareAvatars = []
