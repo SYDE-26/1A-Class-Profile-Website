@@ -13,14 +13,17 @@ body {
   font-style: normal;
 }
 
+.heart {
+  height: 18px;
+}
+
 .Footer {
-  margin-top: 1rem;
-  padding: 1rem;
-  width: 100%;
-  margin: 0;
-  padding: 0;
   border: none;
-  color: #fff
+  color: #fff;
+  margin: 0px auto 0px auto;
+  width: 50%;
+  padding: 0px 0px 40px 0px;
+  text-align: center;
 }
 
 .NavigationalButtons {
@@ -31,35 +34,43 @@ body {
   padding: 64px 243px 100px 243px
 }
 
-.CreatedBy {
-  margin: 0px auto 0px auto;
-  width: 50%;
-  padding: 0px 0px 40px 0px;
-  text-align: center;
-}
-
 .CreatedBy p {
   margin: 0px;
   padding: 0px;
 }
 
-.Wrapper {
-  border: 0px hidden transparent;
-  border-radius: 20px;
-  padding: 2px;
-  margin: 0px
+@media screen and (max-width: 1600px) {
+  :root {
+    font-size: 18px;
+  }
 }
 
-#one {
-  background-image: linear-gradient(122.18deg, #C067E2 13.81%, #749BFF 85.95%);
-  background-color: #C067E2;
+@media screen and (max-width: 1400px) {
+  :root {
+    font-size: 15px;
+  }
 }
 
-#two {
-  background-image: linear-gradient(230.6deg, #FF76A5 13.56%, #FE8C5A 87.82%)
+@media screen and (max-width: 1200px) {
+  :root {
+    font-size: 12px;
+  }
 }
 
-#ScrollToTop {
-  background-image: linear-gradient(116.42deg, #749BFF 22.88%, #FFCD20 91.67%);
-  display: inline-block;
+@media screen and (max-width: 960px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  :root {
+    font-size: 3px;
+  }
 }
