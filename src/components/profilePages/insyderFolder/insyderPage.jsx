@@ -21,43 +21,43 @@ import ReactDOM from "react-dom";
 //     };
 //   }
 
-const theme = createTheme({
-  breakpoints: {
-    values: {
-      mobile: 0,
-      bigMobile: 350,
-      tablet: 650,
-      desktop: 900
-    }
-  }
-});
+// const theme = createTheme({
+//   breakpoints: {
+//     values: {
+//       mobile: 0,
+//       bigMobile: 350,
+//       tablet: 650,
+//       desktop: 900
+//     }
+//   }
+// });
   
-// let width = screen.width;
+// // let width = screen.width;
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };
-}
+// function getWindowDimensions() {
+//   const { innerWidth: width, innerHeight: height } = window;
+//   return {
+//     width,
+//     height
+//   };
+// }
 
-function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
+// function useWindowDimensions() {
+//   const [windowDimensions, setWindowDimensions] = useState(
+//     getWindowDimensions()
+//   );
 
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
+//   useEffect(() => {
+//     function handleResize() {
+//       setWindowDimensions(getWindowDimensions());
+//     }
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+//     window.addEventListener("resize", handleResize);
+//     return () => window.removeEventListener("resize", handleResize);
+//   }, []);
 
-  return windowDimensions;
-}
+//   return windowDimensions;
+// }
 
 function Insyderpage() {
 
@@ -89,7 +89,7 @@ function Insyderpage() {
               //   desktop: "repeat(4, 1fr)"
               // },
               width: 850, 
-              height: 5000, 
+              height: 4000, 
               overflowY: 'scroll' }} className = "box">
       <ImageList variant="masonry" cols={ 3} gap={8} className = "image-list">
         {itemData.map((item) => (
@@ -106,6 +106,10 @@ function Insyderpage() {
       </ImageList>
     </Box>
     </div>
+    <div>
+            {/* <NavArrows navBack="highschool" navForward="coop" /> */}
+            <Footer />
+        </div>
         </div>
     );
 }
