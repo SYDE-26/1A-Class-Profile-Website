@@ -45,6 +45,7 @@ function PhotoGallery() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }
