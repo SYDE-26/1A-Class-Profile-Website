@@ -7,12 +7,16 @@ import SliderNov from '../../carousel/carouselSlideNov';
 import SliderDec from '../../carousel/carouselSlideDec';
 import Footer from '../../footer/footer.jsx';
 import { Link } from 'react-scroll';
-
+import circle1 from '../../../images/circle1.svg';
+import circle2 from '../../../images/circle2.svg';
+import circle3 from '../../../images/circle3.svg';
+import circle4 from '../../../images/circle4.svg';
 
 function PhotoGallery() {
     return (
         <div>
             <ProfileTitle title="1A Photo Gallery" />
+            <img src={circle1} className="circle" />
             <br></br>
             <br></br>
             <br></br>
@@ -31,25 +35,28 @@ function PhotoGallery() {
                     </div>
                 </div>
                 <div className="container right" id="2">
+                    <img src={circle4} className="circle" />
                     <h3 className="headingLeft">October 2021</h3>
                     <div className="content">
-                        <SliderOct/>
+                        <SliderOct />
                     </div>
                 </div>
                 <div className="container left" id="3">
+                    <img src={circle3} className="circle" />
                     <h3 className="headingRight">November 2021</h3>
                     <div className="content">
-                        <SliderNov/>
+                        <SliderNov />
                     </div>
                 </div>
                 <div className="container right" id="4">
+                    <img src={circle2} className="circle" />
                     <h3 className="headingLeftDec">December 2021</h3>
                     <div className="content">
-                        <SliderDec/>
+                        <SliderDec />
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }
