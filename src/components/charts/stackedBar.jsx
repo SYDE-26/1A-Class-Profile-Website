@@ -122,50 +122,50 @@ export default function StackedBar(props) {
                         usePointStyle: true,
                         boxWidth: 8,
                         padding: 8,
-                        fontSize: 12,
-                        fontColor: '#a0a0a0',
+                        size: 12,
+                        color: '#a0a0a0',
                     },
                 },
                 title: {
                     display: true,
                     text: data.title,
-                    fontColor: '#ffffff',
-                    fontSize: 15,
+                    color: '#ffffff',
+                    size: 15,
                     padding: 14,
                 },
                 subtitle: {
                     display: true, 
-                    fontSize: 13,
+                    size: 13,
                     text: 'number of respondents:' + data.n, 
                 },
-                scales: {
-                    xAxis: {
-                        stacked: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: data.xAxes,
-                            fontColor: '#ffffff',
-                            fontSize: 15,
-                        },
-                        ticks: {
-                            fontColor: '#ffffff',
-                        },
-                    },
-                    yAxis: {
-                        stacked: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: data.yAxes,
-                            fontColor: '#ffffff',
-                            fontSize: 15,
-                        },
-                        ticks: {
-                            beginAtZero: true,
-                            fontColor: '#ffffff',
-                        },
-                    },
-                }
             },
+            scales: {
+              x: {
+                  stacked: true,
+                  title: {
+                      display: true,
+                      text: data.xAxes,
+                      color: '#ffffff',
+                      size: 15,
+                  },
+                  ticks: {
+                      color: '#ffffff',
+                  },
+              },
+              y: {
+                  stacked: true,
+                  title: {
+                      display: true,
+                      text: data.yAxes,
+                      color: '#ffffff',
+                      size: 15,
+                  },
+                  ticks: {
+                      beginAtZero: true,
+                      color: '#ffffff',
+                  },
+              },
+          }
           }}
 
         //   options={{

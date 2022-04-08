@@ -2,9 +2,27 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { db } from '../../firebase-config.js';
 import { doc, getDoc } from 'firebase/firestore';
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+} from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import Chart from 'chart.js/auto';
 import 'chartjs-subtitle';
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+);
 
 export default function BarGraph(props) {
     const [data, setData] = useState({
@@ -83,62 +101,58 @@ export default function BarGraph(props) {
                             title: {
                                 display: true,
                                 text: data.title,
-                                fontColor: '#ffffff',
-                                fontSize: 15,
+                                color: '#ffffff',
+                                size: 15,
                                 padding: 14,
                             },
                             subtitle: {
                                 display: true,
-                                fontSize: 13,
+                                size: 13,
                                 text: 'number of respondents:' + data.n,
-                            },
-                            scales: {
-                                xAxes: [
-                                    {
-                                        gridLines: {
-                                            zeroLineColor: '#fff',
-                                            color: 'rgba(255, 255, 255, 0.05)',
-                                            lineWidth: 1,
-                                        },
-                                        scaleLabel: {
-                                            display: true,
-                                            labelString: data.xAxis,
-                                            fontColor: '#ffffff',
-                                            fontSize: 15,
-                                        },
-                                        ticks: {
-                                            fontColor: '#ffffff',
-                                            userCallback: function (tick, index, values) {
-                                                if (tick.length > 9 && values.length >= 4) {
-                                                    return tick.split(" ");
-                                                } else {
-                                                    return tick
-                                                }
-                                            },
-                                        },
-                                    }
-                                ],
-                                yAxes: [
-                                    {
-                                        gridLines: {
-                                            zeroLineColor: '#fff',
-                                            color: 'rgba(255, 255, 255, 0.05)',
-                                            lineWidth: 1,
-                                        },
-                                        scaleLabel: {
-                                            display: true,
-                                            labelString: data.yAxis,
-                                            fontColor: '#ffffff',
-                                            fontSize: 15,
-                                        },
-                                        ticks: {
-                                            beginAtZero: true,
-                                            fontColor: '#ffffff',
-                                        },
+                            }
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: data.xAxis,
+                                    color: '#ffffff',
+                                    size: 15
+                                },
+                                grid: {
+                                    borderColor: '#fff',
+                                    color: 'rgba(255, 255, 255, 0.05)',
+                                    lineWidth: 1 // Don't add a comma on this line lol, it breaks the graphs ¯\_(ツ)_/¯
+                                },
+                                ticks: {
+                                    color: '#ffffff',
+                                    userCallback: function (tick, index, values) {
+                                        if (tick.length > 9 && values.length >= 4) {
+                                            return tick.split(" ");
+                                        } else {
+                                            return tick
+                                        }
                                     },
-                                ],
+                                },
                             },
-                        }
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: data.xAxis,
+                                    color: '#ffffff',
+                                    size: 15
+                                },
+                                grid: {
+                                    borderColor: '#fff',
+                                    color: 'rgba(255, 255, 255, 0.05)',
+                                    lineWidth: 1,
+                                },
+                                ticks: {
+                                    beginAtZero: true,
+                                    color: '#ffffff',
+                                },
+                            }
+                          }
                     }}
                     height={props.height ? props.height : '100%'}
                     width={props.width ? props.width : '100%'}
