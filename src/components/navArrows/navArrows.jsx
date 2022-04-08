@@ -44,7 +44,6 @@ const NavArrows = ({ navBack, navForward }) => {
       navForwardID = navForward
   }
   return (
-    <div className="Footer">
       <div className="NavigationalButtons">
         <div className="Wrapper" id={navBack}>
           <Link to={`/${navBack}`}>
@@ -69,7 +68,6 @@ const NavArrows = ({ navBack, navForward }) => {
           </Link>
         </div>
       </div>
-    </div>
   );
 }
 

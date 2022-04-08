@@ -20,18 +20,10 @@ body {
 .Footer {
   border: none;
   color: #fff;
-  margin: 60px auto 20px auto;
+  margin: 0px auto 0px auto;
   width: 50%;
   padding: 0px 0px 40px 0px;
   text-align: center;
-}
-
-.NavigationalButtons {
-  /*FlexBox*/
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  padding: 64px 243px 100px 243px
 }
 
 .CreatedBy p {
