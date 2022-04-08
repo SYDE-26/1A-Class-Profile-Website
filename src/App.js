@@ -22,7 +22,7 @@ import InsyderPage from './components/profilePages/insyderFolder/insyderPage';
 //     (mod) => mod.HistogramCount
 //   )
 // );
-const PieChart = dynamic(() => import('./components/charts/pieGraph.jsx'));
+// const PieChart = dynamic(() => import('./components/charts/pieGraph.jsx'));
 // const BoxPlot = dynamic(() => import('./components/charts/boxPlotChart.jsx'));
 
 function App() {
@@ -50,8 +50,6 @@ function App() {
           <Route path="/insyderPage" element={<InsyderPage />} />
         </Routes>
       </Router>
-
-      <PieChart datatype="Parents Born" height="450" width="450" />
     </div>
     
   );
