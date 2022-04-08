@@ -26,6 +26,7 @@ export default function PieChart(props) {
                     label: [],
                     color: [],
                     title: '',
+                    n: ''
                 };
 
                 docSnap.data().x.forEach((element) => {
@@ -34,6 +35,7 @@ export default function PieChart(props) {
                     data.color.push(element.color);
                 });
                 data.title = docSnap.data().title;
+                data.n = docSnap.data().n;
                 setId(id + 1);
                 setData(data);
 
@@ -43,19 +45,41 @@ export default function PieChart(props) {
         })
     }, []);
 
+    var arrayData = data.label.map(function (d, i) {
+        return {
+            label: d,
+            data: data.val[i],
+            color: data.color[i],
+        };
+    });
+
+    var sortedArrayData = arrayData.sort(function (a, b) {
+        return b.data - a.data;
+    });
+
+    var newArrayLabel = [];
+    var newArrayData = [];
+    var newArrayColor = [];
+    sortedArrayData.forEach(function (d) {
+        newArrayLabel.push(d.label);
+        newArrayData.push(d.data);
+        newArrayColor.push(d.color);
+    });
+
     return (
         <div>
             <div className="chart">
                 <Pie
                     data={{
-                        labels: data.label,
+                        labels: newArrayLabel,
                         datasets: [
                             {
                                 label: '# of Students',
-                                data: data.val,
-                                backgroundColor: data.color,
-                                borderColor: data.color,
-                                borderWidth: 1,
+                                data: newArrayData,
+                                backgroundColor: newArrayColor,
+                                borderColor: newArrayColor,
+                                hoverBorderColor: '#ffffff',
+                                hoverBorderWidth: 2,
                             },
                         ],
                     }}
@@ -63,15 +87,34 @@ export default function PieChart(props) {
                         responsive: true,
                         maintainAspectRatio: false,
                         plugins: {
-                            legend: { display: true },
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                  usePointStyle: true,
+                                  boxWidth: 8,
+                                  padding: 8,
+                                  size: 12,
+                                  color: '#a0a0a0',
+                                },
+                                display: true,
+                              },
                             title: {
                                 display: true,
                                 text: data.title,
+                                size: 15,
+                                color: '#ffffff',
+                                size: '14',
+                                padding: 14,
                             },
+                            subtitle: {
+                                display: true, 
+                                size: 13,
+                                text: 'number of respondents:' + data.n, 
+                            }
                         }
                     }}
-                    height="450px"
-                    width="450px"
+                    height={props.height ? props.height : '100%'}
+                    width={props.width ? props.width : '100%'}
                 />
             </div>
         </div>
