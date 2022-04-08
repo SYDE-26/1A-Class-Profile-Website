@@ -13,6 +13,33 @@
 html {
     scroll-behavior: smooth;
 }
+.circle1 {
+    position: absolute;
+    background-size: cover;
+    max-width: 60%;
+    margin-top: 0vh;
+    filter: blur(8px);
+    -webkit-filter: blur(80px);
+}
+
+.circle2 {
+    position: absolute;
+    background-size: cover;
+    margin-top: -30vh;
+    filter: blur(8px);
+    -webkit-filter: blur(80px);
+}
+
+.circle3 {
+    position: absolute;
+    background-size: cover;
+    max-width: 110%;
+    margin-top: -20vh;
+    left: -40%;
+    filter: blur(8px);
+    -webkit-filter: blur(80px);
+}
+
 
 .headingRight {
     color: #FFFFFF;
