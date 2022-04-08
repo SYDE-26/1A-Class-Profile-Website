@@ -22,7 +22,7 @@ import InsyderPage from './components/profilePages/insyderFolder/insyderPage';
 //     (mod) => mod.HistogramCount
 //   )
 // );
-// const PieChart = dynamic(() => import('./components/charts/pieGraph.jsx'));
+//const PieChart = dynamic(() => import('./components/charts/pieGraph.jsx'));
 // const BoxPlot = dynamic(() => import('./components/charts/boxPlotChart.jsx'));
 
 function App() {
@@ -51,6 +51,7 @@ function App() {
         </Routes>
       </Router>
     </div>
+    
   );
 }
  

@@ -89,6 +89,7 @@ export default function Scatterplot(props) {
                 data.n = docSnap.data().n;
                 setId(id + 1);
                 setData(data);
+                console.log("Issa Data: ", data);
 
             } else {
                 console.log("No such document!");
@@ -134,32 +135,6 @@ export default function Scatterplot(props) {
                     options={{
                         responsive: true,
                         maintainAspectRatio: true,
-                        tooltips: {
-                            enabled: true,
-                            callbacks: {
-                                label: function (tooltipItem) {
-                                    var label = data.label[tooltipItem.datasetIndex];
-                                    if (label !== null) {
-                                        return (
-                                            label +
-                                            ": (" +
-                                            tooltipItem.xLabel +
-                                            ", " +
-                                            tooltipItem.yLabel +
-                                            ")"
-                                        );
-                                    } else {
-                                        return (
-                                            ": (" +
-                                            tooltipItem.xLabel +
-                                            ", " +
-                                            tooltipItem.yLabel +
-                                            ")"
-                                        );
-                                    }
-                                },
-                            },
-                        },
                         plugins: {
                             legend: {
                                 display: true,
@@ -168,101 +143,93 @@ export default function Scatterplot(props) {
                                     usePointStyle: true,
                                     boxWidth: 8,
                                     padding: 8,
-                                    fontSize: 12,
-                                    fontColor: "#a0a0a0",
+                                    size: 12,
+                                    color: "#a0a0a0",
                                 },
                             },
                             title: {
                                 display: true,
                                 text: data.title,
-                                fontSize: 15,
-                                fontColor: "#ffffff",
+                                size: 15,
+                                color: "#ffffff",
                                 padding: 14,
                             },
                             subtitle: {
                                 display: true,
-                                fontSize: 13,
+                                size: 13,
                                 text: 'number of respondents:' + data.n,
                             },
-                            scales: {
-                                xAxes: [
-                                    {
-                                        gridLines: {
-                                            zeroLineColor: "#fff",
-                                            color: "rgba(255, 255, 255, 0.1)",
-                                            lineWidth: 1.5,
-                                        },
-                                        scaleLabel: {
-                                            display: true,
-                                            labelString: data.xAxis,
-                                            fontSize: 15,
-                                            fontColor: "#ffffff",
-                                        },
-                                        afterTickToLabelConversion: function (q) {
-                                            if (data.allow) {
-                                                for (var tick in q.ticks) {
-                                                    if (q.ticks.length === 9) {
-                                                        if (data.x_enums[tick] !== "") {
-                                                            q.ticks[tick] = data.x_enums[tick];
-                                                            q.ticks[tick] = q.ticks[tick].split(" ");
-                                                        }
-                                                    } else {
-                                                        if (tick % 2 === 0) {
-                                                            q.ticks[tick] = data.x_enums1[tick];
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        ticks: {
-                                            fontColor: "#ffffff",
-                                            maxTicksLimit: 9,
-                                            maxRotation: 0,
-                                            minRotation: 0,
-                                            min: parseInt(data.xmin),
-                                            max: parseInt(data.xmax),
-                                        },
+                            tooltip: {
+                                enabled: true,
+                                callbacks: {
+                                    label: function (tooltipItem) {
+                                        console.log("data label:", tooltipItem)
+                                        var label = data.label[tooltipItem.datasetIndex];
+                                        if (label !== null) {
+                                            return (
+                                                label +
+                                                ": (" +
+                                                tooltipItem.label +
+                                                ", " +
+                                                tooltipItem.formattedValue +
+                                                ")"
+                                            );
+                                        } else {
+                                            return (
+                                                ": (" +
+                                                tooltipItem.label +
+                                                ", " +
+                                                tooltipItem.formattedValue +
+                                                ")"
+                                            );
+                                        }
                                     },
-                                ],
-                                yAxes: [
-                                    {
-                                        gridLines: {
-                                            zeroLineColor: "#fff",
-                                            color: "rgba(255, 255, 255, 0.1)",
-                                            lineWidth: 1.5,
-                                        },
-                                        scaleLabel: {
-                                            display: true,
-                                            labelString: data.yAxis,
-                                            fontSize: 15,
-                                            fontColor: "#ffffff",
-                                        },
-                                        afterTickToLabelConversion: function (q) {
-                                            if (data.allow) {
-                                                for (var tick in q.ticks) {
-                                                    if (q.ticks.length === 9) {
-                                                        if (data.y_enums[tick] !== "") {
-                                                            q.ticks[tick] = data.y_enums[tick];
-                                                        }
-                                                    } else {
-                                                        if (tick % 2 === 0) {
-                                                            q.ticks[tick] = data.y_enums1[tick];
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        },
-    
-                                        ticks: {
-                                            fontColor: "#ffffff",
-                                            maxTicksLimit: 9,
-                                            min: parseInt(data.ymin),
-                                            max: parseInt(data.ymax),
-                                        },
-                                    },
-                                ],
+                                },
                             },
-                        }
+                        },
+                        scales: {
+                            x: {
+                                grid: {
+                                    zeroLineColor: "#fff",
+                                    color: "rgba(255, 255, 255, 0.1)",
+                                    lineWidth: 1.5,
+                                },
+                                title: {
+                                    display: true,
+                                    text: data.xAxis,
+                                    size: 15,
+                                    color: "#ffffff",
+                                },
+                                ticks: {
+                                    color: "#ffffff",
+                                    maxTicksLimit: 9,
+                                    maxRotation: 0,
+                                    minRotation: 0,
+                                    min: parseInt(data.xmin),
+                                    max: parseInt(data.xmax),
+                                },
+                            },
+                            y: {
+                                grid: {
+                                    drawOnChartArea: true,
+                                    zeroLineColor: "#fff",
+                                    color: "rgba(255, 255, 255, 0.1)",
+                                    lineWidth: 1.5,
+                                },
+                                title: {
+                                    display: true,
+                                    text: data.yAxis,
+                                    size: 15,
+                                    color: "#ffffff",
+                                },
+                                ticks: {
+                                    color: "#ffffff",
+                                    maxTicksLimit: 9,
+                                    min: parseInt(data.ymin),
+                                    max: parseInt(data.ymax),
+                                },
+                            },
+                        },
                     }}
                     height={props.height ? props.height : "100%"}
                     width={props.width ? props.width : "100%"}
