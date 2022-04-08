@@ -20,6 +20,14 @@ body {
   margin: 0px
 }
 
+.NavigationalButtons {
+  /*FlexBox*/
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 0px 243px 100px 243px
+}
+
 #coop {
   background-image: linear-gradient(242.5deg, #FE8C5A 25.46%, #F7BF00 89.55%);
   background-color: #C067E2;
