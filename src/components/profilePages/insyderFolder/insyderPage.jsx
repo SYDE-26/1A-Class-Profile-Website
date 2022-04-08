@@ -11,91 +11,43 @@ import Box from '@mui/material/Box';
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
+import {db} from "../../../firebase-config.js";
+// import { initializeApp } from "firebase/app";
+import {getStorage, ref, getDownloadUrl, getDownloadURL } from "firebase/storage";
 
-// function srcset(image: string, size: number, rows = 1, cols = 1) {
-//     return {
-//       src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-//       srcSet: `${image}?w=${size * cols}&h=${
-//         size * rows
-//       }&fit=crop&auto=format&dpr=2 2x`,
-//     };
-//   }
-
-// const theme = createTheme({
-//   breakpoints: {
-//     values: {
-//       mobile: 0,
-//       bigMobile: 350,
-//       tablet: 650,
-//       desktop: 900
-//     }
-//   }
-// });
-  
-// // let width = screen.width;
-
-// function getWindowDimensions() {
-//   const { innerWidth: width, innerHeight: height } = window;
-//   return {
-//     width,
-//     height
-//   };
-// }
-
-// function useWindowDimensions() {
-//   const [windowDimensions, setWindowDimensions] = useState(
-//     getWindowDimensions()
-//   );
-
-//   useEffect(() => {
-//     function handleResize() {
-//       setWindowDimensions(getWindowDimensions());
-//     }
-
-//     window.addEventListener("resize", handleResize);
-//     return () => window.removeEventListener("resize", handleResize);
-//   }, []);
-
-//   return windowDimensions;
-// }
 
 function Insyderpage() {
 
-  // const width = window.innerWidth;
-  // const cols = 0;
-  // if (width > 600){
-  //   cols = 3;
-  // }
-  // else {
-  //   cols = 1;
-  // }
+  const [url, setUrl] = React.useState();
 
-  // const { height, width } = useWindowDimensions();
-  // const col = 0;
-  
+  React.useEffect(() => {
+    const func = async() =>{
+      const storage = getStorage();
+      const reference = ref(storage, '/img1.jpeg');
+      await getDownloadURL(reference).then((x) => {
+        setUrl(x);
+      })
+    }
+    func();
+  }, []);
 
     return (
         <div>
-            {/* <h1>Test</h1> */}
-            <ProfileTitle title = "Insyder Page"/>
-            {/* <Footer /> */}
+            <h1 className= "insyder">Insyder Page</h1>
             <div className = "insyder">
             <Box sx={{ 
-              // display: "grid",
-              // gridTemplateColumns: {
-              //   mobile: "repeat(1, 1fr)",
-              //   bigMobile: "repeat(2, 1fr)",
-              //   tablet: "repeat(3, 1fr)",
-              //   desktop: "repeat(4, 1fr)"
-              // },
               width: 850, 
               height: 4000, 
               overflowY: 'scroll' }} className = "box">
+                <img src = {url} style = {{width: '33%'}}/>
       <ImageList variant="masonry" cols={ 3} gap={8} className = "image-list">
+        {/* <img ></img> */}
         {itemData.map((item) => (
           <ImageListItem key={item.img} className = "image-list-item">
             <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
+              src=
+              {`${item.img}?w=248&fit=crop&auto=format`}
+              // {`${url}?w=248&fit=crop&auto=format`}
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt=''
               loading="lazy"

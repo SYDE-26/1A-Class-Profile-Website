@@ -1,3 +1,7 @@
+.aboutAvatar {
+    background-color: var(--bg-colour);
+}
+
 .wrapper {
     border: 0px hidden transparent;
     border-radius: 50%;
@@ -12,9 +16,6 @@
 }
 
 .frame {
-    margin-bottom: 53px;
-    margin-top: 0;
-    margin-right: 34px;
+    margin: 0 34px 53px 0;
     display: inline-block;
-    vertical-align: middle;
 }
