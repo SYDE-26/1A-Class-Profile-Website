@@ -33,7 +33,7 @@ function Insyderpage() {
 
     return (
         <div>
-            <ProfileTitle title = "Insyder Page"/>
+            <h1 className= "insyder">Insyder Page</h1>
             <div className = "insyder">
             <Box sx={{ 
               width: 850, 

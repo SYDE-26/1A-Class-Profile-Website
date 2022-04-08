@@ -10,9 +10,10 @@ function Demographics() {
     return (
         <div>
             <ProfileTitle section="demographics" title="Demographics"/>
+            {/* <Section title="Gender and Sexuality" graph={<PieChart/>}/> */}
             <SectionHeader header="Gender and Sexuality"/>
             <GraphDescription description="dummy"/>
-            {/* <PieChart/> */}
+            <PieChart datatype="Gender and Sexuality" width="100" height="100"/>
             <NavArrows navBack="academics" navForward="highschool" />
             <Footer />
         </div >

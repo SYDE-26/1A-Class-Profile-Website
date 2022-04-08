@@ -39,7 +39,7 @@ h1 {
     font-size: 34px;
     line-height: 42px;
     letter-spacing: -0.01em;
-    margin: 0px 243px 48px 243px
+    margin: 80px 243px 48px 243px
     /*Background will depend on which section*/
 }
 
@@ -51,17 +51,6 @@ h2 {
     line-height: 38px;
     letter-spacing: -0.01em;
     color: #000000;
-}
-
-h3 {
-    font-family: 'Lexend';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing: -0.01em;
-    color: #000000;
-    margin: 0px 243px 16px 243px
 }
 
 h4 {
@@ -173,6 +162,14 @@ h1.admissions {
 }
 
 h3.sectionHeader {
-    //padding-bottom: 0.66em; This might mess with the spacing
+    //padding-bottom: 0.66em; //This might mess with the spacing
     color: #fff;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    //color: #000000;
+    margin: 0px 243px 16px 243px
 }
