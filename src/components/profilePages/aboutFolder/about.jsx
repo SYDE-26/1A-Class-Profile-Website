@@ -1,61 +1,42 @@
 import React from 'react';
 import CircleImage from '../../circleImage'
 import ClassPic from './classPic.png'
+import githubLogo from './githubLogo.png'
+import reportIcon from './reportIcon.png'
 import './about.scss'
-// import {designTeam} from './avatarInfo.js'
-// import {dataTeam} from './avatarInfo.js'
-// import {softwareTeam} from './avatarInfo.js'
+import Footer from '../../footer/footer';
+import { designTeam } from './avatarInfo.jsx'
+import { dataTeam } from './avatarInfo.jsx'
+import { softwareTeam } from './avatarInfo.jsx'
 
 function About() {
-    // const designAvatars = designTeam.map(item => {
-    //     return <CircleImage name={item.name} linkedin={item.linkedin} imagePath={`./credit/design/img${item.id}.jpeg`}/>
-    // })
+    const designAvatars = designTeam.map(item => {
+        return <CircleImage name={item.name} linkedin={item.linkedin} imagePath={`../credit/design/img${item.id}.png`} />
+    })
 
-    // const dataAvatars = dataTeam.map(item => {
-    //     return <CircleImage name={item.name} linkedin={item.linkedin} imagePath={`./credit/data/img${item.id}.jpeg`}/>
-    // })
+    const dataAvatars = dataTeam.map(item => {
+        return <CircleImage name={item.name} linkedin={item.linkedin} imagePath={`../credit/data/img${item.id}.png`} />
+    })
 
-    // const softwareAvatars = softwareTeam.map(item => {
-    //     return <CircleImage name={item.name} linkedin={item.linkedin} imagePath={`./credit/software/img${item.id}.jpeg`}/>
-    // })
-    
-    const designAvatars = []
-    const dataAvatars = []
-    const softwareAvatars = []
+    const softwareAvatars = softwareTeam.map(item => {
+        return <CircleImage name={item.name} linkedin={item.linkedin} imagePath={`../credit/software/img${item.id}.png`} />
+    })
 
-    for (let i = 0 ; i < 6 ; i++) {
-        designAvatars.push(<CircleImage imagePath=""/>)
-    }
-
-    for (let i = 0 ; i < 6 ; i++) {
-        dataAvatars.push(<CircleImage imagePath=""/>)
-    }
-
-    for (let i = 0 ; i < 7 ; i++) {
-        softwareAvatars.push(<CircleImage imagePath=""/>)
-    }
-    
     return (
         <div>
-            {/* test with all props passed in */}
-            {/* <CircleImage 
-                name="Aashi" 
-                imagePath="https://media-exp1.licdn.com/dms/image/C4E03AQHlb6vM_WLXCA/profile-displayphoto-shrink_200_200/0/1626704722292?e=1654732800&v=beta&t=AidaNy4k0S__k3cDA6pqb1hjWHubRU92CrzkWfldX8Y"
-                linkedin="https://www.linkedin.com/in/aashi-shah-225a041b2/"
-            /> */}
             <div className='about'>
-                <img src={ClassPic} alt="SYDE 26 on our first day of classes!" className='classPic'/>
+                <img src={ClassPic} alt="SYDE 26 on our first day of classes!" className='classPic' />
                 <div className='descriptions'>
                     <div className='column'>
                         <h3 className='heading'>Who Are We?</h3>
                         <p className='textBox'>
-                            At the beginning of September 2021, nearly 120 motivated students began their journey at the University of Waterloo in Systems Design Engineering. This unique, interdisciplinary program focuses on teaching students how to design any solution through systems thinking and viewing problems holistically to understand the bigger effects of their solution. 
+                            At the beginning of September 2021, nearly 120 motivated students began their journey at the University of Waterloo in Systems Design Engineering. This unique, interdisciplinary program focuses on teaching students how to design any solution through systems thinking and viewing problems holistically to understand the bigger effects of their solution.
                         </p>
                         <p className='textBox'>
                             Coming in, there was a wide variety of emotions. For many of us, there was excitement to meet new people, nervousness to live on our own, and anxiousness to know how well our pandemic senior years prepared us to handle university learning! Over the next 4 months, we tackled school and the co-op search, had many first-experiences, met some friends for life and, best of all, we built a mobility device for an alien.
                         </p>
                         <p className='textBox'>
-                            Who are we you may ask? We are a group of highly, unique individuals with many interests that are motivated by a span of factors. Together, we share a common goal to maintain the SYDE tradition of being community oriented while building the skills and knowledge to reach new heights internally and externally. We are the SYDE class of 2026! 
+                            Who are we you may ask? We are a group of highly, unique individuals with many interests that are motivated by a span of factors. Together, we share a common goal to maintain the SYDE tradition of being community oriented while building the skills and knowledge to reach new heights internally and externally. We are the SYDE class of 2026!
                         </p>
                     </div>
                     <div className='column two'>
@@ -73,6 +54,21 @@ function About() {
                 </div>
             </div>
             <div className='credit'>
+                <h3>Credits</h3>
+                <div className='teams'>
+                    <div className='innerTeams'>
+                    <p>Design</p>
+                    <p>Data</p>
+                    <p>Software</p>
+                    </div>
+                </div>
+                <div className='avatars'>
+                    <div>{designAvatars}</div>
+                    <div>{dataAvatars}</div>
+                    <div>{softwareAvatars}</div>
+                </div>
+            </div>
+            {/* <div className='credit'>
                 <h3 className='creditHeader'>Credits</h3>
                 <div className="design">
                     <p className='team'>Design</p>
@@ -86,7 +82,15 @@ function About() {
                     <p className='team'>Software</p>
                     <div className='avatars'>{softwareAvatars}</div>
                 </div>
+            </div> */}
+            <div className='links'>
+                <h3>Links</h3>
+                <img src={githubLogo} className='icon' />
+                <p className="linkText"><a href="https://github.com/SYDE-26/1A-Class-Profile-Website" target="_blank">Github Repo</a></p>
+                <img src={reportIcon} className='icon' />
+                <p className="linkText"><a target="_blank">Data Science Report (PDF)</a></p>
             </div>
+            <Footer />
         </div>
     );
 }

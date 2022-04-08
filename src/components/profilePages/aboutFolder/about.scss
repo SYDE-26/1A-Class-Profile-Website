@@ -3,7 +3,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    max-width: 934px;
+    // max-width: 934px;
     margin-top: 1.7em;
 }
 
@@ -12,10 +12,10 @@
     margin-top: 1.65em;
 }
 
-.descriptions{
+.descriptions {
     display: flex;
     width: 50%;
-    max-width: 934px;
+    // max-width: 934px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -23,7 +23,7 @@
 .column {
     float: left;
     width: 50%;
-    max-width: 440px;
+    // max-width: 440px;
 }
 
 .textBox {
@@ -40,35 +40,91 @@
     margin-left: 3em;
 }
 
-.credit {
-    margin-top: 3.55em;
-}
+// .credit {
+//     margin-top: 3.55em;
+//     overflow: visible;
+// }
 
-.creditHeader{
+// .credit,
+.links {
     color: white;
     display: block;
     width: 50%;
-    max-width: 934px;
+    // max-width: 940px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.creditHeader {
-    margin-bottom: 1.1em;
+// .creditHeader {
+//     margin-bottom: 1.1em;
+//     color: #fff;
+// }
+
+// .team {
+//     // margin-block: 0;
+//     display: inline;
+//     // line-height: 90px;
+//     width: 71px;
+//     margin-right: 36px;
+// }
+
+// .avatars {
+//     display: inline;
+//     margin-left: 30px;
+//     margin-top: 10px;
+//     // white-space: nowrap;
+//     vertical-align: middle;
+//     height: 90px;
+// }
+
+.links>h3 {
+    color: #fff;
+    margin-bottom: 24px;
 }
 
-.data, .design, .software {
-    display: block;
-    margin-left: 25%;
-    margin-block: 0;
+.icon {
+    height: 25px;
+    width: auto;
+    margin-right: 16px;
 }
 
-.team {
-    margin-block: 0;
+.linkText {
+    margin-right: 68px;
+    text-decoration: underline;
     display: inline;
+}
+
+.links {
+    margin-bottom: 40px;
+}
+
+.credit {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.credit > h3 {
+    color: #fff;
+}
+
+.teams {
+    display: inline-block;
+    margin-right: 36px;
+    // margin-top: 58px;
+    vertical-align: top;
+    padding-top: 18px;
+}
+
+.innerTeams {
+    height: 350px;
+    display : flex;
+	flex-direction: column;
+	justify-content:space-between;
 }
 
 .avatars {
-    display: inline;
-    margin-left: 30px;
+    display: inline-block;
+    vertical-align: middle;
 }
