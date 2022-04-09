@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import Footer from './components/footer/footer';
 import Navbar from './components/navbar';
 import Overlay from './components/overlay';
+import InsyderOverlay from './components/insyderOverlay';
 import dynamic from 'next/dynamic';
 import Navigation from './components/navigation/index';
 import Coop from './components/profilePages/coopFolder/coop';
@@ -27,13 +28,10 @@ import InsyderPage from './components/profilePages/insyderFolder/insyderPage';
 
 function App() {
   const [showOverlay, setShowOverlay] = useState(false);
+  const [showInsyderOverlay, setShowInsyderOverlay] = useState(false);
   return (
     <div>
       <Router>
-        <Overlay
-          showOverlay={showOverlay}
-          setShowOverlay={setShowOverlay}
-        />
         <Navbar
           showOverlay={showOverlay}
           setShowOverlay={setShowOverlay}
@@ -49,6 +47,18 @@ function App() {
           <Route path="/photoGallery" element={<PhotoPage />} />
           <Route path="/insyderPage" element={<InsyderPage />} />
         </Routes>
+        <Overlay
+          showOverlay={showOverlay}
+          setShowOverlay={setShowOverlay}
+          showInsyderOverlay={showInsyderOverlay}
+          setShowInsyderOverlay={setShowInsyderOverlay}
+        />
+        <InsyderOverlay
+          showOverlay={showOverlay}
+          setShowOverlay={setShowOverlay}
+          showInsyderOverlay={showInsyderOverlay}
+          setShowInsyderOverlay={setShowInsyderOverlay}
+        />
       </Router>
     </div>
     

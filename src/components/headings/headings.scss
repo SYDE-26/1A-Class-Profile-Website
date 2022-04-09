@@ -125,7 +125,7 @@ h1.demographics {
     background-image: linear-gradient(90deg, var(--pink) 0%, var(--purple) 100%);
     background-clip: text;
     color: transparent;
-    //display: table-caption; //This cuts off the title?
+    display: table-caption; //This cuts off the title?
     white-space: nowrap;
 }
 
@@ -170,6 +170,5 @@ h3.sectionHeader {
     font-size: 24px;
     line-height: 30px;
     letter-spacing: -0.01em;
-    //color: #000000;
     margin: 0px 243px 16px 243px
 }
