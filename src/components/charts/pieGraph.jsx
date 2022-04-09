@@ -84,20 +84,20 @@ export default function PieChart(props) {
                         ],
                     }}
                     options={{
-                        responsive: true,
+                        responsive: false,
                         maintainAspectRatio: false,
                         plugins: {
                             legend: {
                                 position: 'right',
                                 labels: {
-                                  usePointStyle: true,
-                                  boxWidth: 8,
-                                  padding: 8,
-                                  size: 12,
-                                  color: '#a0a0a0',
+                                    usePointStyle: true,
+                                    boxWidth: 8,
+                                    padding: 8,
+                                    size: 12,
+                                    color: '#a0a0a0',
                                 },
                                 display: true,
-                              },
+                            },
                             title: {
                                 display: true,
                                 text: data.title,
@@ -107,9 +107,9 @@ export default function PieChart(props) {
                                 padding: 14,
                             },
                             subtitle: {
-                                display: true, 
+                                display: true,
                                 size: 13,
-                                text: 'number of respondents:' + data.n, 
+                                text: 'number of respondents:' + data.n,
                             }
                         }
                     }}

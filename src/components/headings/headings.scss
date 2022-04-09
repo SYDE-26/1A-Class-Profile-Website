@@ -40,7 +40,7 @@ h1 {
     line-height: 42px;
     letter-spacing: -0.01em;
     margin: 80px 243px 48px 243px
-    /*Background will depend on which section*/
+        /*Background will depend on which section*/
 }
 
 h2 {
@@ -117,15 +117,17 @@ caption {
         font-size: 11px;
     }
 }
+
 //
 .graphDescription {
     margin: 0px 243px 32px 243px
-} 
+}
+
 h1.demographics {
     background-image: linear-gradient(90deg, var(--pink) 0%, var(--purple) 100%);
     background-clip: text;
     color: transparent;
-    //display: table-caption; //This cuts off the title?
+    display: table-caption; //This cuts off the title?
     white-space: nowrap;
 }
 

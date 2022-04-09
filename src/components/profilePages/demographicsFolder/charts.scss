@@ -1,0 +1,14 @@
+.chartSection {
+  width: 400px;
+  height: auto;
+  margin: 0px 243px 64px 243px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.double {
+  flex-grow: 1;
+  width: 400px;
+  display: inline
+}
