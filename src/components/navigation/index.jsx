@@ -1,6 +1,7 @@
 import { React, useState } from 'react';
-import './navigation.scss';
 import { Link } from 'react-router-dom';
+import './navigation.scss';
+import Vector from '../../images/HomePageVector.svg';
 
 const GradientBackground = () => {
     const [onClickChange, setOnClickChange] = useState('');   
@@ -25,20 +26,36 @@ const GradientBackground = () => {
     };
 
     return (
-        <div className='Wrapper'>
-            {Pages.map((page, index) => (
-                <section className={onClickChange.includes(ClickGradient[index]) ? `CircleWrapper Active ${page.text}` : `CircleWrapper ${page.text}`}  >
-                    <div onClick={() => toggleClass(Pages, index)} className={GradientSelection[index]}>        
-                        <div id={page.id} className={onClickChange.includes(ClickGradient[index]) ? `${ClickGradient[index]} BlackCircle` : 'BlackCircle'}>
-                            <div className='Text'>
-                                <p>{page.text}</p>
-                                {onClickChange.includes(ClickGradient[index]) ? <p className='Blurb'>{page.blurb}</p> : ''}
-                                {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}>< img src="../navarrow.png" alt="Arrows" /></Link> : ''}
+        <div className='UltimateWrapper'>
+            <div className='InstructionWrapper'>
+                <img src={Vector} />
+                <p>Click a circle below to go to each section</p>
+                <img src={Vector} />
+            </div>
+            <div className='Wrapper'>
+                {Pages.map((page, index) => (
+                    <section className={onClickChange.includes(ClickGradient[index]) ? `CircleWrapper Active ${page.text}` : `CircleWrapper ${page.text}`}  >
+                        <div onClick={() => toggleClass(Pages, index)} className={GradientSelection[index]}>        
+                            <div id={page.id} className={onClickChange.includes(ClickGradient[index]) ? `${ClickGradient[index]} BlackCircle` : 'BlackCircle'}>
+                                <div className='Text'>
+                                    <p>{page.text}</p>
+                                    {onClickChange.includes(ClickGradient[index]) ? <p className='Blurb'>{page.blurb}</p> : ''}
+                                    {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}>< img src="../navarrow.png" alt="Arrows" /></Link> : ''}
+                                </div>
                             </div>
                         </div>
+                    </section>
+                ))}
+            </div>
+            <div className='DescriptionWrapper'>
+                <div className='BottomCircle'>
+                    <div className='DescriptionTextWrapper'>
+                        <h4>Welcome to the SYDE 2026 class profile!</h4>
+                        <p className='DescriptionPText'>Feel free to click around and learn about the SYDE Class of 2026! <br></br> <br></br>
+                        Check out our photo gallery for proof that engineering kids don’t just study :)</p>
                     </div>
-                </section>
-            ))}
+                </div>
+            </div>
         </div>
     )
 }
