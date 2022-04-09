@@ -20,16 +20,33 @@ function Insyderpage() {
 
   const [url, setUrl] = React.useState();
 
-  React.useEffect(() => {
-    const func = async() =>{
-      const storage = getStorage();
-      const reference = ref(storage, '/img1.jpeg');
-      await getDownloadURL(reference).then((x) => {
-        setUrl(x);
-      })
-    }
-    func();
-  }, []);
+
+  const [memeIndex, setMemeIndex] = useState(1)
+
+  // setMemeIndex()
+
+  // React.useEffect(() => {
+  //   const func = async() =>{
+  //     const storage = getStorage();
+  //     const reference = ref(storage, `/insyderMemes/img1.jpeg`);
+  //     // const reference2 = ref(storage, `/insyderMemes/img2.jpeg`);
+  //     await getDownloadURL(reference).then((x) => {
+  //       setUrl(x);
+  //     })
+  //   }
+  //   func();
+  // }, []);
+
+  // React.useEffect(() => {
+  //   const func = async() =>{
+  //     const storage = getStorage();
+  //     const reference = ref(storage, `/insyderMemes/img2.jpeg`);
+  //     await getDownloadURL(reference).then((x) => {
+  //       setUrl(x);
+  //     })
+  //   }
+  //   func();
+  // }, []);
 
     return (
         <div>
@@ -39,14 +56,15 @@ function Insyderpage() {
               width: 850, 
               height: 4000, 
               overflowY: 'scroll' }} className = "box">
-                <img src = {url} style = {{width: '33%'}}/>
-      <ImageList variant="masonry" cols={ 3} gap={8} className = "image-list">
+                {/* <img src = {url} style = {{width: '33%'}}/> */}
+      <ImageList variant="masonry" cols={3} gap={8} className = "image-list">
         {/* <img ></img> */}
         {itemData.map((item) => (
-          <ImageListItem key={item.img} className = "image-list-item">
+          <ImageListItem key={item.id} className = "image-list-item">
             <img
               src=
               {`${item.img}?w=248&fit=crop&auto=format`}
+              // {`${url}`}
               // {`${url}?w=248&fit=crop&auto=format`}
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt=''
@@ -72,50 +90,62 @@ const itemData = [
     {
       img: '../insyderMemes/0BD82D18-F2BB-440F-9FF2-C3EE7ECD3FA1 - Shushawn Saha.jpeg',
       title: 'Bed',
+      id: 1,
     },
     {
       img: '../insyderMemes/3BE41539-0698-45B5-B8CD-CDDDF21A1FDD - Roselyn H.jpeg',
       title: 'Books',
+      id: 2,
     },
     {
       img: '../insyderMemes/3DD00D70-D181-4209-A45A-14D536AC0A46 - Roselyn H.jpeg',
       title: 'Sink',
+      id: 3,
     },
     {
       img: '../insyderMemes/5C174B00-A04E-453F-AC68-4CB9D23F2927 - Shushawn Saha.jpeg',
       title: 'Kitchen',
+      id: 4,
     },
     {
       img: '../insyderMemes/5CD0E0B7-96E9-4542-86A0-EBD75827F52D - Aditi Sandhu.jpeg',
       title: 'Blinds',
+      id: 5,
     },
     {
       img: '../insyderMemes/8BACA803-9FCE-4B0D-B478-B42DC178F470 - Shushawn Saha.jpeg',
       title: 'Chairs',
+      id: 6,
     },
     {
       img: '../insyderMemes/09C57416-C355-452F-AA20-AAF06003DB7C - Serena Li.jpeg',
       title: 'Laptop',
+      id: 7,
     },
     {
       img: '../insyderMemes/31D49F0D-EF68-4343-BA46-92638BD03A84 - Kelly Pham.jpeg',
       title: 'Doors',
+      id: 8,
     },
     {
       img: '../insyderMemes/39A52E27-B829-426F-9357-3A87898C897A - Serena Li.jpeg',
       title: 'Coffee',
+      id: 9,
     },
     {
       img: '../insyderMemes/34BF3F32-C850-410F-912A-D1B344982C11 - Shushawn Saha.jpeg',
       title: 'Storage',
+      id: 10,
     },
     {
       img: '../insyderMemes/40D24635-330F-439F-BB96-D157515E0A86 - Shushawn Saha.jpeg',
       title: 'Candle',
+      id: 11,
     },
     {
       img: '../insyderMemes/74BA30A0-9B2A-4B75-89BF-0C9825196EAE - Shushawn Saha.jpeg',
       title: 'Coffee table',
+      id: 12,
     },
     {
         img: '../insyderMemes/189BC681-1494-4A4D-B66D-9F62763C6C3B - Shushawn Saha.jpeg',
@@ -213,6 +243,7 @@ const itemData = [
       {
         img: '../insyderMemes/Snapchat-1537388837 - Hargun Sibal.jpg',
         title: 'Coffee table',
-      },
+      }
+      ,
   ];
   
