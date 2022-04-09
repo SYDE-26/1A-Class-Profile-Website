@@ -1,21 +1,23 @@
+.about {
+    margin-top: 4.45em;
+}
 .classPic {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    // max-width: 934px;
     margin-top: 1.7em;
 }
 
 .heading {
     color: #fff;
     margin-top: 1.65em;
+    white-space: nowrap;
 }
 
 .descriptions {
     display: flex;
     width: 50%;
-    // max-width: 934px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -23,16 +25,11 @@
 .column {
     float: left;
     width: 50%;
-    // max-width: 440px;
 }
 
 .textBox {
     width: 100%;
     max-width: 440px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: rgba(255, 255, 255, 0.9);
     margin-top: 1em;
 }
 
@@ -40,91 +37,60 @@
     margin-left: 3em;
 }
 
-// .credit {
-//     margin-top: 3.55em;
-//     overflow: visible;
-// }
+.credit {
+    margin-top: 3.55em;
+    display: block;
+    margin-left: 25%;
+    margin-bottom: 0;
+}
 
-// .credit,
+.credit > h3 {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.team {
+    display: inline;
+}
+
+.avatarRow {
+    display: inline;
+    vertical-align: middle;
+    margin-left: 2em;
+}
+
+.design, .data, .software {
+    margin-bottom: 2.5em;
+}
+
+.design {
+    margin-top: 1.4em;
+}
+
 .links {
     color: white;
     display: block;
     width: 50%;
-    // max-width: 940px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2.25em;
+    padding-top: 0.6em;
 }
-
-// .creditHeader {
-//     margin-bottom: 1.1em;
-//     color: #fff;
-// }
-
-// .team {
-//     // margin-block: 0;
-//     display: inline;
-//     // line-height: 90px;
-//     width: 71px;
-//     margin-right: 36px;
-// }
-
-// .avatars {
-//     display: inline;
-//     margin-left: 30px;
-//     margin-top: 10px;
-//     // white-space: nowrap;
-//     vertical-align: middle;
-//     height: 90px;
-// }
 
 .links>h3 {
     color: #fff;
-    margin-bottom: 24px;
+    margin-bottom: 1em;
+    margin-top: 0;
 }
 
 .icon {
     height: 25px;
     width: auto;
-    margin-right: 16px;
+    margin-right: 0.9em;
 }
 
 .linkText {
-    margin-right: 68px;
+    margin-right: 3.8em;
     text-decoration: underline;
     display: inline;
-}
-
-.links {
-    margin-bottom: 40px;
-}
-
-.credit {
-    display: block;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.credit > h3 {
-    color: #fff;
-}
-
-.teams {
-    display: inline-block;
-    margin-right: 36px;
-    // margin-top: 58px;
-    vertical-align: top;
-    padding-top: 18px;
-}
-
-.innerTeams {
-    height: 350px;
-    display : flex;
-	flex-direction: column;
-	justify-content:space-between;
-}
-
-.avatars {
-    display: inline-block;
-    vertical-align: middle;
 }
