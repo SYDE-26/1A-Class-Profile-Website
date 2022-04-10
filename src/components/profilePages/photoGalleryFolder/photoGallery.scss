@@ -136,17 +136,17 @@ html {
 }
 
 /* Place the container to the left */
-.left {
+.leftGallery {
     left: 0;
 }
 
 /* Place the container to the right */
-.right {
+.rightGallery {
     left: 50%;
 }
 
 /* Fix the circle for containers on the right side */
-.right::after {
+.rightGallery::after {
     left: -16px;
 }
 
@@ -180,13 +180,13 @@ html {
     }
 
     /* Make sure all circles are at the same spot */
-    .left::after,
-    .right::after {
+    .leftGallery::after,
+    .rightGallery::after {
         left: 18px;
     }
 
     /* Make all right containers behave like the left ones */
-    .right {
+    .rightGallery {
         left: 0%;
     }
 
