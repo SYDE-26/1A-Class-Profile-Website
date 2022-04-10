@@ -85,12 +85,16 @@ const HistogramPercent = (props) => {
                             display: true,
                             text: data.title,
                             color: '#ffffff',
-                            size: 15,
+                            font: {
+                                size: 15
+                            },
                             padding: 14,
                         },
                         subtitle: {
                             display: true,
-                            size: 13,
+                            font: {
+                                size: 13
+                            },
                             text: 'number of respondents:' + data.n,
                         }
                     },
@@ -106,7 +110,9 @@ const HistogramPercent = (props) => {
                                 display: true,
                                 text: data.xAxis,
                                 color: '#ffffff',
-                                size: 15,
+                                font: {
+                                    size: 15
+                                },
                             },
                             ticks: {
                                 color: '#ffffff',
@@ -123,7 +129,9 @@ const HistogramPercent = (props) => {
                                 display: true,
                                 text: data.yAxis,
                                 color: '#ffffff',
-                                size: 15,
+                                font: {
+                                    size: 15
+                                },
                             },
                             ticks: {
                                 beginAtZero: true,
@@ -248,12 +256,16 @@ const HistogramCount = (props) => {
                                 display: true,
                                 text: data.title,
                                 color: '#ffffff',
-                                size: 15,
+                                font: {
+                                    size: 15
+                                },
                                 padding: 14,
                             },
                             subtitle: {
                                 display: true,
-                                size: 13,
+                                font: {
+                                    size: 13
+                                },
                                 text: 'number of respondents:' + data.n,
                             },
                         },
@@ -269,7 +281,9 @@ const HistogramCount = (props) => {
                                     display: true,
                                     text: data.xAxis,
                                     color: '#ffffff',
-                                    size: 15,
+                                    font: {
+                                        size: 15
+                                    },
                                 },
                                 ticks: {
                                     color: '#ffffff',
@@ -286,7 +300,9 @@ const HistogramCount = (props) => {
                                     display: true,
                                     text: data.yAxis,
                                     color: '#ffffff',
-                                    size: 15,
+                                    font: {
+                                        size: 15
+                                    },
                                 },
                                 ticks: {
                                     beginAtZero: true,

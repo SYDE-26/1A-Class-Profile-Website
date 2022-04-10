@@ -121,7 +121,9 @@ export default function StackedBar(props) {
                   usePointStyle: true,
                   boxWidth: 8,
                   padding: 8,
-                  size: 12,
+                  font: {
+                    size: 12
+                  },
                   color: '#a0a0a0',
                 },
               },
@@ -129,12 +131,16 @@ export default function StackedBar(props) {
                 display: true,
                 text: data.title,
                 color: '#ffffff',
-                size: 15,
+                font: {
+                  size: 15
+                },
                 padding: 14,
               },
               subtitle: {
                 display: true,
-                size: 13,
+                font: {
+                  size: 13
+                },
                 text: 'number of respondents:' + data.n,
               },
             },
@@ -143,9 +149,11 @@ export default function StackedBar(props) {
                 stacked: true,
                 title: {
                   display: true,
-                  text: data.xAxes,
+                  text: data.xAxis,
                   color: '#ffffff',
-                  size: 15,
+                  font: {
+                    size: 15
+                  },
                 },
                 ticks: {
                   color: '#ffffff',
@@ -155,9 +163,11 @@ export default function StackedBar(props) {
                 stacked: true,
                 title: {
                   display: true,
-                  text: data.yAxes,
+                  text: data.yAxis,
                   color: '#ffffff',
-                  size: 15,
+                  font: {
+                    size: 15
+                  },
                 },
                 ticks: {
                   beginAtZero: true,

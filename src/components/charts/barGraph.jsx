@@ -101,12 +101,16 @@ export default function BarGraph(props) {
                             display: true,
                             text: data.title,
                             color: '#ffffff',
-                            size: 15,
+                            font: {
+                                size: 15
+                            },
                             padding: 14,
                         },
                         subtitle: {
                             display: true,
-                            size: 13,
+                            font: {
+                                size: 13
+                            },
                             text: 'number of respondents:' + data.n,
                         }
                     },
@@ -116,7 +120,9 @@ export default function BarGraph(props) {
                                 display: true,
                                 text: data.xAxis,
                                 color: '#ffffff',
-                                size: 15
+                                font: {
+                                    size: 15
+                                },
                             },
                             grid: {
                                 borderColor: '#fff',
@@ -125,7 +131,7 @@ export default function BarGraph(props) {
                             },
                             ticks: {
                                 color: '#ffffff',
-                                userCallback: function (tick, index, values) {
+                                Callback: function (tick, index, values) {
                                     if (tick.length > 9 && values.length >= 4) {
                                         return tick.split(" ");
                                     } else {
@@ -139,7 +145,9 @@ export default function BarGraph(props) {
                                 display: true,
                                 text: data.xAxis,
                                 color: '#ffffff',
-                                size: 15
+                                font: {
+                                    size: 15
+                                },
                             },
                             grid: {
                                 borderColor: '#fff',

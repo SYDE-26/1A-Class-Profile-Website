@@ -92,7 +92,9 @@ export default function PieChart(props) {
                                 usePointStyle: true,
                                 boxWidth: 8,
                                 padding: 8,
-                                size: 12,
+                                font: {
+                                    size: 12
+                                },
                                 color: '#a0a0a0',
                             },
                             display: true,
@@ -100,14 +102,18 @@ export default function PieChart(props) {
                         title: {
                             display: true,
                             text: data.title,
-                            size: 15,
+                            font: {
+                                size: 15
+                            },
                             color: '#ffffff',
-                            size: '14',
+                            size: 14,
                             padding: 14,
                         },
                         subtitle: {
                             display: true,
-                            size: 13,
+                            font: {
+                                size: 13
+                            },
                             text: 'number of respondents:' + data.n,
                         }
 
