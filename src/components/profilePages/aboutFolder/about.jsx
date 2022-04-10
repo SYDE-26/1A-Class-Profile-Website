@@ -1,10 +1,10 @@
 import React from 'react';
-import CircleImage from '../../circleImage'
 import ClassPic from './classPic.png'
+import CircleImage from '../../circleImage'
+import Footer from '../../footer/footer';
 import githubLogo from './githubLogo.png'
 import reportIcon from './reportIcon.png'
 import './about.scss'
-import Footer from '../../footer/footer';
 import { designTeam } from './avatarInfo.jsx'
 import { dataTeam } from './avatarInfo.jsx'
 import { softwareTeam } from './avatarInfo.jsx'
@@ -55,34 +55,20 @@ function About() {
             </div>
             <div className='credit'>
                 <h3>Credits</h3>
-                <div className='teams'>
-                    <div className='innerTeams'>
-                    <p>Design</p>
-                    <p>Data</p>
-                    <p>Software</p>
-                    </div>
+                <div className='design'>
+                    <p className='team'>Design
+                        <div className='avatarRow'>{designAvatars}</div>
+                    </p>
                 </div>
-                <div className='avatars'>
-                    <div>{designAvatars}</div>
-                    <div>{dataAvatars}</div>
-                    <div>{softwareAvatars}</div>
-                </div>
-            </div>
-            {/* <div className='credit'>
-                <h3 className='creditHeader'>Credits</h3>
-                <div className="design">
-                    <p className='team'>Design</p>
-                    <div className='avatars'>{designAvatars}</div>
-                </div>
-                <div className="data">
+                <div className='data'>
                     <p className='team'>Data</p>
-                    <div className='avatars'>{dataAvatars}</div>
+                    <div className='avatarRow'>{dataAvatars}</div>
                 </div>
-                <div className="software">
+                <div className='software'>
                     <p className='team'>Software</p>
-                    <div className='avatars'>{softwareAvatars}</div>
-                </div>
-            </div> */}
+                    <div className='avatarRow'>{softwareAvatars}</div>
+                </div>              
+            </div>
             <div className='links'>
                 <h3>Links</h3>
                 <img src={githubLogo} className='icon' />
