@@ -61,8 +61,18 @@ export default function StackedBar(props) {
         } else {
             console.log("No such document!");
         }
+
+        data.title = docSnap.data().title;
+        data.xAxis = docSnap.data().x.label;
+        data.yAxis = docSnap.data().y.label;
+        data.n = docSnap.data().n;
+        setId(id + 1);
+        setData(data);
+      } else {
+        console.log("No such document!");
+      }
     })
-  }, [] );
+  }, []);
 
   function dataset_chartjs(data) {
     var datasets = [];
@@ -93,21 +103,31 @@ export default function StackedBar(props) {
       .map((key) => ({ key, value: input[key] }))
       .sort((a, b) => a.value[key] - b.value[key]);
   }
+<<<<<<< HEAD
   
-  return (
-    <div>
-      <div className="chart">
-        <Bar
-          data={{
-            labels: data.barlabel,
-            datasets: dataset_chartjs(data),
-          }}
+=======
 
-          options={ 
-            {
+  const optionInformation = {
+
+
+  }
+
+  console.log("Options: ", optionInformation);
+>>>>>>> main
+  return (
+    <div className="chart">
+      <Bar
+        data={{
+          labels: data.barlabel,
+          datasets: dataset_chartjs(data),
+        }}
+
+        options={
+          {
             responsive: true,
             maintainAspectRatio: true,
             plugins: {
+<<<<<<< HEAD
                 legend: {
                     display: true,
                     reverse: true,
@@ -137,10 +157,36 @@ export default function StackedBar(props) {
                       size: '13'
                     },
                     text: 'number of respondents:' + data.n, 
+=======
+              legend: {
+                display: true,
+                reverse: true,
+                position: 'right',
+                labels: {
+                  usePointStyle: true,
+                  boxWidth: 8,
+                  padding: 8,
+                  size: 12,
+                  color: '#a0a0a0',
+>>>>>>> main
                 },
+              },
+              title: {
+                display: true,
+                text: data.title,
+                color: '#ffffff',
+                size: 15,
+                padding: 14,
+              },
+              subtitle: {
+                display: true,
+                size: 13,
+                text: 'number of respondents:' + data.n,
+              },
             },
             scales: {
               x: {
+<<<<<<< HEAD
                   stacked: true,
                   title: {
                       display: true,
@@ -178,8 +224,33 @@ export default function StackedBar(props) {
                       color: '#ffffff',
                   },
                   beginAtZero: true,
+=======
+                stacked: true,
+                title: {
+                  display: true,
+                  text: data.xAxes,
+                  color: '#ffffff',
+                  size: 15,
+                },
+                ticks: {
+                  color: '#ffffff',
+                },
               },
-          }
+              y: {
+                stacked: true,
+                title: {
+                  display: true,
+                  text: data.yAxes,
+                  color: '#ffffff',
+                  size: 15,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  color: '#ffffff',
+                },
+>>>>>>> main
+              },
+            }
           }}
 
         //   options={{
@@ -243,10 +314,9 @@ export default function StackedBar(props) {
         //       ],
         //     },
         //   }}
-          height={props.height ? props.height : '100%'}
-          width={props.width ? props.width : '100%'}
-        />
-      </div>
+        height={props.height ? props.height : '100%'}
+        width={props.width ? props.width : '100%'}
+      />
     </div>
   );
 }

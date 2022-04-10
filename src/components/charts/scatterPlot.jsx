@@ -149,8 +149,18 @@ export default function Scatterplot(props) {
                                     color: "#a0a0a0",
                                 },
                             },
+                        },
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                zeroLineColor: "#fff",
+                                color: "rgba(255, 255, 255, 0.1)",
+                                lineWidth: 1.5,
+                            },
                             title: {
                                 display: true,
+<<<<<<< HEAD
                                 text: data.title,
                                 font: {
                                     size: 15
@@ -164,35 +174,22 @@ export default function Scatterplot(props) {
                                     size: 13
                                 },
                                 text: 'number of respondents:' + data.n,
+=======
+                                text: data.xAxis,
+                                size: 15,
+                                color: "#ffffff",
+>>>>>>> main
                             },
-                            tooltip: {
-                                enabled: true,
-                                callbacks: {
-                                    label: function (tooltipItem) {
-                                        console.log("data label:", tooltipItem)
-                                        var label = data.label[tooltipItem.datasetIndex];
-                                        if (label !== null) {
-                                            return (
-                                                label +
-                                                ": (" +
-                                                tooltipItem.label +
-                                                ", " +
-                                                tooltipItem.formattedValue +
-                                                ")"
-                                            );
-                                        } else {
-                                            return (
-                                                ": (" +
-                                                tooltipItem.label +
-                                                ", " +
-                                                tooltipItem.formattedValue +
-                                                ")"
-                                            );
-                                        }
-                                    },
-                                },
+                            ticks: {
+                                color: "#ffffff",
+                                maxTicksLimit: 9,
+                                maxRotation: 0,
+                                minRotation: 0,
+                                min: parseInt(data.xmin),
+                                max: parseInt(data.xmax),
                             },
                         },
+<<<<<<< HEAD
                         scales: {
                             x: {
                                 grid: {
@@ -286,15 +283,33 @@ export default function Scatterplot(props) {
                                     color: "#ffffff",
                                     maxTicksLimit: 9,
                                 },
+=======
+                        y: {
+                            grid: {
+                                drawOnChartArea: true,
+                                zeroLineColor: "#fff",
+                                color: "rgba(255, 255, 255, 0.1)",
+                                lineWidth: 1.5,
+                            },
+                            title: {
+                                display: true,
+                                text: data.yAxis,
+                                size: 15,
+                                color: "#ffffff",
+                            },
+                            ticks: {
+                                color: "#ffffff",
+                                maxTicksLimit: 9,
+>>>>>>> main
                                 min: parseInt(data.ymin),
                                 max: parseInt(data.ymax),
                             },
                         },
-                    }}
-                    height={props.height ? props.height : "100%"}
-                    width={props.width ? props.width : "100%"}
-                />
-            </div>
+                    },
+                }}
+                height={props.height ? props.height : "100%"}
+                width={props.width ? props.width : "100%"}
+            />
         </div>
     );
 }

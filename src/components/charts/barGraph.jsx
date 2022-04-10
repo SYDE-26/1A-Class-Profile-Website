@@ -78,29 +78,43 @@ export default function BarGraph(props) {
     }
 
     return (
-        <div>
-            <div className="chart">
-                <Bar
-                    data={{
-                        labels: data.label,
-                        datasets: [
-                            {
-                                label: '% of Students',
-                                data: data.val,
-                                backgroundColor: data.color,
-                                borderColor: data.color,
-                                hoverBackgroundColor: '#ffffff',
-                            },
-                        ],
-                    }}
-                    options={{
-                        responsive: true,
-                        maintainAspectRatio: true,
-                        plugins: {
-                            legend: { display: false },
+        <div className="chart">
+            <Bar
+                data={{
+                    labels: data.label,
+                    datasets: [
+                        {
+                            label: '% of Students',
+                            data: data.val,
+                            backgroundColor: data.color,
+                            borderColor: data.color,
+                            hoverBackgroundColor: '#ffffff',
+                        },
+                    ],
+                }}
+                options={{
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: data.title,
+                            color: '#ffffff',
+                            size: 15,
+                            padding: 14,
+                        },
+                        subtitle: {
+                            display: true,
+                            size: 13,
+                            text: 'number of respondents:' + data.n,
+                        }
+                    },
+                    scales: {
+                        x: {
                             title: {
                                 display: true,
-                                text: data.title,
+                                text: data.xAxis,
                                 color: '#ffffff',
                                 font: {
                                     size: '15'

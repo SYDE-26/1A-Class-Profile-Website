@@ -39,7 +39,7 @@ h1 {
     font-size: 34px;
     line-height: 42px;
     letter-spacing: -0.01em;
-    margin: 80px 243px 48px 243px
+    margin: 80px 25% 48px 25%;
     /*Background will depend on which section*/
 }
 
@@ -117,15 +117,29 @@ caption {
         font-size: 11px;
     }
 }
+
 //
 .graphDescription {
-    margin: 0px 243px 32px 243px
-} 
+    margin: 0px 25% 32px 25%
+}
+
+h3.sectionHeader {
+    //padding-bottom: 0.66em; //This might mess with the spacing
+    color: #fff;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    margin: 0px 25% 16px 25%
+}
+
 h1.demographics {
     background-image: linear-gradient(90deg, var(--pink) 0%, var(--purple) 100%);
     background-clip: text;
     color: transparent;
-    //display: table-caption; //This cuts off the title?
+    display: table-caption; //This cuts off the title?
     white-space: nowrap;
 }
 
@@ -133,7 +147,7 @@ h1.lifestyle {
     background: linear-gradient(109.91deg, var(--blue) 22.98%, #FFCD20 93.33%);
     background-clip: text;
     color: transparent;
-    display: table-caption;
+    //display: table-caption;
     white-space: nowrap;
 }
 
@@ -159,17 +173,4 @@ h1.admissions {
     color: transparent;
     display: table-caption;
     white-space: nowrap;
-}
-
-h3.sectionHeader {
-    //padding-bottom: 0.66em; //This might mess with the spacing
-    color: #fff;
-    font-family: 'Lexend';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing: -0.01em;
-    //color: #000000;
-    margin: 0px 243px 16px 243px
 }

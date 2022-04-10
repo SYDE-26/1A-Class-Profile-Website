@@ -194,14 +194,12 @@ export default function BoxPlot(props) {
     }
 
     return (
-        <div>
-            <div className="chart">
-                <BoxPlotChart
-                    data={data}
-                    height={props.height ? props.height : '100%'}
-                    width={props.width ? props.width : '100%'}
-                />
-            </div>
+        <div className="chart">
+            <BoxPlotChart
+                data={data}
+                height={props.height ? props.height : '100%'}
+                width={props.width ? props.width : '100%'}
+            />
         </div>
     );
 }
