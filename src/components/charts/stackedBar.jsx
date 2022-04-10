@@ -20,7 +20,6 @@ export default function StackedBar(props) {
 
     getDoc(doc(db, "1A Data", props.datatype)).then(docSnap => {
         if (docSnap.exists()) {
-            console.log("Document data:", docSnap.data());
 
             let data = {
                 barlabel: [],
@@ -56,6 +55,7 @@ export default function StackedBar(props) {
             data.xAxis = docSnap.data().x.label;
             data.yAxis = docSnap.data().y.label;
             data.n = docSnap.data().n;
+            console.log("No such document!", data);
             setId(id + 1);
             setData(data);
         } else {
@@ -93,13 +93,7 @@ export default function StackedBar(props) {
       .map((key) => ({ key, value: input[key] }))
       .sort((a, b) => a.value[key] - b.value[key]);
   }
-
-  const optionInformation = {
-    
-            
-  }
-
-  console.log("Options: ", optionInformation);
+  
   return (
     <div>
       <div className="chart">
@@ -122,7 +116,9 @@ export default function StackedBar(props) {
                         usePointStyle: true,
                         boxWidth: 8,
                         padding: 8,
-                        size: 12,
+                        font: {
+                          size: '12'
+                        },
                         color: '#a0a0a0',
                     },
                 },
@@ -130,12 +126,16 @@ export default function StackedBar(props) {
                     display: true,
                     text: data.title,
                     color: '#ffffff',
-                    size: 15,
-                    padding: 14,
+                    font: {
+                      size: '15'
+                    },
+                    padding: '14',
                 },
                 subtitle: {
                     display: true, 
-                    size: 13,
+                    font: {
+                      size: '13'
+                    },
                     text: 'number of respondents:' + data.n, 
                 },
             },
@@ -144,9 +144,16 @@ export default function StackedBar(props) {
                   stacked: true,
                   title: {
                       display: true,
-                      text: data.xAxes,
+                      text: data.xAxis,
                       color: '#ffffff',
-                      size: 15,
+                      font: {
+                        size: '15'
+                      }
+                  },
+                  grid: {
+                    borderColor: '#fff',
+                    color: 'rgba(255, 255, 255, 0.05)',
+                    lineWidth: '1',
                   },
                   ticks: {
                       color: '#ffffff',
@@ -156,14 +163,21 @@ export default function StackedBar(props) {
                   stacked: true,
                   title: {
                       display: true,
-                      text: data.yAxes,
+                      text: data.yAxis,
                       color: '#ffffff',
-                      size: 15,
+                      font: {
+                        size: '15'
+                      }
+                  },
+                  grid: {
+                    borderColor: '#fff',
+                    color: 'rgba(255, 255, 255, 0.05)',
+                    lineWidth: 1,
                   },
                   ticks: {
-                      beginAtZero: true,
                       color: '#ffffff',
                   },
+                  beginAtZero: true,
               },
           }
           }}

@@ -143,20 +143,26 @@ export default function Scatterplot(props) {
                                     usePointStyle: true,
                                     boxWidth: 8,
                                     padding: 8,
-                                    size: 12,
+                                    font: {
+                                        size: 12
+                                    },
                                     color: "#a0a0a0",
                                 },
                             },
                             title: {
                                 display: true,
                                 text: data.title,
-                                size: 15,
+                                font: {
+                                    size: 15
+                                },
                                 color: "#ffffff",
                                 padding: 14,
                             },
                             subtitle: {
                                 display: true,
-                                size: 13,
+                                font: {
+                                    size: 13
+                                },
                                 text: 'number of respondents:' + data.n,
                             },
                             tooltip: {
@@ -191,43 +197,97 @@ export default function Scatterplot(props) {
                             x: {
                                 grid: {
                                     zeroLineColor: "#fff",
-                                    color: "rgba(255, 255, 255, 0.1)",
+                                    color: function (context) {
+                                        if (context.tick.value != 0) {
+                                            return "rgba(255, 255, 255, 0.1)";
+                                        } else {
+                                            return "#fff";
+                                        }
+                                    },
                                     lineWidth: 1.5,
                                 },
                                 title: {
                                     display: true,
                                     text: data.xAxis,
-                                    size: 15,
+                                    font: {
+                                        size: 15
+                                    },
                                     color: "#ffffff",
+                                },
+                                afterTickToLabelConversion: function (q) {
+                                    if (data.allow) {
+
+                                        for (var tick in q.ticks) {
+                                            if (q.ticks.length == 9) {
+
+                                                if (data.x_enums[tick] !== "") {
+                                                    // q.ticks[tick] = data.x_enums[tick];
+                                                    // q.ticks[tick] = q.ticks[tick].split(" ");
+                                                    q.ticks[tick].label = data.x_enums[tick];
+                                                }
+                                            } else {
+                                                if (tick % 2 == 0) {
+                                                    //q.ticks[tick] = data.x_enums1[tick];
+                                                    q.ticks[tick].label = data.x_enums1[tick];
+
+                                                }
+                                            }
+                                        }
+                                    }
                                 },
                                 ticks: {
                                     color: "#ffffff",
                                     maxTicksLimit: 9,
                                     maxRotation: 0,
                                     minRotation: 0,
-                                    min: parseInt(data.xmin),
-                                    max: parseInt(data.xmax),
                                 },
+                                min: parseInt(data.xmin),
+                                max: parseInt(data.xmax),
                             },
                             y: {
                                 grid: {
                                     drawOnChartArea: true,
-                                    zeroLineColor: "#fff",
-                                    color: "rgba(255, 255, 255, 0.1)",
+                                    color: function (context) {
+                                        if (context.tick.value != 0) {
+                                            return "rgba(255, 255, 255, 0.1)";
+                                        } else {
+                                            return "#fff";
+                                        }
+                                    },
                                     lineWidth: 1.5,
                                 },
                                 title: {
                                     display: true,
                                     text: data.yAxis,
-                                    size: 15,
+                                    font: {
+                                        size: '15'
+                                    },
                                     color: "#ffffff",
+                                },
+                                afterTickToLabelConversion: function (q) {
+                                    if (data.allow) {
+                                        for (var tick in q.ticks) {
+                                            if (q.ticks.length == 9) {
+                                                if (data.y_enums[tick] !== "") {
+                                                    q.ticks[tick] = data.y_enums[tick];
+                                                }
+                                            } else {
+                                                if (tick % 2 == 0 && data.y_enums1[tick] !== undefined) {
+                                                    if (data.y_enums[tick] !== "") {
+                                                        q.ticks[tick].label = data.y_enums[tick];
+                                                    }
+                                                    //q.ticks[tick].label = data.y_enums1[tick];
+                                                }
+                                            }
+                                        }
+                                    }
                                 },
                                 ticks: {
                                     color: "#ffffff",
                                     maxTicksLimit: 9,
-                                    min: parseInt(data.ymin),
-                                    max: parseInt(data.ymax),
                                 },
+                                min: parseInt(data.ymin),
+                                max: parseInt(data.ymax),
                             },
                         },
                     }}

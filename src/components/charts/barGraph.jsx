@@ -13,7 +13,7 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import Chart from 'chart.js/auto';
-import 'chartjs-subtitle';
+import 'chartjs-subtitle'
 
 ChartJS.register(
     CategoryScale,
@@ -102,12 +102,16 @@ export default function BarGraph(props) {
                                 display: true,
                                 text: data.title,
                                 color: '#ffffff',
-                                size: 15,
-                                padding: 14,
+                                font: {
+                                    size: '15'
+                                },
+                                padding: '14',
                             },
                             subtitle: {
                                 display: true,
-                                size: 13,
+                                font: {
+                                    size: '13'
+                                },
                                 text: 'number of respondents:' + data.n,
                             }
                         },
@@ -117,16 +121,21 @@ export default function BarGraph(props) {
                                     display: true,
                                     text: data.xAxis,
                                     color: '#ffffff',
-                                    size: 15
+                                    font: {
+                                        size: '15'
+                                    }
                                 },
                                 grid: {
                                     borderColor: '#fff',
                                     color: 'rgba(255, 255, 255, 0.05)',
-                                    lineWidth: 1 // Don't add a comma on this line lol, it breaks the graphs ¯\_(ツ)_/¯
+                                    line: {
+                                        width: '1'
+                                    }
+                                     // Don't add a comma on this line lol, it breaks the graphs ¯\_(ツ)_/¯
                                 },
                                 ticks: {
                                     color: '#ffffff',
-                                    userCallback: function (tick, index, values) {
+                                    callback: function (tick, index, values) {
                                         if (tick.length > 9 && values.length >= 4) {
                                             return tick.split(" ");
                                         } else {
@@ -138,19 +147,22 @@ export default function BarGraph(props) {
                             y: {
                                 title: {
                                     display: true,
-                                    text: data.xAxis,
+                                    text: data.yAxis,
                                     color: '#ffffff',
-                                    size: 15
+                                    font: {
+                                        size: '15'
+                                    }
                                 },
                                 grid: {
                                     borderColor: '#fff',
                                     color: 'rgba(255, 255, 255, 0.05)',
-                                    lineWidth: 1,
+                                    lineWidth: '1',
                                 },
                                 ticks: {
                                     beginAtZero: true,
                                     color: '#ffffff',
                                 },
+                                
                             }
                           }
                     }}

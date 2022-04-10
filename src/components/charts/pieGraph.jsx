@@ -90,25 +90,31 @@ export default function PieChart(props) {
                             legend: {
                                 position: 'right',
                                 labels: {
-                                  usePointStyle: true,
-                                  boxWidth: 8,
-                                  padding: 8,
-                                  size: 12,
-                                  color: '#a0a0a0',
+                                    usePointStyle: true,
+                                    boxWidth: 8,
+                                    padding: 8,
+                                    font: {
+                                        size: 12
+                                    },
+                                    color: '#a0a0a0',
                                 },
                                 display: true,
                               },
                             title: {
                                 display: true,
                                 text: data.title,
-                                size: 15,
+                                font: {
+                                    size: 15
+                                },
                                 color: '#ffffff',
-                                size: '14',
+                                fontSize: '14',
                                 padding: 14,
                             },
                             subtitle: {
                                 display: true, 
-                                size: 13,
+                                font: {
+                                    size: 13
+                                },
                                 text: 'number of respondents:' + data.n, 
                             }
                         }
