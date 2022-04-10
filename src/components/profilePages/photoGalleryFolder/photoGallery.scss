@@ -21,6 +21,7 @@ html {
     margin-top: 0vh;
     filter: blur(8px);
     -webkit-filter: blur(80px);
+    z-index: 0;
 }
 
 .circle2 {
@@ -29,6 +30,7 @@ html {
     margin-top: -30vh;
     filter: blur(8px);
     -webkit-filter: blur(80px);
+    z-index: 0;
 }
 
 .circle3 {
@@ -39,6 +41,7 @@ html {
     left: -40%;
     filter: blur(8px);
     -webkit-filter: blur(80px);
+    z-index: 0;
 }
 
 
@@ -210,6 +213,40 @@ html {
         right: -71%;
         top: 15%;
     }
+
+    .circle1 {
+        width: 50vw;
+        height: 50vh;
+        margin-left: 10%;
+    }
+
+    .circle2 {
+        width: 70vw;
+        height: 70vh;
+        margin-top: -8rem;
+    }
+
+    .circle3 {
+        width: 60vw;
+        height: 60vh;
+    }
+}
+@media screen and (max-width: 1176px) {
+    // .headingLeft {
+    //     margin-top: 1.65em;
+    //     margin-right: 114%;
+    //     position: absolute;
+    //     right:8%;
+    //     top: 15%;
+    // }
+
+    // .headingLeftDec {
+    //     margin-top: 1.65em;
+    //     margin-right: 108%;
+    //     position: absolute;
+    //     right: 5%;
+    //     top: 15%;
+    // }
 }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -221,8 +258,3 @@ html {
         }
     }
   }
-  
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (max-width: 699px) {
-
-  } 
