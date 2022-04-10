@@ -1,0 +1,38 @@
+canvas {
+  margin: 0;
+  display: inline-block !important;
+}
+
+.chart {
+  // position: relative;
+  // height: 100%;
+  // width: 100% !important;
+  // flex-grow: 1 !important;
+  // flex-basis: 1 !important
+  // width: 26rem;
+  // height: 13rem
+  // height: 100%
+  width: 100%;
+  display: inline-block !important;
+  margin-top: 0px;
+  margin-bottom: 64px;
+}
+
+.left {
+  display: inline-block;
+  width: 25% !important;
+  margin-left: 25%;
+}
+
+.right {
+  display: inline-block;
+  width: 25% !important;
+  margin-right: 25%;
+}
+
+.center {
+  width: 40% !important;
+  margin-left: 30%;
+  margin-right: 30%;
+  display: inline-block;
+}

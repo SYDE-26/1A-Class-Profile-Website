@@ -19,50 +19,50 @@ export default function StackedBar(props) {
   useEffect(() => {
 
     getDoc(doc(db, "1A Data", props.datatype)).then(docSnap => {
-        if (docSnap.exists()) {
-            console.log("Document data:", docSnap.data());
+      if (docSnap.exists()) {
+        console.log("Document data:", docSnap.data());
 
-            let data = {
-                barlabel: [],
-                barval: [],
-                label: [],
-                val: [],
-                color: [],
-                title: '',
-                xAxis: '',
-                yAxis: '',
-                n: '',
-                xAxisID: 'xAxes',
-                yAxisID: 'yAxes'
-            };
-            docSnap.data().x.bars.forEach((element) => {
-                data.label.push(element.legendIndex);
-                data.barval.push(element.barValues);
-                data.color.push(element.color);
-            });
+        let data = {
+          barlabel: [],
+          barval: [],
+          label: [],
+          val: [],
+          color: [],
+          title: '',
+          xAxis: '',
+          yAxis: '',
+          n: '',
+          xAxisID: 'xAxes',
+          yAxisID: 'yAxes'
+        };
+        docSnap.data().x.bars.forEach((element) => {
+          data.label.push(element.legendIndex);
+          data.barval.push(element.barValues);
+          data.color.push(element.color);
+        });
 
-            for (var i in data.barval) {
-                var d = [];
-                data.barval[i].forEach(function (elem, index) {
-                    d.push(parseFloat(Number(elem.barValue).toFixed(2)));
-                    if (!data.barlabel.includes(elem.barLabel)) {
-                        data.barlabel.push(elem.barLabel);
-                    }
-                });
-                data.val.push(d);
+        for (var i in data.barval) {
+          var d = [];
+          data.barval[i].forEach(function (elem, index) {
+            d.push(parseFloat(Number(elem.barValue).toFixed(2)));
+            if (!data.barlabel.includes(elem.barLabel)) {
+              data.barlabel.push(elem.barLabel);
             }
-
-            data.title = docSnap.data().title;
-            data.xAxis = docSnap.data().x.label;
-            data.yAxis = docSnap.data().y.label;
-            data.n = docSnap.data().n;
-            setId(id + 1);
-            setData(data);
-        } else {
-            console.log("No such document!");
+          });
+          data.val.push(d);
         }
+
+        data.title = docSnap.data().title;
+        data.xAxis = docSnap.data().x.label;
+        data.yAxis = docSnap.data().y.label;
+        data.n = docSnap.data().n;
+        setId(id + 1);
+        setData(data);
+      } else {
+        console.log("No such document!");
+      }
     })
-  }, [] );
+  }, []);
 
   function dataset_chartjs(data) {
     var datasets = [];
@@ -95,77 +95,76 @@ export default function StackedBar(props) {
   }
 
   const optionInformation = {
-    
-            
+
+
   }
 
   console.log("Options: ", optionInformation);
   return (
-    <div>
-      <div className="chart">
-        <Bar
-          data={{
-            labels: data.barlabel,
-            datasets: dataset_chartjs(data),
-          }}
+    <div className="chart">
+      <Bar
+        data={{
+          labels: data.barlabel,
+          datasets: dataset_chartjs(data),
+        }}
 
-          options={ 
-            {
+        options={
+          {
             responsive: true,
             maintainAspectRatio: true,
             plugins: {
-                legend: {
-                    display: true,
-                    reverse: true,
-                    position: 'right',
-                    labels: {
-                        usePointStyle: true,
-                        boxWidth: 8,
-                        padding: 8,
-                        size: 12,
-                        color: '#a0a0a0',
-                    },
+              legend: {
+                display: true,
+                reverse: true,
+                position: 'right',
+                labels: {
+                  usePointStyle: true,
+                  boxWidth: 8,
+                  padding: 8,
+                  size: 12,
+                  color: '#a0a0a0',
                 },
-                title: {
-                    display: true,
-                    text: data.title,
-                    color: '#ffffff',
-                    size: 15,
-                    padding: 14,
-                },
-                subtitle: {
-                    display: true, 
-                    size: 13,
-                    text: 'number of respondents:' + data.n, 
-                },
+              },
+              title: {
+                display: true,
+                text: data.title,
+                color: '#ffffff',
+                size: 15,
+                padding: 14,
+              },
+              subtitle: {
+                display: true,
+                size: 13,
+                text: 'number of respondents:' + data.n,
+              },
             },
             scales: {
               x: {
-                  stacked: true,
-                  title: {
-                      display: true,
-                      text: data.xAxes,
-                      color: '#ffffff',
-                      size: 15,
-                  },
-                  ticks: {
-                      color: '#ffffff',
-                  },
+                stacked: true,
+                title: {
+                  display: true,
+                  text: data.xAxes,
+                  color: '#ffffff',
+                  size: 15,
+                },
+                ticks: {
+                  color: '#ffffff',
+                },
               },
               y: {
-                  stacked: true,
-                  title: {
-                      display: true,
-                      text: data.yAxes,
-                      color: '#ffffff',
-                      size: 15,
-                  },
-                  ticks: {
-                      beginAtZero: true,
-                      color: '#ffffff',
-                  },
+                stacked: true,
+                title: {
+                  display: true,
+                  text: data.yAxes,
+                  color: '#ffffff',
+                  size: 15,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  color: '#ffffff',
+                },
               },
-          }
+            }
           }}
 
         //   options={{
@@ -229,10 +228,9 @@ export default function StackedBar(props) {
         //       ],
         //     },
         //   }}
-          height={props.height ? props.height : '100%'}
-          width={props.width ? props.width : '100%'}
-        />
-      </div>
+        height={props.height ? props.height : '100%'}
+        width={props.width ? props.width : '100%'}
+      />
     </div>
   );
 }

@@ -67,56 +67,56 @@ export default function PieChart(props) {
     });
 
     return (
-        <div>
-            <div className="chart">
-                <Pie
-                    data={{
-                        labels: newArrayLabel,
-                        datasets: [
-                            {
-                                label: '# of Students',
-                                data: newArrayData,
-                                backgroundColor: newArrayColor,
-                                borderColor: newArrayColor,
-                                hoverBorderColor: '#ffffff',
-                                hoverBorderWidth: 2,
+        <div className="chart">
+            <Pie
+                data={{
+                    labels: newArrayLabel,
+                    datasets: [
+                        {
+                            label: '# of Students',
+                            data: newArrayData,
+                            backgroundColor: newArrayColor,
+                            borderColor: newArrayColor,
+                            hoverBorderColor: '#ffffff',
+                            hoverBorderWidth: 2,
+                        },
+                    ],
+                }}
+                options={{
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                usePointStyle: true,
+                                boxWidth: 8,
+                                padding: 8,
+                                size: 12,
+                                color: '#a0a0a0',
                             },
-                        ],
-                    }}
-                    options={{
-                        responsive: false,
-                        maintainAspectRatio: false,
-                        plugins: {
-                            legend: {
-                                position: 'right',
-                                labels: {
-                                    usePointStyle: true,
-                                    boxWidth: 8,
-                                    padding: 8,
-                                    size: 12,
-                                    color: '#a0a0a0',
-                                },
-                                display: true,
-                            },
-                            title: {
-                                display: true,
-                                text: data.title,
-                                size: 15,
-                                color: '#ffffff',
-                                size: '14',
-                                padding: 14,
-                            },
-                            subtitle: {
-                                display: true,
-                                size: 13,
-                                text: 'number of respondents:' + data.n,
-                            }
+                            display: true,
+                        },
+                        title: {
+                            display: true,
+                            text: data.title,
+                            size: 15,
+                            color: '#ffffff',
+                            size: '14',
+                            padding: 14,
+                        },
+                        subtitle: {
+                            display: true,
+                            size: 13,
+                            text: 'number of respondents:' + data.n,
                         }
-                    }}
-                    height={props.height ? props.height : '100%'}
-                    width={props.width ? props.width : '100%'}
-                />
-            </div>
+
+                    }
+
+                }}
+                height={props.height ? props.height : '100%'}
+                width={props.width ? props.width : '100%'}
+            />
         </div>
     );
 }
