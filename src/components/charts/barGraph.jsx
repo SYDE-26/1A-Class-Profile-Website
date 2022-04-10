@@ -143,7 +143,7 @@ export default function BarGraph(props) {
                         y: {
                             title: {
                                 display: true,
-                                text: data.xAxis,
+                                text: data.yAxis,
                                 color: '#ffffff',
                                 font: {
                                     size: 15
