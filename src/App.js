@@ -25,6 +25,7 @@ import InsyderPage from './components/profilePages/insyderFolder/insyderPage';
 // );
 // const PieChart = dynamic(() => import('./components/charts/pieGraph.jsx'));
 // const BoxPlot = dynamic(() => import('./components/charts/boxPlotChart.jsx'));
+//const MultiBar = dynamic(() => import('./components/charts/multiBar.jsx'));
 
 function App() {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -60,6 +61,7 @@ function App() {
           setShowInsyderOverlay={setShowInsyderOverlay}
         />
       </Router>
+
     </div>
     
   );
