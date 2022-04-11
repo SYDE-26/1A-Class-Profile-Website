@@ -44,7 +44,7 @@ const HistogramPercent = (props) => {
                 });
 
                 data.title = allData.title;
-                data.xAxis = allData.x.label;
+                data.xAxis = allData.x.title;
                 data.yAxis = allData.y.label;
                 data.color = allData.x.color;
                 data.n = allData.n;
