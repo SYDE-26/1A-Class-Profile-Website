@@ -19,3 +19,9 @@
     margin-bottom: 10px;
     display: inline-block;
 }
+
+@media screen and (max-width: 960px) {
+    .frame {
+        margin-right: 18px;
+    }
+}
