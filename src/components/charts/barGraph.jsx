@@ -76,88 +76,94 @@ export default function BarGraph(props) {
         data.val[x] = Number(data.val[x]).toFixed(2);
         x++;
     }
-
+    console.log("hehe",data.label)
     return (
-        <div>
-            <div className="chart">
-                <Bar
-                    data={{
-                        labels: data.label,
-                        datasets: [
-                            {
-                                label: '% of Students',
-                                data: data.val,
-                                backgroundColor: data.color,
-                                borderColor: data.color,
-                                hoverBackgroundColor: '#ffffff',
+        <div className="chart">
+            <Bar
+                data={{
+                    labels: data.label,
+                    datasets: [
+                        {
+                            label: '% of Students',
+                            data: data.val,
+                            backgroundColor: data.color,
+                            borderColor: data.color,
+                            hoverBackgroundColor: '#ffffff',
+                        },
+                    ],
+                }}
+                options={{
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: data.title,
+                            color: '#ffffff',
+                            font: {
+                                size: 15
                             },
-                        ],
-                    }}
-                    options={{
-                        responsive: true,
-                        maintainAspectRatio: true,
-                        plugins: {
-                            legend: { display: false },
+                            padding: 14,
+                        },
+                        subtitle: {
+                            display: true,
+                            font: {
+                                size: 13
+                            },
+                            text: 'number of respondents:' + data.n,
+                        }
+                    },
+                    scales: {
+                        x: {
                             title: {
                                 display: true,
-                                text: data.title,
+                                text: data.xAxis,
                                 color: '#ffffff',
-                                size: 15,
-                                padding: 14,
+                                font: {
+                                    size: 15
+                                },
                             },
-                            subtitle: {
-                                display: true,
-                                size: 13,
-                                text: 'number of respondents:' + data.n,
-                            }
+                            grid: {
+                                borderColor: '#fff',
+                                color: 'rgba(255, 255, 255, 0.05)',
+                                lineWidth: 1 // Don't add a comma on this line lol, it breaks the graphs ¯\_(ツ)_/¯
+                            },
+                            ticks: {
+                                color: '#ffffff',
+                                Callback: function (tick, index, values) {
+                                    if (tick.length > 9 && values.length >= 4) {
+                                        return tick.split(" ");
+                                    } else {
+                                        return tick
+                                    }
+                                },
+                            },
                         },
-                        scales: {
-                            x: {
-                                title: {
-                                    display: true,
-                                    text: data.xAxis,
-                                    color: '#ffffff',
+                        y: {
+                            title: {
+                                display: true,
+                                text: data.yAxis,
+                                color: '#ffffff',
+                                font: {
                                     size: 15
-                                },
-                                grid: {
-                                    borderColor: '#fff',
-                                    color: 'rgba(255, 255, 255, 0.05)',
-                                    lineWidth: 1 // Don't add a comma on this line lol, it breaks the graphs ¯\_(ツ)_/¯
-                                },
-                                ticks: {
-                                    color: '#ffffff',
-                                    userCallback: function (tick, index, values) {
-                                        if (tick.length > 9 && values.length >= 4) {
-                                            return tick.split(" ");
-                                        } else {
-                                            return tick
-                                        }
-                                    },
                                 },
                             },
-                            y: {
-                                title: {
-                                    display: true,
-                                    text: data.xAxis,
-                                    color: '#ffffff',
-                                    size: 15
-                                },
-                                grid: {
-                                    borderColor: '#fff',
-                                    color: 'rgba(255, 255, 255, 0.05)',
-                                    lineWidth: 1,
-                                },
-                                ticks: {
-                                    beginAtZero: true,
-                                    color: '#ffffff',
-                                },
-                            }
-                          }
-                    }}
-                    height={props.height ? props.height : '100%'}
-                    width={props.width ? props.width : '100%'}
-                />
-            </div>
+                            grid: {
+                                borderColor: '#fff',
+                                color: 'rgba(255, 255, 255, 0.05)',
+                                lineWidth: 1,
+                            },
+                            ticks: {
+                                beginAtZero: true,
+                                color: '#ffffff',
+                            },
+                        }
+                    }
+                }}
+                height={props.height ? props.height : '100%'}
+                width={props.width ? props.width : '100%'}
+            />
         </div>
     );
 }

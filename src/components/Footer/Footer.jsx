@@ -5,7 +5,7 @@ import logo from '../../images/heart.svg';
 const Footer = () => {
   return (
     <div className="Footer">
-      Created with by <img src={logo} alt="love" className="heart" /> SYDE 2026
+      Created with <img src={logo} alt="love" className="heart" /> by SYDE 2026
       <div className="Wrapper" id="ScrollToTop">
         <Button onClick={topFunction} sx={{
           backgroundColor: "#27313B",

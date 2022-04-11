@@ -17,38 +17,35 @@ function PhotoGallery() {
         <div>
             <ProfileTitle title="1A Photo Gallery" />
             <img src={circle1} className="circle1" alt="Circles"/>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
             <div className="buttons">
                 <Link activeClass="active" to="1" spy={true} smooth={true} className="textButton">Sept</Link>
                 <Link to="2" spy={true} smooth={true} className="textButton">Oct</Link>
                 <Link to="3" spy={true} smooth={true} className="textButton">Nov</Link>
                 <Link to="4" spy={true} smooth={true} className="textButton">Dec</Link>
             </div>
+            <br></br>
             <div className="timeline">
-                <div className="container left" id="1">
+                <div className="container leftGallery" id="1">
                     <h3 className="headingRight">September 2021</h3>
                     <div className="content">
                         <SliderSept />
                     </div>
                 </div>
-                <div className="container right" id="2">
+                <div className="container rightGallery" id="2">
                     <img src={circle2} className="circle2" alt="Circles"/>
                     <h3 className="headingLeft">October 2021</h3>
                     <div className="content">
                         <SliderOct />
                     </div>
                 </div>
-                <div className="container left" id="3">
+                <div className="container leftGallery" id="3">
                     <img src={circle3} className="circle3" alt="Circles" />
                     <h3 className="headingRight">November 2021</h3>
                     <div className="content">
                         <SliderNov />
                     </div>
                 </div>
-                <div className="container right" id="4">
+                <div className="container rightGallery" id="4">
                     <img src={circle4} className="circle2" alt="Circles"/>
                     <h3 className="headingLeftDec">December 2021</h3>
                     <div className="content">
@@ -56,6 +53,8 @@ function PhotoGallery() {
                     </div>
                 </div>
             </div>
+            <br></br>
+            <br></br>
             <Footer />
         </div>
     );

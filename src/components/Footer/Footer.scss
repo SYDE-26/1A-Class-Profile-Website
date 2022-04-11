@@ -20,15 +20,21 @@ body {
 .Footer {
   border: none;
   color: #fff;
-  margin: 0px auto 0px auto;
+  margin: 0px auto 40px auto;
   width: 50%;
-  padding: 60px 0px 60px 0px;
   text-align: center;
 }
 
 .CreatedBy p {
   margin: 0px;
   padding: 0px;
+}
+
+#ScrollToTop {
+  background-image: linear-gradient(116.42deg, #749BFF 22.88%, #FFCD20 91.67%);
+  display: inline-block;
+  position: absolute;
+  right: 25px;
 }
 
 @media screen and (max-width: 1600px) {

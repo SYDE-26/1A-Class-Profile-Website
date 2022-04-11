@@ -44,7 +44,7 @@ const HistogramPercent = (props) => {
                 });
 
                 data.title = allData.title;
-                data.xAxis = allData.x.label;
+                data.xAxis = allData.x.title;
                 data.yAxis = allData.y.label;
                 data.color = allData.x.color;
                 data.n = allData.n;
@@ -61,83 +61,89 @@ const HistogramPercent = (props) => {
     }
 
     return (
-        <div>
-            <div className="chart">
-                <Bar
-                    data={{
-                        labels: data.label,
-                        datasets: [
-                            {
-                                label: '% of Students',
-                                data: data.val,
-                                backgroundColor: data.color,
-                                borderColor: data.color,
-                                hoverBackgroundColor: '#ffffff',
-                                barPercentage: 1.3,
+        <div className="chart">
+            <Bar
+                data={{
+                    labels: data.label,
+                    datasets: [
+                        {
+                            label: '% of Students',
+                            data: data.val,
+                            backgroundColor: data.color,
+                            borderColor: data.color,
+                            hoverBackgroundColor: '#ffffff',
+                            barPercentage: 1.3,
+                        },
+                    ],
+                }}
+                options={{
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: data.title,
+                            color: '#ffffff',
+                            font: {
+                                size: 15
                             },
-                        ],
-                    }}
-                    options={{
-                        responsive: true,
-                        maintainAspectRatio: true,
-                        plugins: {
-                            legend: { display: false },
+                            padding: 14,
+                        },
+                        subtitle: {
+                            display: true,
+                            font: {
+                                size: 13
+                            },
+                            text: 'number of respondents:' + data.n,
+                        }
+                    },
+                    scales: {
+                        x:
+                        {
+                            grid: {
+                                zeroLineColor: '#fff',
+                                color: 'rgba(255, 255, 255, 0.05)',
+                                lineWidth: 1,
+                            },
                             title: {
                                 display: true,
-                                text: data.title,
+                                text: data.xAxis,
                                 color: '#ffffff',
-                                size: 15,
-                                padding: 14,
+                                font: {
+                                    size: 15
+                                },
                             },
-                            subtitle: {
+                            ticks: {
+                                color: '#ffffff',
+                            },
+                        },
+                        y:
+                        {
+                            grid: {
+                                zeroLineColor: '#fff',
+                                color: 'rgba(255, 255, 255, 0.05)',
+                                lineWidth: 1,
+                            },
+                            title: {
                                 display: true,
-                                size: 13,
-                                text: 'number of respondents:' + data.n,
-                            }
-                        },
-                        scales: {
-                            x: 
-                                {
-                                    grid: {
-                                        zeroLineColor: '#fff',
-                                        color: 'rgba(255, 255, 255, 0.05)',
-                                        lineWidth: 1,
-                                    },
-                                    title: {
-                                        display: true,
-                                        text: data.xAxis,
-                                        color: '#ffffff',
-                                        size: 15,
-                                    },
-                                    ticks: {
-                                        color: '#ffffff',
-                                    },
+                                text: data.yAxis,
+                                color: '#ffffff',
+                                font: {
+                                    size: 15
                                 },
-                            y: 
-                                {
-                                    grid: {
-                                        zeroLineColor: '#fff',
-                                        color: 'rgba(255, 255, 255, 0.05)',
-                                        lineWidth: 1,
-                                    },
-                                    title: {
-                                        display: true,
-                                        text: data.yAxis,
-                                        color: '#ffffff',
-                                        size: 15,
-                                    },
-                                    ticks: {
-                                        beginAtZero: true,
-                                        color: '#ffffff',
-                                    },
-                                },
+                            },
+                            ticks: {
+                                beginAtZero: true,
+                                color: '#ffffff',
+                            },
                         },
-                        
-                    }}
-                    height={props.height ? props.height : '100%'}
-                    width={props.width ? props.width : '100%'}
-                />
-            </div>
+                    },
+
+                }}
+                height={props.height ? props.height : '100%'}
+                width={props.width ? props.width : '100%'}
+            />
         </div>
     );
 };
@@ -250,52 +256,60 @@ const HistogramCount = (props) => {
                                 display: true,
                                 text: data.title,
                                 color: '#ffffff',
-                                size: 15,
+                                font: {
+                                    size: 15
+                                },
                                 padding: 14,
                             },
                             subtitle: {
                                 display: true,
-                                size: 13,
+                                font: {
+                                    size: 13
+                                },
                                 text: 'number of respondents:' + data.n,
                             },
-                        },  
+                        },
                         scales: {
-                            x: 
-                                {
-                                    grid: {
-                                        zeroLineColor: '#fff',
-                                        color: 'rgba(255, 255, 255, 0.05)',
-                                        lineWidth: 1,
-                                    },
-                                    title: {
-                                        display: true,
-                                        text: data.xAxis,
-                                        color: '#ffffff',
-                                        size: 15,
-                                    },
-                                    ticks: {
-                                        color: '#ffffff',
+                            x:
+                            {
+                                grid: {
+                                    zeroLineColor: '#fff',
+                                    color: 'rgba(255, 255, 255, 0.05)',
+                                    lineWidth: 1,
+                                },
+                                title: {
+                                    display: true,
+                                    text: data.xAxis,
+                                    color: '#ffffff',
+                                    font: {
+                                        size: 15
                                     },
                                 },
-                            y: 
-                                {
-                                    grid: {
-                                        zeroLineColor: '#fff',
-                                        color: 'rgba(255, 255, 255, 0.05)',
-                                        lineWidth: 1,
-                                    },
-                                    title: {
-                                        display: true,
-                                        text: data.yAxis,
-                                        color: '#ffffff',
-                                        size: 15,
-                                    },
-                                    ticks: {
-                                        beginAtZero: true,
-                                        color: '#ffffff',
+                                ticks: {
+                                    color: '#ffffff',
+                                },
+                            },
+                            y:
+                            {
+                                grid: {
+                                    zeroLineColor: '#fff',
+                                    color: 'rgba(255, 255, 255, 0.05)',
+                                    lineWidth: 1,
+                                },
+                                title: {
+                                    display: true,
+                                    text: data.yAxis,
+                                    color: '#ffffff',
+                                    font: {
+                                        size: 15
                                     },
                                 },
-                        }, 
+                                ticks: {
+                                    beginAtZero: true,
+                                    color: '#ffffff',
+                                },
+                            },
+                        },
                     }}
                     height={props.height ? props.height : '100%'}
                     width={props.width ? props.width : '100%'}
