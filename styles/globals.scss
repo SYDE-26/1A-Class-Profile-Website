@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend&family=Montserrat&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lexend&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
 :root {
     --bg-colour: #27313B;
@@ -17,7 +18,7 @@
 
     font-size: 18px;
     line-height: 22px;
-    font-family: 'Montserrat';
+    font-family: 'Nunito Sans';
     font-style: normal;
 
     scroll-behavior: smooth;
@@ -71,8 +72,16 @@ h4 {
     color: #000000;
 }
 
+p {
+    font-family: 'Nunito Sans';
+    // font-style: normal;
+    // font-weight: 400;
+    // font-size: 17px;
+    // line-height: 23px;
+}
+
 a {
-    font-family: 'Montserrat';
+    font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -82,7 +91,7 @@ a {
 }
 
 caption {
-    font-family: 'Proxima Nova';
+    font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
