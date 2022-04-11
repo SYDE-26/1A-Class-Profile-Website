@@ -12,8 +12,8 @@ function Coop() {
         <div>
             <ProfileTitle section="coop" title="Co-op" />
             <Section header="Industries and Jobs" description="Software and Banking/Financial were the top two industries that hired SYDE students. Software is the most popular field this cohort accepted." />
-            <Chart type="Stacked" data="Coop Round vs Job Sector" position="center" />
-            <Chart type="Stacked" data="Coop Round vs Job Sector" position="center" />
+            <Chart type="Stacked" data="IndustryHiring" position="center" />
+            <Chart type="Stacked" data="JobAcceptance" position="center" />
             <Section header="External Factors and Co-op" description="NEED TO COME UP WITH SUMN" />
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="center" />
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="center" />
