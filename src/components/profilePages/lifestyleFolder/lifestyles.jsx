@@ -19,7 +19,7 @@ function Lifestyles() {
             <Chart type="Scatter" data="Course Average vs Difficulty" position="center" />
             <Section header="Social and Physical Life" description="We’re not just smart; gym is love, gym is life. We’re known as the most social engineering for a reason, SYDE is one big happy family." />
             <Chart type="Pie" data="Parents Born" position="left" />
-            <Chart type="Bar" data="FriendsHighschool" position="right" />
+            <Chart type="Multi" data="FriendsHighschool" position="right" />
             <Section header="Before Coming to Waterloo/1A Have You..." description="NEED TO COME UP WITH SUMN" />
             <Chart type="Bar" data="Drugs" position="center" />
             <Chart type="Bar" data="Drugs" position="center" />

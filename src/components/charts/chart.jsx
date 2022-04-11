@@ -4,6 +4,7 @@ import { HistogramCount } from "./histogramChart"
 import PieChart from "./pieGraph"
 import Scatterplot from "./scatterPlot"
 import StackedBar from "./stackedBar"
+import MultiBar from "./multiBar"
 import "./charts.scss"
 
 const Chart = ({ type, data, position }) => {
@@ -24,6 +25,12 @@ const Chart = ({ type, data, position }) => {
       return (
         <div className={position}>
           <BarGraph datatype={data} />
+        </div >
+      );
+    case 'Multi':
+      return (
+        <div className={position}>
+          <MultiBar datatype={data} />
         </div >
       );
     case 'Histogram':
