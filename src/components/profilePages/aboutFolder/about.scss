@@ -1,25 +1,31 @@
 .about {
-    margin-top: 4.45em;
+    margin-top: 1.7em;
 }
 .classPic {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    margin-top: 1.7em;
+    width: 65%;
 }
 
 .heading {
     color: #fff;
     margin-top: 1.65em;
-    white-space: nowrap;
+    // white-space: nowrap;
 }
 
 .descriptions {
     display: flex;
-    width: 50%;
+    width: 65%;
+    // max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.descriptions:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .column {
@@ -29,34 +35,23 @@
 
 .textBox {
     width: 100%;
-    max-width: 440px;
+    // max-width: 440px;
     margin-top: 1em;
 }
 
 .two {
-    margin-left: 3em;
+    margin-left: 3.75%;
 }
 
 .credit {
-    margin-top: 3.55em;
+    margin: 3.55em auto 0 auto;
     display: block;
-    margin-left: 25%;
-    margin-bottom: 0;
+    width: 65%;
 }
 
 .credit > h3 {
     color: #fff;
     margin-bottom: 0;
-}
-
-.team {
-    display: inline;
-}
-
-.avatarRow {
-    display: inline;
-    vertical-align: middle;
-    margin-left: 2em;
 }
 
 .design, .data, .software {
@@ -67,10 +62,28 @@
     margin-top: 1.4em;
 }
 
+.team {
+    display: inline;
+}
+
+.design > .team {
+    margin-right: 15px;
+}
+
+.data > .team {
+    margin-right: 34px;
+}
+
+.avatarRow {
+    display: inline;
+    vertical-align: middle;
+    margin-left: 2em;
+}
+
 .links {
     color: white;
     display: block;
-    width: 50%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2.25em;
@@ -83,6 +96,14 @@
     margin-top: 0;
 }
 
+.github {
+    display: inline;
+}
+
+.report {
+    display: inline;
+}
+
 .icon {
     height: 25px;
     width: auto;
@@ -93,4 +114,65 @@
     margin-right: 3.8em;
     text-decoration: underline;
     display: inline;
+    white-space: nowrap;
 }
+
+@media screen and (max-width: 1514px) {
+    .credit {
+        margin-top: 2em;
+        // max-width: 400px;
+        margin-left: 17.5%;
+    }
+
+    .design, .data, .software {
+        margin-bottom: 1em;
+    }
+
+    .team {
+        display: block;
+    }
+
+    .avatarRow {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .classPic {
+        margin-top: 0;
+    }
+
+    .descriptions {
+        display: block;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .two {
+        margin-left: 0;
+    }
+
+    .heading {
+        margin-top: 1em;
+    }
+
+    .textBox {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .github {
+        display: block;
+        margin-bottom: 1em;
+    }
+    
+    .linkText {
+        font-size: 10px;
+        vertical-align: middle;
+    }
+}
+

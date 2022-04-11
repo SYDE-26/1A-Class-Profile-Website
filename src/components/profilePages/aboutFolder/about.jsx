@@ -56,9 +56,8 @@ function About() {
             <div className='credit'>
                 <h3>Credits</h3>
                 <div className='design'>
-                    <p className='team'>Design
+                    <p className='team'>Design</p>
                         <div className='avatarRow'>{designAvatars}</div>
-                    </p>
                 </div>
                 <div className='data'>
                     <p className='team'>Data</p>
@@ -71,10 +70,14 @@ function About() {
             </div>
             <div className='links'>
                 <h3>Links</h3>
-                <img src={githubLogo} className='icon' />
-                <p className="linkText"><a href="https://github.com/SYDE-26/1A-Class-Profile-Website" target="_blank">Github Repo</a></p>
-                <img src={reportIcon} className='icon' />
-                <p className="linkText"><a target="_blank">Data Science Report (PDF)</a></p>
+                <div className='github'>
+                    <img src={githubLogo} className='icon' />
+                    <p className="linkText"><a href="https://github.com/SYDE-26/1A-Class-Profile-Website" target="_blank">Github Repo</a></p>
+                </div>
+                <div className='report'>
+                    <img src={reportIcon} className='icon' />
+                    <p className="linkText"><a target="_blank">Data Science Report (PDF)</a></p>
+                </div>
             </div>
             <Footer />
         </div>
