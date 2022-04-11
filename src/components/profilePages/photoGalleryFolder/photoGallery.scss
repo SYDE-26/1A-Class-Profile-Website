@@ -150,6 +150,46 @@ html {
     left: -16px;
 }
 
+@media screen and (min-width: 2000px) {
+    .circle1 {
+        width: 100vw;
+        height: 100vh;
+        margin-left: 10%;
+    }
+
+    .circle2 {
+        width: 80vw;
+        height: 80vh;
+        margin-top: -1rem;
+        margin-left: -20rem;
+    }
+
+    .circle3 {
+        width: 60vw;
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width: 1430px ) {
+    .circle1 {
+        width: 50vw;
+        height: 50vh;
+        margin-left: 10%;
+    }
+
+    .circle2 {
+        width: 70vw;
+        height: 70vh;
+        margin-top: -8rem;
+        margin-left: -10rem;
+    }
+
+    .circle3 {
+        width: 60vw;
+        height: 60vh;
+    }
+}
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
 
@@ -172,8 +212,10 @@ html {
     }
 
     .buttons {
-        right: 47%;
-        position: absolute;
+        right: 15rem;
+        padding-left: 7%;
+        padding-bottom: 13%;
+        position: static;
         top: 30%;
         display: flex;
         gap: 13px;
@@ -194,7 +236,7 @@ html {
         margin-top: 1.65em;
         margin-right: 1em;
         position: absolute;
-        left: 17%;
+        left: 3em;
         top: 15%;
     }
 
@@ -202,7 +244,7 @@ html {
         margin-top: 1.65em;
         margin-right: 114%;
         position: absolute;
-        right: -71%;
+        right: -12.1em;
         top: 15%;
     }
 
@@ -210,7 +252,7 @@ html {
         margin-top: 1.65em;
         margin-right: 108%;
         position: absolute;
-        right: -71%;
+        right: -12.1em;
         top: 15%;
     }
 
@@ -231,7 +273,23 @@ html {
         height: 60vh;
     }
 }
-@media screen and (max-width: 1176px) {
+@media screen and (max-width: 1200px) {
+    // .circle1 {
+    //     width: 50vw;
+    //     height: 50vh;
+    //     margin-left: 10%;
+    // }
+
+    // .circle2 {
+    //     width: 50vw;
+    //     height: 50vh;
+    //     margin-top: -8rem;
+    // }
+
+    // .circle3 {
+    //     width: 50vw;
+    //     height: 50vh;
+    // }
     // .headingLeft {
     //     margin-top: 1.65em;
     //     margin-right: 114%;
@@ -249,7 +307,6 @@ html {
     // }
 }
   
-  /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (max-width:1590px) {
     :root {
         h1 {
@@ -257,4 +314,18 @@ html {
             position: static;
         }
     }
+  }
+
+ 
+@media screen and (min-width: 2000px) {
+    // :root {
+    //   font-size: 18px;
+    // }
+
+    // .container {
+    //     width: 160%;
+    //     padding-left: 160px;
+    //     margin-left: -80%;
+    //     padding-right: 50px;
+    // }
   }
