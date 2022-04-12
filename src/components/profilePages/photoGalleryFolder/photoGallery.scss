@@ -14,7 +14,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.circle1 {
+.circleOne {
     position: absolute;
     background-size: cover;
     max-width: 60%;
@@ -24,7 +24,7 @@ html {
     z-index: 0;
 }
 
-.circle2 {
+.circleTwo {
     position: absolute;
     background-size: cover;
     margin-top: -30vh;
@@ -33,7 +33,7 @@ html {
     z-index: 0;
 }
 
-.circle3 {
+.circleThree {
     position: absolute;
     background-size: cover;
     max-width: 110%;
@@ -151,40 +151,40 @@ html {
 }
 
 @media screen and (min-width: 2000px) {
-    .circle1 {
+    .circleOne {
         width: 100vw;
         height: 100vh;
         margin-left: 10%;
     }
 
-    .circle2 {
+    .circleTwo {
         width: 80vw;
         height: 80vh;
         margin-top: -1rem;
         margin-left: -20rem;
     }
 
-    .circle3 {
+    .circleThree {
         width: 60vw;
         height: 60vh;
     }
 }
 
 @media screen and (max-width: 1430px ) {
-    .circle1 {
+    .circleOne {
         width: 50vw;
         height: 50vh;
         margin-left: 10%;
     }
 
-    .circle2 {
+    .circleTwo {
         width: 70vw;
         height: 70vh;
         margin-top: -8rem;
         margin-left: -10rem;
     }
 
-    .circle3 {
+    .circleThree {
         width: 60vw;
         height: 60vh;
     }
@@ -256,19 +256,19 @@ html {
         top: 15%;
     }
 
-    .circle1 {
+    .circleOne {
         width: 50vw;
         height: 50vh;
         margin-left: 10%;
     }
 
-    .circle2 {
+    .circleTwo {
         width: 70vw;
         height: 70vh;
         margin-top: -8rem;
     }
 
-    .circle3 {
+    .circleThree {
         width: 60vw;
         height: 60vh;
     }
