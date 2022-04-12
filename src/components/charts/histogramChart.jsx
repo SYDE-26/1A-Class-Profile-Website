@@ -266,7 +266,7 @@ const HistogramCount = (props) => {
                                 font: {
                                     size: 13
                                 },
-                                text: 'number of respondents:' + data.n,
+                                text: 'number of respondents: ' + data.n,
                             },
                         },
                         scales: {

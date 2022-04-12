@@ -20,13 +20,15 @@ canvas {
 
 .left {
   display: inline-block;
-  width: 25% !important;
+  width: 23% !important;
+  padding-right: 2%;
   margin-left: 25%;
 }
 
 .right {
   display: inline-block;
-  width: 25% !important;
+  width: 23% !important;
+  padding-left: 2%;
   margin-right: 25%;
 }
 

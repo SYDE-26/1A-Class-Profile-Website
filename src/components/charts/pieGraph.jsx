@@ -114,7 +114,7 @@ export default function PieChart(props) {
                             font: {
                                 size: 13
                             },
-                            text: 'number of respondents:' + data.n,
+                            text: 'number of respondents: ' + data.n,
                         }
 
                     }

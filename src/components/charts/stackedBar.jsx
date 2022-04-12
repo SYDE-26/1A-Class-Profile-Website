@@ -141,7 +141,7 @@ export default function StackedBar(props) {
                 font: {
                   size: 13
                 },
-                text: 'number of respondents:' + data.n,
+                text: 'number of respondents: ' + data.n,
               },
             },
             scales: {

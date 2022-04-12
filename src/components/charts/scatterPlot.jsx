@@ -162,7 +162,7 @@ export default function Scatterplot(props) {
                             font: {
                                 size: 13
                             },
-                            text: 'number of respondents:' + data.n,
+                            text: 'number of respondents: ' + data.n,
                         },
                         tooltip: {
                             enabled: true,

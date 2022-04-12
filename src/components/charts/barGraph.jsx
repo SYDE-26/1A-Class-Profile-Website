@@ -76,7 +76,7 @@ export default function BarGraph(props) {
         data.val[x] = Number(data.val[x]).toFixed(2);
         x++;
     }
-    console.log("hehe",data.label)
+    console.log("hehe", data.label)
     return (
         <div className="chart">
             <Bar
@@ -111,7 +111,7 @@ export default function BarGraph(props) {
                             font: {
                                 size: 13
                             },
-                            text: 'number of respondents:' + data.n,
+                            text: 'number of respondents: ' + data.n,
                         }
                     },
                     scales: {
