@@ -21,7 +21,7 @@ function Academics() {
             <Chart type="Stacked" data="LecturesAttendedByFormat" position="right" />
             <Section header="Course Difficulty, Usefulness, and Average" description="NEED TO COME UP WITH SUMN." />
             <Chart type="Scatter" data="Course Average vs Difficulty" position="center" />
-            <Chart type="Scatter" data="1A Course Average VS Usefulness" position="center" />
+            <Chart type="Scatter" data="Course Average vs Usefulness" position="center" />
             <Chart type="Scatter" data="Course Average vs Difficulty" position="center" />
             <Section header="Study Habits" description="Hopefully they improve by 1B." />
             <Chart type="Pie" data="StudyHabits" position="center" />

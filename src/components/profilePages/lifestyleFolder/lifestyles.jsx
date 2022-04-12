@@ -18,7 +18,7 @@ function Lifestyles() {
             <Section header="Sleep" description="Much of the cohort didn’t pull a single all nighter. Maybe we’re just great at time mangament." />
             <Chart type="Scatter" data="Course Average vs Difficulty" position="center" />
             <Section header="Social and Physical Life" description="We’re not just smart; gym is love, gym is life. We’re known as the most social engineering for a reason, SYDE is one big happy family." />
-            <Chart type="Pie" data="Parents Born" position="left" />
+            <Chart type="Pie" data="socialBubble" position="left" />
             <Chart type="Multi" data="FriendsHighschool" position="right" />
             <Section header="Before Coming to Waterloo/1A Have You..." description="NEED TO COME UP WITH SUMN" />
             <Chart type="Multi" data="Before 1A" position="center" />

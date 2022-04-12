@@ -95,7 +95,7 @@ export default function SideBar(props) {
       .sort((a, b) => a.value[key] - b.value[key]);
   }
 
-  if (data.barlabel == null) {
+  if (data.barlabel === null) {
     data.barlabel = ["Drunk Alcohol", "Smoked/Vaped", "Done Drugs", "Had First Kiss", "Had Sex"];
   }
   console.log(data.barlabel)

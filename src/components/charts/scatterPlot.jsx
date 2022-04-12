@@ -196,7 +196,7 @@ export default function Scatterplot(props) {
                         x: {
                             grid: {
                                 color: function (context) {
-                                    if (context.tick.value != 0) {
+                                    if (context.tick.value !== 0) {
                                         return "rgba(255, 255, 255, 0.1)";
                                     } else {
                                         return "#fff";
@@ -216,7 +216,7 @@ export default function Scatterplot(props) {
                                 if (data.allow) {
 
                                     for (var tick in q.ticks) {
-                                        if (q.ticks.length == 9) {
+                                        if (q.ticks.length === 9) {
 
                                             if (data.x_enums[tick] !== "") {
                                                 // q.ticks[tick] = data.x_enums[tick];
@@ -224,7 +224,7 @@ export default function Scatterplot(props) {
                                                 q.ticks[tick].label = data.x_enums[tick];
                                             }
                                         } else {
-                                            if (tick % 2 == 0) {
+                                            if (tick % 2 === 0) {
                                                 //q.ticks[tick] = data.x_enums1[tick];
                                                 q.ticks[tick].label = data.x_enums1[tick];
 
@@ -246,7 +246,7 @@ export default function Scatterplot(props) {
                             grid: {
                                 drawOnChartArea: true,
                                 color: function (context) {
-                                    if (context.tick.value != 0) {
+                                    if (context.tick.value !== 0) {
                                         return "rgba(255, 255, 255, 0.1)";
                                     } else {
                                         return "#fff";
@@ -265,12 +265,12 @@ export default function Scatterplot(props) {
                             afterTickToLabelConversion: function (q) {
                                 if (data.allow) {
                                     for (var tick in q.ticks) {
-                                        if (q.ticks.length == 9) {
+                                        if (q.ticks.length === 9) {
                                             if (data.y_enums[tick] !== "") {
                                                 q.ticks[tick] = data.y_enums[tick];
                                             }
                                         } else {
-                                            if (tick % 2 == 0 && data.y_enums1[tick] !== undefined) {
+                                            if (tick % 2 === 0 && data.y_enums1[tick] !== undefined) {
                                                 if (data.y_enums[tick] !== "") {
                                                     q.ticks[tick].label = data.y_enums[tick];
                                                 }
