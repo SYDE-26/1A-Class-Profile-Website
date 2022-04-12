@@ -19,9 +19,8 @@ function Coop() {
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="center" />
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="center" />
             <Section header="Gender Identity and Co-op" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-            <Chart type="Scatter" data="Course Average vs Difficulty" position="center" />
-            <Chart type="Scatter" data="Course Average vs Difficulty" position="center" />
-            <Chart type="Scatter" data="Course Average vs Difficulty" position="center" />
+            <Chart type="Multi" data="Gender vs Co-op Type" position="center" />
+            <Chart type="Multi" data="Gender Pay vs Round" position="center" />
             <Section header="Study Habits" description="Hopefully they improve by 1B." />
 
             <img src={logo} alt="" className="bottom" />

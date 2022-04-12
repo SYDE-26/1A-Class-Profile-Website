@@ -70,6 +70,7 @@
         color: white;
         font-size: 3.5vmax;
         font-weight: 300;
+        margin-bottom: max(30px,4%);
         margin-left: max(40px,2.5%);
         margin-right: auto;
         line-height: 0;
@@ -88,7 +89,7 @@
     align-items: center;
     height: 10%;
     width: 100%;
-    margin-top: 0.5%;
+    margin-top: 0;
     margin-bottom: 1.5%;
 }
 
@@ -98,6 +99,9 @@
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .demographics-button {
@@ -113,6 +117,7 @@
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
+        line-height: 25px;
     }
 }
 
@@ -132,9 +137,9 @@
         font-weight: 100;
         font-size: 1.75vmax;
         text-align: center;
-        line-height: normal;
         margin-top: 0;
         margin-bottom: auto;
+        line-height: 25px;
     }
 }
 
@@ -156,6 +161,7 @@
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
+        line-height: 25px;
     }
 }
 
@@ -178,6 +184,7 @@
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
+        line-height: 25px;
     }
 }
 
@@ -198,6 +205,7 @@
         text-align: center;
         margin-top: 0;
         margin-bottom: auto;
+        line-height: 25px;
     }
 }
 

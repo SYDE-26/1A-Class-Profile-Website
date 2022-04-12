@@ -51,6 +51,12 @@ const Chart = ({ type, data, position }) => {
           <StackedBar datatype={data} />
         </div >
       );
+    case 'MultiBar':
+      return (
+        <div className={position}>
+            <MultiBar datatype={data} />
+        </div>
+      )
     default:
       return (
         <h1>Invalid Chart Type!</h1>

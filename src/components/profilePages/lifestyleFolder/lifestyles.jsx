@@ -21,8 +21,8 @@ function Lifestyles() {
             <Chart type="Pie" data="Parents Born" position="left" />
             <Chart type="Multi" data="FriendsHighschool" position="right" />
             <Section header="Before Coming to Waterloo/1A Have You..." description="NEED TO COME UP WITH SUMN" />
-            <Chart type="Bar" data="Drugs" position="center" />
-            <Chart type="Bar" data="Drugs" position="center" />
+            <Chart type="Multi" data="Before 1A" position="center" />
+            <Chart type="Multi" data="During 1A" position="center" />
             <Section header="Did SYDE live up to the hype?" description="NEED TO COME UP WITH SUMN" />
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="left" />
             <Chart type="Bar" data="FavAssignment" position="right" />

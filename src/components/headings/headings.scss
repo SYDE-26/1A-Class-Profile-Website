@@ -136,10 +136,10 @@ h3.sectionHeader {
 }
 
 h1.demographics {
-    background-image: linear-gradient(90deg, var(--pink) 0%, var(--purple) 100%);
+    background: linear-gradient(90deg, var(--pink) 0%, var(--purple) 100%);
     background-clip: text;
     color: transparent;
-    display: table-caption; //This cuts off the title?
+    width: max-content;
     white-space: nowrap;
 }
 
@@ -147,7 +147,7 @@ h1.lifestyle {
     background: linear-gradient(109.91deg, var(--blue) 22.98%, #FFCD20 93.33%);
     background-clip: text;
     color: transparent;
-    //display: table-caption;
+    width: max-content;
     white-space: nowrap;
 }
 
@@ -155,7 +155,7 @@ h1.coop {
     background: linear-gradient(251.34deg, var(--orange) 9.78%, #F7BF00 84.54%);
     background-clip: text;
     color: transparent;
-    display: table-caption;
+    width: max-content;
     white-space: nowrap;
 }
 
@@ -163,7 +163,7 @@ h1.academics {
     background: linear-gradient(245.1deg, var(--pink) 5.86%, var(--orange) 74.16%);
     background-clip: text;
     color: transparent;
-    display: table-caption;
+    width: max-content;
     white-space: nowrap;
 }
 
@@ -171,6 +171,6 @@ h1.admissions {
     background: linear-gradient(114.13deg, var(--purple) 24.52%, var(--blue) 93.58%);
     background-clip: text;
     color: transparent;
-    display: table-caption;
+    width: max-content;
     white-space: nowrap;
 }
