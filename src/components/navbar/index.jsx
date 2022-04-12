@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../navbar/navbar.scss';
 import Overlay from '../overlay';
 import logo from '../../images/menu-logo.svg';
@@ -12,11 +13,16 @@ export default function Navbar(props) {
 
     return (
         <header className="navbar">
-            <img
-                src={logo}
-                alt="Navbar Logo"
-                className="navbar-logo"
-            />
+            <Link to="/">
+                <button
+                    className="logo-button"
+                ><img
+                        src={logo}
+                        alt="Navbar Logo"
+                        className="navbar-logo"
+                    /></button>
+            </Link>
+
             <button
                 className="menu-button"
                 onClick={toggleOverlay}
