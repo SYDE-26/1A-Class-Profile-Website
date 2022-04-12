@@ -2,29 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend&family=Montserrat&display=swap');
 
-:root {
-    --bg-colour: #27313B;
-    --gradient-1: linear-gradient(180deg, #FF76A5 0%, #C067E2 100%);
-    --gradient-2: linear-gradient(122.18deg, #C067E2 13.81%, #749BFF 85.95%);
-    --gradient-3: linear-gradient(230.6deg, #FF76A5 13.56%, #FE8C5A 87.82%);
-    --gradient-4: linear-gradient(242.5deg, #FE8C5A 25.46%, #F7BF00 89.55%);
-    --gradient-5: linear-gradient(116.42deg, #749BFF 22.88%, #FFCD20 91.67%);
-    --blue: #749BFF;
-    --purple: #C067E2;
-    --pink: #FF76A5;
-    --orange: #FE8C5A;
-    --yellow: #FFCE1F;
-    --main-text: #fff;
-
-    font-size: 18px;
-    line-height: 22px;
-    font-family: 'Nunito Sans';
-    font-style: normal;
-
-    scroll-behavior: smooth;
-    background-color: var(--bg-colour);
-}
-
 html,
 body {
     margin: 0;
@@ -36,10 +13,10 @@ h1 {
     font-family: 'Lexend';
     font-style: normal;
     font-weight: 600;
-    font-size: 34px;
-    line-height: 42px;
+    font-size: 2.125rem;
+    line-height: 2.625rem;
     letter-spacing: -0.01em;
-    margin: 80px 25% 48px 25%;
+    margin: 5rem 25% 3rem 25%;
     /*Background will depend on which section*/
 }
 
@@ -47,7 +24,7 @@ h2 {
     font-family: 'Lexend';
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 38px;
     letter-spacing: -0.01em;
     color: #000000;
@@ -57,7 +34,7 @@ h4 {
     font-family: 'Lexend';
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 22px;
     letter-spacing: -0.01em;
     color: #000000;
@@ -67,7 +44,7 @@ a {
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 22px;
     text-decoration-line: underline;
     color: rgba(255, 255, 255, 0.9);
@@ -77,50 +54,14 @@ caption {
     font-family: 'Proxima Nova';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 22px;
     color: #fff;
 }
 
-@media screen and (max-width: 1600px) {
-    :root {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    :root {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    :root {
-        font-size: 17px;
-    }
-}
-
-@media screen and (max-width: 960px) {
-    :root {
-        font-size: 15px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    :root {
-        font-size: 13px;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    :root {
-        font-size: 11px;
-    }
-}
-
 //
 .graphDescription {
-    margin: 0px 25% 32px 25%
+    margin: 0px 25% 2rem 25%
 }
 
 h3.sectionHeader {
@@ -129,10 +70,10 @@ h3.sectionHeader {
     font-family: 'Lexend';
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 30px;
     letter-spacing: -0.01em;
-    margin: 0px 25% 16px 25%
+    margin: 0px 25% 1rem 25%
 }
 
 h1.demographics {
@@ -173,4 +114,94 @@ h1.admissions {
     color: transparent;
     width: max-content;
     white-space: nowrap;
+}
+
+@media screen and (max-width: 1600px) {
+    .graphDescription {
+        margin: 0px 25% 2rem 25%
+    }
+
+    h3.sectionHeader {
+        margin: 0px 25% 1rem 25%
+    }
+
+    h1 {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .graphDescription {
+        margin: 0px 20% 2rem 20%
+    }
+
+    h3.sectionHeader {
+        margin: 0px 20% 1rem 20%
+    }
+
+    h1 {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .graphDescription {
+        margin: 0px 15% 2rem 15%
+    }
+
+    h3.sectionHeader {
+        margin: 0px 15% 1rem 15%
+    }
+
+    h1 {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .graphDescription {
+        margin: 0px 10% 2rem 10%
+    }
+
+    h3.sectionHeader {
+        margin: 0px 10% 1rem 10%
+    }
+
+    h1 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .graphDescription {
+        margin: 0px 10% 2rem 10%
+    }
+
+    h3.sectionHeader {
+        margin: 0px 10% 1rem 10%
+    }
+
+    h1 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .graphDescription {
+        margin: 0px 10% 2rem 10%
+    }
+
+    h3.sectionHeader {
+        margin: 0px 10% 1rem 10%
+    }
+
+    h1 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 }

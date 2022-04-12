@@ -1,22 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend&family=Montserrat&display=swap');
 
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #27313B;
-  font-size: 18px;
-  line-height: 22px;
-  font-family: 'Nunito Sans';
-  font-style: normal;
-}
-
 .Wrapper {
   border: 0px hidden transparent;
   border-radius: 20px;
-  padding: 2px;
+  padding: 2px; //keep as px
   margin: 0px
 }
 
@@ -25,7 +13,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin: 0px 25% 100px 25%
+  margin: 0px 25% 6.25rem 25%
 }
 
 #coop {
@@ -53,37 +41,47 @@ body {
 }
 
 @media screen and (max-width: 1600px) {
-  :root {
-    font-size: 18px;
+
+
+  .NavigationalButtons {
+    margin: 0px 25% 6.25rem 25%
   }
 }
 
 @media screen and (max-width: 1400px) {
-  :root {
-    font-size: 15px;
+
+  .NavigationalButtons {
+    margin: 0px 20% 6.25rem 20%
   }
 }
 
 @media screen and (max-width: 1200px) {
-  :root {
-    font-size: 12px;
+
+  .NavigationalButtons {
+    margin: 0px 15% 6.25rem 15%
   }
+
 }
 
 @media screen and (max-width: 960px) {
-  :root {
-    font-size: 9px;
+
+  .NavigationalButtons {
+    margin: 0px 10% 6.25rem 10%
   }
+
 }
 
 @media screen and (max-width: 480px) {
-  :root {
-    font-size: 6px;
+
+  .NavigationalButtons {
+    margin: 0px 10% 6.25rem 10%
   }
+
 }
 
 @media screen and (max-width: 360px) {
-  :root {
-    font-size: 3px;
+
+  .NavigationalButtons {
+    margin: 0px 10% 6.25rem 10%
   }
 }
