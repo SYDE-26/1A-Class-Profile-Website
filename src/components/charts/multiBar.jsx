@@ -42,7 +42,7 @@ export default function SideBar(props) {
                 var d = [];
                 data.barval[i].forEach(function (elem, index) {
                  
-                  d.push(parseFloat(elem.barValue.toFixed(2)));
+                  d.push(parseFloat(Number(elem.barValue).toFixed(2)));
                   if (!data.barlabel.includes(elem.barLabel)) {
                     data.barlabel.push(elem.barLabel);
                   }
@@ -57,7 +57,7 @@ export default function SideBar(props) {
               data.n = docSnap.data().n;
               setId(id + 1);
               setData(data);
-              
+              console.log(data)
             } else {
                 console.log('No such document!');
             }
@@ -70,7 +70,7 @@ export default function SideBar(props) {
       var datasets_sorted = [];
       for (var i = 0; i < data.val.length; i++) {
         var add_data = {
-          labels: ["Drunk Alcohol", "Smoked/Vaped", "Done Drugs", "Had First Kiss", "Had Sex"],
+          //labels: ["Drunk Alcohol", "Smoked/Vaped", "Done Drugs", "Had First Kiss", "Had Sex"],
           label: data.label[i],
           data: data.val[i],
           backgroundColor: data.color[i],
@@ -96,7 +96,7 @@ export default function SideBar(props) {
     }
     
   if (data.barlabel == null) {
-    data.barlabel = ["Drunk Alcohol", "Smoked/Vaped", "Done Drugs", "Had First Kiss", "Had Sex"];
+    //data.barlabel = ["Drunk Alcohol", "Smoked/Vaped", "Done Drugs", "Had First Kiss", "Had Sex"];
   }
     console.log(data.barlabel)
     return (
@@ -153,7 +153,7 @@ export default function SideBar(props) {
                 x: 
                   {
                     grid: {
-                      zeroLineColor: '#fff',
+                      borderColor: '#fff',
                       color: 'rgba(255, 255, 255, 0.05)',
                       lineWidth: 1,
                     },
@@ -172,7 +172,7 @@ export default function SideBar(props) {
                 y: 
                   {
                     grid: {
-                      zeroLineColor: '#fff',
+                      borderColor: '#fff',
                       color: 'rgba(255, 255, 255, 0.05)',
                       lineWidth: 1,
                     },

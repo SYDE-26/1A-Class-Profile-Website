@@ -4,6 +4,7 @@ import { HistogramCount } from "./histogramChart"
 import PieChart from "./pieGraph"
 import Scatterplot from "./scatterPlot"
 import StackedBar from "./stackedBar"
+import MultiBar from "./multiBar"
 import "./charts.scss"
 
 const Chart = ({ type, data, position }) => {
@@ -44,6 +45,12 @@ const Chart = ({ type, data, position }) => {
           <StackedBar datatype={data} />
         </div >
       );
+    case 'MultiBar':
+      return (
+        <div className={position}>
+            <MultiBar datatype={data} />
+        </div>
+      )
     default:
       return (
         <h1>Invalid Chart Type!</h1>
