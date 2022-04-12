@@ -14,6 +14,10 @@ import ReactDOM from "react-dom";
 import {db} from "../../../firebase-config.js";
 // import { initializeApp } from "firebase/app";
 import {getStorage, ref, getDownloadUrl, getDownloadURL } from "firebase/storage";
+import circle1 from '../../../images/circle1.svg';
+import circle2 from '../../../images/circle4.svg';
+import circle3 from '../../../images/circle3.svg';
+import circle4 from '../../../images/circle2.svg';
 
 
 function Insyderpage() {
@@ -21,59 +25,65 @@ function Insyderpage() {
   const [url, setUrl] = React.useState();
 
 
-  const [memeIndex, setMemeIndex] = useState(1)
+  const [memeIndex, setMemeIndex] = useState(1);
 
-  // setMemeIndex()
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
+    
+  React.useEffect(() => {
+      function watchWidth() {
+          console.log("Setting up...")
+          setWindowWidth(window.innerWidth)
+      }
+      
+      window.addEventListener("resize", watchWidth)
+      
+      return function() {
+          // console.log("Cleaning up...")
+          window.removeEventListener("resize", watchWidth)
+      }
 
-  // React.useEffect(() => {
-  //   const func = async() =>{
-  //     const storage = getStorage();
-  //     const reference = ref(storage, `/insyderMemes/img1.jpeg`);
-  //     // const reference2 = ref(storage, `/insyderMemes/img2.jpeg`);
-  //     await getDownloadURL(reference).then((x) => {
-  //       setUrl(x);
-  //     })
-  //   }
-  //   func();
-  // }, []);
+      // if (windowWidth > 600){
+      //     const isSixHundred = true;
+      // }
+  }, [])
 
-  // React.useEffect(() => {
-  //   const func = async() =>{
-  //     const storage = getStorage();
-  //     const reference = ref(storage, `/insyderMemes/img2.jpeg`);
-  //     await getDownloadURL(reference).then((x) => {
-  //       setUrl(x);
-  //     })
-  //   }
-  //   func();
-  // }, []);
 
     return (
-        <div>
-            <h1 className= "insyder">Insyder Page</h1>
-            <div className = "insyder">
+        <div className = "insyderPage">
+            <h1 className= "insyder--title">Insyder Page</h1>
+            {/* <h1 className= "insyder--window">{windowWidth}</h1> */}
+            <div className = "insyder--box">
             <Box sx={{ 
               width: 850, 
-              height: 4000, 
+              height: 4200, 
               overflowY: 'scroll' }} className = "box">
                 {/* <img src = {url} style = {{width: '33%'}}/> */}
-      <ImageList variant="masonry" cols={3} gap={8} className = "image-list">
+      <ImageList variant="masonry"  cols={windowWidth > 1000
+         ? 3 : windowWidth > 650 ? 2 : 1}  gap={8} className = "image-list">
         {/* <img ></img> */}
+        <img src={circle1} className="circle1" alt="Circles"/>
+        <img src={circle2} className="circle2" alt="Circles"/>
+        <img src={circle3} className="circle3" alt="Circles"/>
+        <img src={circle4} className="circle4" alt="Circles"/>
         {itemData.map((item) => (
           <ImageListItem key={item.id} className = "image-list-item">
             <img
               src=
-              {`${item.img}?w=248&fit=crop&auto=format`}
+              {`${item.img}?w=${windowWidth > 600
+                ? 33 : windowWidth < 375 ? 148 : 48}&fit=crop&auto=format`}
               // {`${url}`}
               // {`${url}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              srcSet={`${item.img}?w=${windowWidth > 600
+                ? 248 : windowWidth < 375 ? 148 : 48}&fit=crop&auto=format&dpr=2 2x`}
               alt=''
               loading="lazy"
             />
+         
             <a style = {{display: 'none'}}>{item.title}</a>
           </ImageListItem>
         ))}
       </ImageList>
+      {/* <img src={circle3} className="circle3" alt="Circles"/> */}
     </Box>
     </div>
     <div>

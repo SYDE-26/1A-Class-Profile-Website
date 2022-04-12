@@ -1,6 +1,21 @@
 // h1{
 //     margin-left: 5%;
 // }
+
+// .MuiImageListItem-img{
+//     // width: 30% !important;
+// }
+
+html, body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+// .insyderPage{
+//     margin: auto 0;
+//     right: -50%;
+// }
+
 :root {
     --bg-colour: #27313B;
     --gradient-1: linear-gradient(180deg, #FF76A5 0%, #C067E2 100%);
@@ -24,21 +39,50 @@
     // background-color: var(--bg-colour);
 }
 
-h1.insyder{ 
-    margin-left: 22%;
-    margin-right: 22%;
-}
+// *{
+//     max-width: 95% !important;
+// }
+
+
+
+// h1.insyder{ 
+//     margin-left: 22%;
+//     margin-right: 22%;
+// }
 
 // body{
 //     overflow: hidden;
 //     // margin-left: 22%;
 // }
+// .insyder--title{
+//     // display: flex;
+//     // justify-content: space-between !important;
+//     margin-left: 22% !important;
+// }
 
-.box{
-    margin-left: 22%;
-    margin-right: 22%;
+.insyder--window{
+    display: flex;
+    justify-content: center;
+}
+
+
+.insyder--box{
+    // margin-left: 22%;
+    // margin-right: 22%;
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
     // width: 200%;
 }
+
+// .it{
+//     margin-left: 10%;
+//     margin-right: 10%;
+// }
+// .image-list-item{
+//     margin-right: 23px;
+// }
 
 // @media screen and (max-width: 600px) {
 
@@ -55,37 +99,84 @@ h1.insyder{
     
 // }
 
+@media only screen and (max-width: 2000px){
+    .insyder--title{
+        margin-left: 28% !important;
+    }
+}
+
+
+
+@media only screen and (max-width: 1600px){
+    .insyder--title{
+        margin-left: 22% !important;
+    }
+}
+
 @media only screen and (max-width: 1360px){
-    .box{
-        margin-left: 19%;
-        margin-right: 19%;
-        // width: 200%;
+    // .box{
+    //     margin-left: 18%;
+    //     margin-right: 18%;
+    //     // width: 200%;
+    // }
+    .insyder--title{
+        margin-left: 17% !important;
+        // margin-right: 18%;
     }
 }
 
 @media only screen and (max-width: 1260px){
-    .box{
-        margin-left: 17%;
-        // margin-right: 19%;
-        // width: 200%;
+   
+    // .box{
+    //     margin-left: 17%;
+    //     // margin-right: 19%;
+    //     // width: 200%;
+    
+    .insyder--title{
+        margin-left: 11% !important;
     }
 }
 
 @media only screen and (max-width: 1165px){
-    .box{
-        margin-left: 14%;
-        // margin-right: 19%;
-        // width: 200%;
+    // .box{
+    //     margin-left: 14%;
+    //     // margin-right: 19%;
+    //     // width: 200%;
+    // }
+    .insyder--title{
+        margin-left: 10% !important;
     }
 }
 
 @media only screen and (max-width: 1065px){
-    .box{
-        margin-left: 10%;
-        // margin-right: 19%;
-        // width: 200%;
+    // .box{
+    //     margin-left: 10%;
+    //     // margin-right: 19%;
+    //     // width: 200%;
+    // }
+    .insyder--title{
+        margin-left: 10% !important;
     }
 }
+
+@media only screen and (max-width: 850px){
+    .insyder--title{
+        margin-left: 9% !important;
+    }
+}
+
+// @media only screen and (max-width: 500px){
+
+//     .insyder--title{
+//         margin-left: 7% !important;
+//     }
+// }
+
+// @media only screen and (max-width: 450px){
+//     .insyder--title{
+//         margin-left: 8% !important;
+//     }
+// }
 
 ::-webkit-scrollbar {
     display: none;
@@ -109,4 +200,46 @@ h1.insyder{
         left: 50%;
         transform: translate(-50%, -50%);
     }
+}
+
+.circle1 {
+    position: absolute;
+    background-size: cover;
+    max-width: 60%;
+    margin-top: 0vh;
+    filter: blur(8px);
+    -webkit-filter: blur(80px);
+    z-index: 0;
+    left: 0%;
+}
+
+.circle2 {
+    position: absolute;
+    background-size: cover;
+    margin-top: -30vh;
+    filter: blur(8px);
+    -webkit-filter: blur(80px);
+    z-index: 0;
+    right: 0%;
+}
+
+.circle3 {
+    position: absolute;
+    background-size: cover;
+    max-width: 110%;
+    margin-top: -20vh;
+    left: -10%;
+    filter: blur(8px);
+    -webkit-filter: blur(80px);
+    z-index: 0;
+    top: 200%;
+}
+
+.circle4{
+    position: absolute;
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(80px);
+    right: 0%;
+    top: 200%;
 }
