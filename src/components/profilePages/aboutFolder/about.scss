@@ -1,5 +1,5 @@
 .about {
-    margin-top: 1.7em;
+    margin-top: 4.45em;
 }
 .classPic {
     display: block;
@@ -44,13 +44,16 @@
 }
 
 .two {
-    margin-left: 3.75%;
+    margin-left: 5.75%;
 }
 
 .credit {
-    margin: 3.55em auto 0 auto;
+    // margin: 3.55em auto 0 auto;
     display: block;
-    width: 65%;
+    // width: 65%;
+    margin-top: 3.55em;
+    margin-left: 17.5%;
+    margin-right: 10%;
 }
 
 .credit > h3 {
@@ -68,14 +71,18 @@
 
 .team {
     display: inline;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
 }
 
 .design > .team {
-    margin-right: 15px;
+    margin-right: 16px;
 }
 
 .data > .team {
-    margin-right: 34px;
+    margin-right: 33px;
 }
 
 .avatarRow {
@@ -90,7 +97,7 @@
     width: 65%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2.25em;
+    margin-bottom: 5.5em;
     padding-top: 0.6em;
 }
 
@@ -102,6 +109,7 @@
 
 .github {
     display: inline;
+    margin-right: 3.8em;
 }
 
 .report {
@@ -115,13 +123,16 @@
 }
 
 .linkText {
-    margin-right: 3.8em;
     text-decoration: underline;
     display: inline;
     white-space: nowrap;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px; 
+    line-height: 22px;
 }
 
-@media screen and (max-width: 1514px) {
+@media screen and (max-width: 1340px) {
     .credit {
         margin-top: 2em;
         // max-width: 400px;
@@ -173,10 +184,33 @@
         display: block;
         margin-bottom: 1em;
     }
-    
+
     .linkText {
-        font-size: 10px;
-        vertical-align: middle;
+        margin-left: 0.9em;
+    }
+
+    .github > .icon {
+        margin-right: 0;
+    }
+
+    .report > .icon {
+        margin-right: 5px;
     }
 }
 
+@media screen and (max-width: 600px) {
+    .about {
+        margin-top: 1em;
+    }
+
+    .links {
+        margin-bottom: 3em;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .icon {
+        height: 18px;
+        width: auto;
+    }
+}

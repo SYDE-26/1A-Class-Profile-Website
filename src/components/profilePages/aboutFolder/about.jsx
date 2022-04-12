@@ -72,11 +72,11 @@ function About() {
                 <h3>Links</h3>
                 <div className='github'>
                     <img src={githubLogo} className='icon' />
-                    <p className="linkText"><a href="https://github.com/SYDE-26/1A-Class-Profile-Website" target="_blank">Github Repo</a></p>
+                    <p className="linkText"><a href="https://github.com/SYDE-26/1A-Class-Profile-Website" target="_blank" className="linkText">Github Repo</a></p>
                 </div>
                 <div className='report'>
                     <img src={reportIcon} className='icon' />
-                    <p className="linkText"><a target="_blank">Data Science Report (PDF)</a></p>
+                    <p className="linkText"><a target="_blank" className="linkText">Data Science Report (PDF)</a></p>
                 </div>
             </div>
             <Footer />
