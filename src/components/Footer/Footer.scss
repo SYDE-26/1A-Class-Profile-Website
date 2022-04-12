@@ -1,26 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend&family=Montserrat&display=swap');
 
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #27313B;
-  font-size: 18px;
-  line-height: 22px;
-  font-family: 'Nunito Sans';
-  font-style: normal;
-}
-
 .heart {
-  height: 18px;
+  height: 1.125rem;
 }
 
 .Footer {
   border: none;
   color: #fff;
-  margin: 0px auto 40px auto;
+  margin: 0px auto 2.5rem auto;
   width: 50%;
   text-align: center;
 }
@@ -34,41 +22,5 @@ body {
   background-image: linear-gradient(116.42deg, #749BFF 22.88%, #FFCD20 91.67%);
   display: inline-block;
   position: absolute;
-  right: 25px;
-}
-
-@media screen and (max-width: 1600px) {
-  :root {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 1400px) {
-  :root {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  :root {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  :root {
-    font-size: 9px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  :root {
-    font-size: 6px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  :root {
-    font-size: 3px;
-  }
+  right: 1.5625rem;
 }

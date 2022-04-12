@@ -33,8 +33,136 @@ canvas {
 }
 
 .center {
-  width: 40% !important;
-  margin-left: 30%;
-  margin-right: 30%;
+  width: 34% !important;
+  margin-left: 33%;
+  margin-right: 33%;
   display: inline-block;
+}
+
+@media screen and (max-width: 1600px) {
+  .right {
+    width: 23% !important;
+    //padding-left: 2%;
+    margin-right: 25%;
+  }
+
+  .left {
+    width: 23% !important;
+    //padding-right: 2%;
+    margin-left: 25%;
+  }
+
+  .center {
+    width: 34% !important;
+    margin-left: 33%;
+    margin-right: 33%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+
+  .right {
+    width: 28% !important;
+    //padding-left: 2%;
+    margin-right: 20%;
+  }
+
+  .left {
+    width: 28% !important;
+    //padding-right: 2%;
+    margin-left: 20%;
+  }
+
+  .center {
+    width: 50% !important;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .right {
+    width: 33% !important;
+    //padding-left: 2%;
+    margin-right: 15%;
+  }
+
+  .left {
+    width: 33% !important;
+    //padding-right: 2%;
+    margin-left: 15%;
+  }
+
+  .center {
+    width: 70% !important;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+}
+
+@media screen and (max-width: 960px) {
+
+  .right {
+    width: 90% !important;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .left {
+    width: 90% !important;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .center {
+    width: 90% !important;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .center {
+    width: 90% !important;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .center {
+    width: 90% !important;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .center {
+    width: 90% !important;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+
+  .center {
+    width: 90% !important;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .center {
+    width: 90% !important;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .center {
+    width: 90% !important;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }

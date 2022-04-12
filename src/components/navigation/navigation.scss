@@ -11,12 +11,12 @@
     --orange: #FE8C5A;
     --yellow: #FFCE1F;
     --main-text: #fff;
-    
-    font-size: 18px;
+
+    // font-size: 18px;
     line-height: 22px;
     font-family: 'Nunito Sans';
     font-style: normal;
-    
+
     scroll-behavior: smooth;
     background-color: var(--bg-colour);
 }
@@ -34,7 +34,7 @@
     color: #A9ADB1;
     font-size: 16px;
 }
-    
+
 .Wrapper {
     display: flex;
     flex-direction: row;
@@ -42,7 +42,7 @@
     margin-left: 1.5vw;
     // transition: 2s;
 }
-    
+
 .CircleWrapper {
     display: flex;
     flex-direction: column;
@@ -52,10 +52,12 @@
     justify-content: center;
     // transition: 2s;
 }
-    
-.CoopGradient, .CoopChange {
+
+.CoopGradient,
+.CoopChange {
     display: flex;
-    background: linear-gradient(242.5deg, #FE8C5A 25.46%, #F7BF00 89.55%);;
+    background: linear-gradient(242.5deg, #FE8C5A 25.46%, #F7BF00 89.55%);
+    ;
     mix-blend-mode: normal;
     width: 290px;
     height: 290px;
@@ -63,8 +65,9 @@
     justify-content: center;
     // transition: 2s;
 }
-    
-.AcademicsGradient, .AcademicsChange {
+
+.AcademicsGradient,
+.AcademicsChange {
     display: flex;
     background: linear-gradient(230.6deg, #FF76A5 13.56%, #FE8C5A 87.82%);
     mix-blend-mode: normal;
@@ -74,8 +77,9 @@
     justify-content: center;
     // transition: 2s;
 }
-    
-.DemographicsGradient, .DemographicsChange {
+
+.DemographicsGradient,
+.DemographicsChange {
     display: flex;
     background: linear-gradient(180deg, #FF76A5 0%, #C067E2 100%);
     mix-blend-mode: normal;
@@ -85,8 +89,9 @@
     justify-content: center;
     // transition: 2s;
 }
-    
-.HighSchoolGradient, .HighSchoolChange {
+
+.HighSchoolGradient,
+.HighSchoolChange {
     display: flex;
     background: linear-gradient(122.18deg, #C067E2 13.81%, #749BFF 85.95%);
     mix-blend-mode: normal;
@@ -96,8 +101,9 @@
     justify-content: center;
     // transition: 2s;
 }
-    
-.LifeStyleGradient, .LifeStyleChange {
+
+.LifeStyleGradient,
+.LifeStyleChange {
     display: flex;
     background: linear-gradient(116.42deg, #749BFF 22.88%, #FFCD20 91.67%);
     mix-blend-mode: normal;
@@ -107,7 +113,7 @@
     justify-content: center;
     // transition: 2s;
 }
-    
+
 .BlackCircle {
     display: flex;
     background-color: var(--bg-colour);
@@ -118,7 +124,7 @@
     margin-top: 2vh;
     transition: 2s;
 }
-    
+
 .Text {
     font-size: 24px;
     font-family: 'Lexend';
@@ -128,39 +134,39 @@
     color: var(--main-text);
     text-align: center;
     margin: 0 auto;
-    
+
 }
-    
-section:first-child{
+
+section:first-child {
     margin-top: 9%;
     z-index: 0;
     margin-right: -5%;
 }
-    
-section:nth-of-type(2){
+
+section:nth-of-type(2) {
     margin-top: 6%;
     z-index: 5;
     margin-right: -5%;
 }
-    
-section:nth-of-type(3){
+
+section:nth-of-type(3) {
     margin-top: 3%;
     z-index: 10;
 }
-    
-section:nth-of-type(4){
+
+section:nth-of-type(4) {
     margin-top: 6%;
     z-index: 5;
     margin-left: -5%;
 }
-    
-section:last-child{
-    margin-top:9%;
+
+section:last-child {
+    margin-top: 9%;
     z-index: 0;
     margin-left: -5%;
 }
-    
-.Blurb{
+
+.Blurb {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -168,12 +174,13 @@ section:last-child{
     margin-left: 19% !important;
     margin-right: 19% !important;
 }
-    
-.DemographicsGradient .Blurb, .DemographicsChange .Blurb{
+
+.DemographicsGradient .Blurb,
+.DemographicsChange .Blurb {
     margin-left: 16% !important;
     margin-right: 16% !important;
 }
-    
+
 div[class*="Change"] {
     transform: scale(1.25);
     transition: 2s;
@@ -201,28 +208,29 @@ h4 {
     font-size: 16px;
     width: 25vw;
 }
-    
-@media screen and (min-width: 1920px) {   
+
+@media screen and (min-width: 1920px) {
     .UltimateWrapper {
         max-height: 90vh;
     }
+
     .BlackCircle {
         margin-top: 1.5vh;
     }
 
-    section:first-child{
+    section:first-child {
         margin-right: -3.5%;
     }
-        
-    section:nth-of-type(2){
+
+    section:nth-of-type(2) {
         margin-right: -3.5%;
     }
-        
-    section:nth-of-type(4){
+
+    section:nth-of-type(4) {
         margin-left: -3.5%;
     }
-        
-    section:last-child{
+
+    section:last-child {
         margin-left: -3.5%;
     }
 

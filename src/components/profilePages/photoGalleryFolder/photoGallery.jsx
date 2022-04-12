@@ -15,8 +15,8 @@ import circle4 from '../../../images/circle2.svg';
 function PhotoGallery() {
     return (
         <div>
-            <ProfileTitle title="1A Photo Gallery" />
-            <img src={circle1} className="circle1" alt="Circles"/>
+            <ProfileTitle title="1A Photo Gallery" section="gallery" />
+            <img src={circle1} className="circle1" alt="Circles" />
             <div className="buttons">
                 <Link activeClass="active" to="1" spy={true} smooth={true} className="textButton">Sept</Link>
                 <Link to="2" spy={true} smooth={true} className="textButton">Oct</Link>
@@ -32,7 +32,7 @@ function PhotoGallery() {
                     </div>
                 </div>
                 <div className="container rightGallery" id="2">
-                    <img src={circle2} className="circle2" alt="Circles"/>
+                    <img src={circle2} className="circle2" alt="Circles" />
                     <h3 className="headingLeft">October 2021</h3>
                     <div className="content">
                         <SliderOct />
@@ -46,7 +46,7 @@ function PhotoGallery() {
                     </div>
                 </div>
                 <div className="container rightGallery" id="4">
-                    <img src={circle4} className="circle2" alt="Circles"/>
+                    <img src={circle4} className="circle2" alt="Circles" />
                     <h3 className="headingLeftDec">December 2021</h3>
                     <div className="content">
                         <SliderDec />

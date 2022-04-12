@@ -6,6 +6,7 @@ import Chart from '../../charts/chart';
 import Section from '../../headings/section';
 import logo from '../../../images/weirdqs.svg'
 import '../img.scss'
+import FlexTiles from './flexTiles';
 
 function Coop() {
     return (
@@ -21,9 +22,8 @@ function Coop() {
             <Section header="Gender Identity and Co-op" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
             <Chart type="Multi" data="Gender vs Co-op Type" position="center" />
             <Chart type="Multi" data="Gender Pay vs Round" position="center" />
-            <Section header="Study Habits" description="Hopefully they improve by 1B." />
-
-            <img src={logo} alt="" className="bottom" />
+            <Section header="Weirdest Job Interview Questions" description="" />
+            <FlexTiles />
             <NavArrows navBack="lifestyles" navForward="academics" />
             <Footer />
         </div>

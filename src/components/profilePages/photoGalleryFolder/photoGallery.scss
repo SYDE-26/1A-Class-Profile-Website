@@ -170,7 +170,7 @@ html {
     }
 }
 
-@media screen and (max-width: 1430px ) {
+@media screen and (max-width: 1430px) {
     .circle1 {
         width: 50vw;
         height: 50vh;
@@ -194,8 +194,8 @@ html {
 @media screen and (max-width: 600px) {
 
     :root {
-        h1 {
-            margin: 40px 30px 160px;
+        h1.gallery {
+            margin: 40px 30px 160px !important;
         }
     }
 
@@ -273,6 +273,7 @@ html {
         height: 60vh;
     }
 }
+
 @media screen and (max-width: 1200px) {
     // .circle1 {
     //     width: 50vw;
@@ -306,17 +307,17 @@ html {
     //     top: 15%;
     // }
 }
-  
-  @media only screen and (max-width:1590px) {
+
+@media only screen and (max-width:1590px) {
     :root {
-        h1 {
-            margin: 80px 6%;
-            position: static;
+        h1.gallery {
+            margin: 80px 6% !important; //!! I changed your responsiveness a little as it was messing with mine on the profile pages. Now your changes only apply to your title, and overwrite mine for your page (hence !important)
+            position: static !important;
         }
     }
-  }
+}
 
- 
+
 @media screen and (min-width: 2000px) {
     // :root {
     //   font-size: 18px;
@@ -328,4 +329,4 @@ html {
     //     margin-left: -80%;
     //     padding-right: 50px;
     // }
-  }
+}
