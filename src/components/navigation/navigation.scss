@@ -21,6 +21,11 @@
     background-color: var(--bg-colour);
 }
 
+body {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
 .UltimateWrapper {
     max-height: 87.5vh;
     overflow: hidden;
