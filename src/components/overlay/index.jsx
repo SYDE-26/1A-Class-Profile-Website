@@ -9,10 +9,6 @@ export default function Overlay(props) {
         props.setShowOverlay(prev => !prev)
     }
 
-    function toggleInsyderOverlay() {
-        props.setShowInsyderOverlay(prev => !prev)
-    }
-
     return ((props.showOverlay ? (
         <div className="overlay">
             <div className="overlay-content">
@@ -82,7 +78,7 @@ export default function Overlay(props) {
                 </Link>
 
                 <Link to="/insyderPage">
-                    <button onClick={toggleInsyderOverlay} className="meme-page-button">
+                    <button onClick={toggleOverlay} className="meme-page-button">
                         <h3 className="number-text">04</h3>
                         <h1 className="page-text">Insyder Page</h1>
                         <img
