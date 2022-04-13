@@ -21,8 +21,8 @@ function Lifestyles() {
             <Section header="Before Coming to Waterloo/1A Have You..." description="Singlehandedly destroying engineering stereotypes 😍" />
             <Chart type="Multi" data="Before 1A" position="center" />
             <Chart type="Multi" data="During 1A" position="center" />
-            <Section header="Did SYDE live up to the hype?" description="That's a great question 😎" />
-            <Chart type="Stacked" data="Coop Round vs Job Sector" position="left" />
+            <Section header="Did SYDE live up to the hype?" description="We do love SYDE 😎" />
+            <Chart type="Multi" data="SYDEHype" position="left" />
             <Chart type="Bar" data="FavAssignment" position="right" />
             <Section header="Describe 1A in one word..." description="Well, university definetly didn't expand our vocabulary. " />
             <img src={logo} alt="SYDE 2026's words to describe 1a" className="bottom" />

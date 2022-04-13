@@ -18,7 +18,7 @@ class BoxPlotChart extends Component {
     this.myChart.data.datasets[0].backgroundColor = this.props.data.color;
     this.myChart.data.datasets[0].outlierColor = this.props.data.color;
     this.myChart.options.plugins.title.text = this.props.data.title;
-    this.myChart.options.plugins.subtitle.text = 'number of respondents:' + this.props.data.n;
+    this.myChart.options.plugins.subtitle.text = 'number of respondents: ' + this.props.data.n;
     this.myChart.options.scales.x.title.text = this.props.data.xAxis;
     this.myChart.options.scales.y.title.text = this.props.data.yAxis;
     this.myChart.options.scales.y.min = this.props.data.ymin;
@@ -50,7 +50,7 @@ class BoxPlotChart extends Component {
               family: 'Lexend',
               size: 13
             },
-            text: 'number of respondents:' + this.props.data.n,
+            text: 'number of respondents: ' + this.props.data.n,
           }
         },
         scales: {
