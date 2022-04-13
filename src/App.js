@@ -46,13 +46,11 @@ function App() {
           <Route path="/lifestyles" element={<Lifestyles />} />
           <Route path="/about" element={<About />} />
           <Route path="/photoGallery" element={<PhotoPage />} />
-          <Route path="/insyderPage" element={<InsyderPage />} />
+          <Route path="/insyderPage" element={<InsyderPage showInsyderOverlay={showInsyderOverlay} setShowInsyderOverlay={setShowInsyderOverlay} />} />
         </Routes>
         <Overlay
           showOverlay={showOverlay}
           setShowOverlay={setShowOverlay}
-          showInsyderOverlay={showInsyderOverlay}
-          setShowInsyderOverlay={setShowInsyderOverlay}
         />
         <InsyderOverlay
           showOverlay={showOverlay}
@@ -63,7 +61,7 @@ function App() {
       </Router>
 
     </div>
-    
+
   );
 }
 

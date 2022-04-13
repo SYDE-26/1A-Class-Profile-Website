@@ -11,6 +11,10 @@
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
+    @-moz-document url-prefix() {
+        background-color: #27313B;
+    }
     z-index: 20;
 }
 
@@ -51,7 +55,7 @@
 }
 
 .profile-button {
-    height: 100%;
+    height: 20vh;
     width: 100%;
     border: none;
     background: none;
@@ -214,7 +218,7 @@
 }
 
 .about-button {
-    height: 100%;
+    height: 20vh;
     width: 100%;
     border: none;
     background: none;
@@ -243,7 +247,7 @@
 }
 
 .photo-gallery-button {
-    height: 100%;
+    height: 20vh;
     width: 100%;
     border: none;
     background: none;
@@ -273,7 +277,7 @@
 }
 
 .meme-page-button {
-    height: 100%;
+    height: 20vh;
     width: 100%;
     border: none;
     background: none;
