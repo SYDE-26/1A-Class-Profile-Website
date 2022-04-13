@@ -102,6 +102,7 @@ export default function BarGraph(props) {
                             text: data.title,
                             color: '#ffffff',
                             font: {
+                                family: 'Lexend',
                                 size: 15
                             },
                             padding: 14,
@@ -109,6 +110,7 @@ export default function BarGraph(props) {
                         subtitle: {
                             display: true,
                             font: {
+                                family: 'Lexend',
                                 size: 13
                             },
                             text: 'number of respondents: ' + data.n,
@@ -121,6 +123,7 @@ export default function BarGraph(props) {
                                 text: data.xAxis,
                                 color: '#ffffff',
                                 font: {
+                                    family: 'Lexend',
                                     size: 15
                                 },
                             },
@@ -146,6 +149,7 @@ export default function BarGraph(props) {
                                 text: data.yAxis,
                                 color: '#ffffff',
                                 font: {
+                                    family: 'Lexend',
                                     size: 15
                                 },
                             },

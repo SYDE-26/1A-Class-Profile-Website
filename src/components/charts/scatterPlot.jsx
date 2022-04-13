@@ -143,6 +143,7 @@ export default function Scatterplot(props) {
                                 boxWidth: 8,
                                 padding: 8,
                                 font: {
+                                    family: 'Lexend',
                                     size: 12
                                 },
                                 color: "#a0a0a0",
@@ -152,6 +153,7 @@ export default function Scatterplot(props) {
                             display: true,
                             text: data.title,
                             font: {
+                                family: 'Lexend',
                                 size: 15
                             },
                             color: "#ffffff",
@@ -160,6 +162,7 @@ export default function Scatterplot(props) {
                         subtitle: {
                             display: true,
                             font: {
+                                family: 'Lexend',
                                 size: 13
                             },
                             text: 'number of respondents: ' + data.n,
@@ -208,6 +211,7 @@ export default function Scatterplot(props) {
                                 display: true,
                                 text: data.xAxis,
                                 font: {
+                                    family: 'Lexend',
                                     size: 15
                                 },
                                 color: "#ffffff",
@@ -258,6 +262,7 @@ export default function Scatterplot(props) {
                                 display: true,
                                 text: data.yAxis,
                                 font: {
+                                    family: 'Lexend',
                                     size: 15
                                 },
                                 color: "#ffffff",

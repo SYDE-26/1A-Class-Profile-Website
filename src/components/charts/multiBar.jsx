@@ -127,6 +127,7 @@ export default function SideBar(props) {
                   boxWidth: 8,
                   padding: 8,
                   font: {
+                    family: 'Lexend',
                     size: 12
                   },
                   color: '#a0a0a0',
@@ -137,6 +138,7 @@ export default function SideBar(props) {
                 text: data.title,
                 color: '#ffffff',
                 font: {
+                  family: 'Lexend',
                   size: 15
                 },
                 padding: 14,
@@ -144,6 +146,7 @@ export default function SideBar(props) {
               subtitle: {
                 display: true,
                 font: {
+                  family: 'Lexend',
                   size: 13
                 },
                 text: 'number of respondents:' + data.n,
@@ -162,6 +165,7 @@ export default function SideBar(props) {
                   text: data.xAxis,
                   color: '#ffffff',
                   font: {
+                    family: 'Lexend',
                     size: 15
                   },
                 },
@@ -181,6 +185,7 @@ export default function SideBar(props) {
                   text: data.yAxis,
                   color: '#ffffff',
                   font: {
+                    family: 'Lexend',
                     size: 15
                   },
                 },

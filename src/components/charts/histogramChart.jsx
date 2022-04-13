@@ -86,6 +86,7 @@ const HistogramPercent = (props) => {
                             text: data.title,
                             color: '#ffffff',
                             font: {
+                                family: 'Lexend',
                                 size: 15
                             },
                             padding: 14,
@@ -93,6 +94,7 @@ const HistogramPercent = (props) => {
                         subtitle: {
                             display: true,
                             font: {
+                                family: 'Lexend',
                                 size: 13
                             },
                             text: 'number of respondents:' + data.n,
@@ -111,6 +113,7 @@ const HistogramPercent = (props) => {
                                 text: data.xAxis,
                                 color: '#ffffff',
                                 font: {
+                                    family: 'Lexend',
                                     size: 15
                                 },
                             },
@@ -130,6 +133,7 @@ const HistogramPercent = (props) => {
                                 text: data.yAxis,
                                 color: '#ffffff',
                                 font: {
+                                    family: 'Lexend',
                                     size: 15
                                 },
                             },
@@ -257,6 +261,7 @@ const HistogramCount = (props) => {
                                 text: data.title,
                                 color: '#ffffff',
                                 font: {
+                                    family: 'Lexend',
                                     size: 15
                                 },
                                 padding: 14,
@@ -264,6 +269,7 @@ const HistogramCount = (props) => {
                             subtitle: {
                                 display: true,
                                 font: {
+                                    family: 'Lexend',
                                     size: 13
                                 },
                                 text: 'number of respondents: ' + data.n,
@@ -282,6 +288,7 @@ const HistogramCount = (props) => {
                                     text: data.xAxis,
                                     color: '#ffffff',
                                     font: {
+                                        family: 'Lexend',
                                         size: 15
                                     },
                                 },
@@ -301,6 +308,7 @@ const HistogramCount = (props) => {
                                     text: data.yAxis,
                                     color: '#ffffff',
                                     font: {
+                                        family: 'Lexend',
                                         size: 15
                                     },
                                 },

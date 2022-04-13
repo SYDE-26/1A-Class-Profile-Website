@@ -11,7 +11,7 @@ function Academics() {
     return (
         <div>
             <ProfileTitle section="academics" title="Academics" />
-            <Section header="1A Class Average" description="The cohort finished with a high 80 average. Note: just under half the cohort responded about their average. ..." />
+            <Section header="1A Class Average" description="The cohort finished with a high 80 average. Note: just under half the cohort responded about their average..." />
             <Chart type="Histogram" data="Average1A" position="left" />
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="right" />
             <Section header="High School Programs and University Averages" description="Students who took IB in high school typically had higher averages in university." />

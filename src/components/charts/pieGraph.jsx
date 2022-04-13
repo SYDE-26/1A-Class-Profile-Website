@@ -93,6 +93,7 @@ export default function PieChart(props) {
                                 boxWidth: 8,
                                 padding: 8,
                                 font: {
+                                    family: 'Lexend',
                                     size: 12
                                 },
                                 color: '#a0a0a0',
@@ -103,6 +104,7 @@ export default function PieChart(props) {
                             display: true,
                             text: data.title,
                             font: {
+                                family: 'Lexend',
                                 size: 15
                             },
                             color: '#ffffff',
@@ -112,6 +114,7 @@ export default function PieChart(props) {
                         subtitle: {
                             display: true,
                             font: {
+                                family: 'Lexend',
                                 size: 13
                             },
                             text: 'number of respondents: ' + data.n,

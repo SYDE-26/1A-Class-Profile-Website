@@ -8,18 +8,23 @@ const NavArrows = ({ navBack, navForward }) => {
   switch (navBack) {
     case "academics":
       navBackID = "Academics"
+      window.scrollTo(0,0);
       break
     case "coop":
       navBackID = "Co-op"
+      window.scrollTo(0,0);
       break
     case "lifestyles":
       navBackID = "Lifestyles"
+      window.scrollTo(0,0);
       break
     case "demographics":
       navBackID = "Demographics"
+      window.scrollTo(0,0);
       break
     case "highschool":
       navBackID = "High School"
+      window.scrollTo(0,0);
       break
     default:
       navBackID = navBack

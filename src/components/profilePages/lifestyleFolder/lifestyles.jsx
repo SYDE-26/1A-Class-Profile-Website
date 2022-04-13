@@ -20,7 +20,7 @@ function Lifestyles() {
             <Section header="Social and Physical Life" description="We’re not just smart; gym is love, gym is life. We’re known as the most social engineering for a reason, SYDE is one big happy family." />
             <Chart type="Pie" data="socialBubble" position="left" />
             <Chart type="Multi" data="FriendsHighschool" position="right" />
-            <Section header="Before Coming to Waterloo/1A Have You..." description="NEED TO COME UP WITH SUMN" />
+            <Section header="Before Coming to Waterloo/1A Have You..." description="Singlehandedly destroying engineering stereotypes 😍" />
             <Chart type="Multi" data="Before 1A" position="center" />
             <Chart type="Multi" data="During 1A" position="center" />
             <Section header="Did SYDE live up to the hype?" description="NEED TO COME UP WITH SUMN" />
