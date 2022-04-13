@@ -22,7 +22,7 @@
 }
 
 .UltimateWrapper {
-    max-height: 88.5vh;
+    max-height: 87.5vh;
     overflow: hidden;
 }
 
@@ -40,7 +40,6 @@
     flex-direction: row;
     justify-content: center;
     margin-left: 1.5vw;
-    // transition: 2s;
 }
 
 .CircleWrapper {
@@ -197,8 +196,9 @@ div[class*="Change"] {
     justify-content: center;
 }
 
-h4 {
+h3 {
     margin-bottom: -1.5vh;
+    margin-top: -1.3vh;
 }
 
 .DescriptionTextWrapper {
@@ -206,7 +206,183 @@ h4 {
     color: #27313B;
     margin-top: 4vh;
     font-size: 16px;
-    width: 25vw;
+    width: 22vw;
+}
+
+.DescriptionPText {
+    color: #27313B;
+    font-size: 16px;
+}
+
+.DescriptionPText:hover {
+    color: #FFCD20;
+}
+
+.active-anim {
+    opacity: 0;
+}
+
+.Translate1 {
+    transform: translateX(90%)
+}
+
+.MobileWrapper, .buttonSlider {
+    display: none;
+}
+
+@media screen and (max-width: 420px) {
+    .UltimateWrapper {
+        max-height: 89vh;
+    }
+
+    .InstructionWrapper {
+        margin-bottom: 4vh;
+    }
+
+    .Wrapper, .MobileWrapper, .buttonSlider {
+        display: none;
+    }
+
+    .PhoneWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-left: 1.5vw;
+    }
+
+    .btn-slide {
+        margin-top: 17vh;
+    }
+
+    .container-dots {
+        margin-bottom: 32.5vh;
+    }
+
+    section:first-child {
+        margin-right: 0%;
+    }
+    
+    section:nth-of-type(2) {
+        margin-left: 0%;
+    }
+
+    section:nth-of-type(4) {
+        margin-left: 0%;
+    }
+
+    section:last-child {
+        margin-left: 0%;
+    }
+
+    .BlackCircle {
+        margin-top: 1.5vh;
+    }
+
+    .BottomCircle {
+        margin-top: 4vh;
+        height: 70vh;
+    }
+
+    .phoneButtonSlider {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-dots2 {
+        display: flex;
+        align-self: center;
+        margin-top: 3vh;
+    }
+
+    .DescriptionTextWrapper {
+        width: 70vw;
+        margin-top: 6vh;
+        font-size: 14px;
+    }
+
+    .DescriptionPText {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 421px) and (max-width: 1000px) {
+    .UltimateWrapper {
+        max-height: 92vh;
+    }
+
+    .InstructionWrapper {
+        margin-bottom: 8vh;
+    }
+
+    .Wrapper {
+        display: none;
+    }
+
+    .buttonSlider {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-slide {
+        margin-top: 10vh;
+    }
+
+    .container-dots {
+        margin-bottom: 37.5vh;
+    }
+
+    .MobileWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-left: 1.5vw;
+    }
+    section:first-child {
+        margin-left: 0vw;
+    }
+
+    section:nth-of-type(3) {
+        margin-top: 6vh;
+    }
+
+    section:nth-of-type(5) {
+        display: none;
+    }
+
+    section:nth-of-type(4) {
+        display: none;
+    }
+
+    .Translate1 {
+        section:first-child, section:nth-of-type(2), section:nth-of-type(3) {
+            display: none;
+        }
+
+        section:nth-of-type(4), section:nth-of-type(5) {
+            display: flex;
+        }
+
+        section:nth-of-type(4) {
+            margin-top: 6vh;
+            margin-left: 2vw;
+        }
+
+    }
+
+
+    .BlackCircle {
+        margin-top: 1.5vh;
+    }
+
+    .BottomCircle {
+        margin-top: 20vh;
+        height: 80vh;
+    }
+
+    .DescriptionTextWrapper {
+        width: 58vw;
+        margin-top: 12vh;
+    }
 }
 
 @media screen and (min-width: 1920px) {
@@ -234,7 +410,7 @@ h4 {
         margin-left: -3.5%;
     }
 
-    h4 {
+    h3 {
         margin-bottom: -1.5vh;
     }
 
@@ -245,6 +421,50 @@ h4 {
 
     .DescriptionTextWrapper {
         width: 20vw;
-        margin-top: 8vh;
+        margin-top: 10vh;
+    }
+}
+
+@media screen and (min-width: 2500px) {
+    .UltimateWrapper {
+        max-height: 90vh;
+    }
+
+    .InstructionWrapper {
+        margin-bottom: 5vh;
+    }
+
+    .BlackCircle {
+        margin-top: 1.3vh;
+    }
+
+    section:first-child {
+        margin-right: -3.5%;
+    }
+
+    section:nth-of-type(2) {
+        margin-right: -3.5%;
+    }
+
+    section:nth-of-type(4) {
+        margin-left: -3.5%;
+    }
+
+    section:last-child {
+        margin-left: -3.5%;
+    }
+
+    h3 {
+        margin-bottom: -1.5vh;
+    }
+
+    .BottomCircle {
+        margin-top: 10vh;
+        height: 200vh;
+    }
+
+    .DescriptionTextWrapper {
+        width: 18vw;
+        margin-top: 12vh;
     }
 }
