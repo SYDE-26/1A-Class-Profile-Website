@@ -16,7 +16,7 @@ function Coop() {
             <Chart type="Stacked" data="IndustryHiring" position="center" />
             <Chart type="Stacked" data="JobAcceptance" position="center" />
             <Section header="External Factors and Co-op" description="NEED TO COME UP WITH SUMN" />
-            <Chart type="Stacked" data="Coop Round vs Job Sector" position="center" />
+            <Chart type="Box" data="SYDE 121 Average vs Software Coop" position="center" />
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="center" />
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="center" />
             <Section header="Gender Identity and Co-op" description="SOMETHIN " />
