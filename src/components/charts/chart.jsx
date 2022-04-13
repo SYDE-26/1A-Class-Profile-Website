@@ -1,5 +1,5 @@
 import BarGraph from "./barGraph"
-import BoxPlot from "./boxPlotChart"
+import BoxPlot from "./boxPlot"
 import { HistogramCount } from "./histogramChart"
 import PieChart from "./pieGraph"
 import Scatterplot from "./scatterPlot"

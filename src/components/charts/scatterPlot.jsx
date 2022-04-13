@@ -89,7 +89,6 @@ export default function Scatterplot(props) {
                 data.n = docSnap.data().n;
                 setId(id + 1);
                 setData(data);
-                console.log("Issa Data: ", data);
 
             } else {
                 console.log("No such document!");
@@ -163,7 +162,7 @@ export default function Scatterplot(props) {
                             display: true,
                             font: {
                                 family: 'Lexend',
-                                size: 13
+                                size: 13,
                             },
                             text: 'number of respondents: ' + data.n,
                         },
@@ -272,7 +271,7 @@ export default function Scatterplot(props) {
                                     for (var tick in q.ticks) {
                                         if (q.ticks.length === 9) {
                                             if (data.y_enums[tick] !== "") {
-                                                q.ticks[tick] = data.y_enums[tick];
+                                                q.ticks[tick].label = data.y_enums[tick];
                                             }
                                         } else {
                                             if (tick % 2 === 0 && data.y_enums1[tick] !== undefined) {

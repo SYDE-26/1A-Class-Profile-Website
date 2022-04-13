@@ -164,7 +164,6 @@ const HistogramCount = (props) => {
         getDoc(doc(db, "1A Data", props.datatype)).then(docSnap => {
             if (docSnap.exists()) {
                 console.log("Document data:", docSnap.data());
-                console.log('Hargun');
 
                 let data = {
                     val: [],

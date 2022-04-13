@@ -19,6 +19,7 @@ export default function InsyderOverlay(props) {
 
     function clickCloseButton() {
         toggleInsyderOverlay()
+        toggleOverlay()
         navigate(-1)
     }
 
@@ -27,8 +28,8 @@ export default function InsyderOverlay(props) {
 
         if (userInput.target.value == "password") {
             toggleInsyderOverlay()
-            toggleOverlay()
             changeInput("")
+  
         }
     }
 
@@ -48,7 +49,7 @@ export default function InsyderOverlay(props) {
                     alt="Lock Icon"
                     className="lock-icon"
                 />
-                <h3 className="main-text">Enter the password to access the Meme Page</h3>
+                <h3 className="main-text">Enter the password to access the Insyder Page</h3>
                 <p className="sub-text">Hint: Check the SYDE 2026 server for the password!</p>
                 <input type="password" onChange={(userInput) => inputChange(userInput)} value={input} className="password-field"/>
             </div>

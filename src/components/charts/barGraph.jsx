@@ -76,7 +76,6 @@ export default function BarGraph(props) {
         data.val[x] = Number(data.val[x]).toFixed(2);
         x++;
     }
-    console.log("hehe", data.label)
     return (
         <div className="chart">
             <Bar
