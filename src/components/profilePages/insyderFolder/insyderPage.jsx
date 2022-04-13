@@ -55,16 +55,17 @@ function Insyderpage() {
             <div className = "insyder--box">
             <Box sx={{ 
               width: 850, 
-              height: 4200, 
+              height: windowWidth > 1000
+              ? 4400 : windowWidth > 650 ? 4600 : 4900, 
               overflowY: 'scroll' }} className = "box">
                 {/* <img src = {url} style = {{width: '33%'}}/> */}
       <ImageList variant="masonry"  cols={windowWidth > 1000
          ? 3 : windowWidth > 650 ? 2 : 1}  gap={8} className = "image-list">
         {/* <img ></img> */}
-        <img src={circle1} className="circle1" alt="Circles"/>
-        <img src={circle2} className="circle2" alt="Circles"/>
-        <img src={circle3} className="circle3" alt="Circles"/>
-        <img src={circle4} className="circle4" alt="Circles"/>
+        <img src={circle1} className="circle1IP" alt="Circles"/>
+        <img src={circle2} className="circle2IP" alt="Circles"/>
+        <img src={circle3} className="circle3IP" alt="Circles"/>
+        <img src={circle4} className="circle4IP" alt="Circles"/>
         {itemData.map((item) => (
           <ImageListItem key={item.id} className = "image-list-item">
             <img
@@ -79,7 +80,7 @@ function Insyderpage() {
               loading="lazy"
             />
          
-            <a style = {{display: 'none'}}>{item.title}</a>
+            <a className = "textOnTop" style = {{display: 'none'}}>{item.title}</a>
           </ImageListItem>
         ))}
       </ImageList>
@@ -99,161 +100,169 @@ export default Insyderpage;
 const itemData = [
     {
       img: '../insyderMemes/0BD82D18-F2BB-440F-9FF2-C3EE7ECD3FA1 - Shushawn Saha.jpeg',
-      title: 'Bed',
+      title: 'For the record, I was trying to waterfall from a brita and it spilled - Shushawn',
       id: 1,
     },
     {
       img: '../insyderMemes/3BE41539-0698-45B5-B8CD-CDDDF21A1FDD - Roselyn H.jpeg',
-      title: 'Books',
+      title: 'Mhmm Ontario slush',
       id: 2,
     },
     {
       img: '../insyderMemes/3DD00D70-D181-4209-A45A-14D536AC0A46 - Roselyn H.jpeg',
-      title: 'Sink',
+      title: 'The only 101 class people attended',
       id: 3,
     },
     {
       img: '../insyderMemes/5C174B00-A04E-453F-AC68-4CB9D23F2927 - Shushawn Saha.jpeg',
-      title: 'Kitchen',
+      title: 'No comment - Shushawn',
       id: 4,
     },
     {
       img: '../insyderMemes/5CD0E0B7-96E9-4542-86A0-EBD75827F52D - Aditi Sandhu.jpeg',
-      title: 'Blinds',
+      title: '🎉🎉🎉',
       id: 5,
     },
     {
       img: '../insyderMemes/8BACA803-9FCE-4B0D-B478-B42DC178F470 - Shushawn Saha.jpeg',
-      title: 'Chairs',
+      title: 'What type of heart is that?',
       id: 6,
     },
     {
       img: '../insyderMemes/09C57416-C355-452F-AA20-AAF06003DB7C - Serena Li.jpeg',
-      title: 'Laptop',
+      title: 'Girlboss',
       id: 7,
     },
     {
       img: '../insyderMemes/31D49F0D-EF68-4343-BA46-92638BD03A84 - Kelly Pham.jpeg',
-      title: 'Doors',
+      title: '🛗👟',
       id: 8,
     },
     {
       img: '../insyderMemes/39A52E27-B829-426F-9357-3A87898C897A - Serena Li.jpeg',
-      title: 'Coffee',
+      title: 'What Jada meant by an entanglement',
       id: 9,
     },
     {
       img: '../insyderMemes/34BF3F32-C850-410F-912A-D1B344982C11 - Shushawn Saha.jpeg',
-      title: 'Storage',
+      title: 'Good skin ⬆️',
       id: 10,
     },
     {
       img: '../insyderMemes/40D24635-330F-439F-BB96-D157515E0A86 - Shushawn Saha.jpeg',
-      title: 'Candle',
+      title: 'Hey! Let’s use our lego low-fidelity prototype to measure turning radius as that is going to help in a production version :) ',
       id: 11,
     },
     {
       img: '../insyderMemes/74BA30A0-9B2A-4B75-89BF-0C9825196EAE - Shushawn Saha.jpeg',
-      title: 'Coffee table',
+      title: 'Benjamin Robert David Chung',
       id: 12,
     },
     {
         img: '../insyderMemes/189BC681-1494-4A4D-B66D-9F62763C6C3B - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: '*put a mickey mouse/cartoon emoji*',
       },
       {
         img: '../insyderMemes/3344A006-5A67-4CCA-883F-7A19A5FE48DF - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: '101L phone thingy',
       },
       {
         img: '../insyderMemes/409693E2-3C9F-44EC-BC11-C0B96063C4D6 - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: 'Josh and Deen got even closer at the hotel - S',
       },
       {
         img: '../insyderMemes/14664094-8E61-4A10-BC1D-42BB5FC14756 - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: 'when you message the wrong group chart … - s',
       },
       {
         img: '../insyderMemes/A3AABD92-45D9-4471-94FB-7A242BCE05D1 - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: 'Seungwoo got the cracked girl vibes - S',
       },
       {
         img: '../insyderMemes/AFE32FDF-E064-43DC-87EC-59103C5A8B02 - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: 'take your shoes off!!!! - s',
       },
       {
         img: '../insyderMemes/C0249AAA-A903-4A5B-8660-ED7DD1175E7B - Serena Li.jpeg',
-        title: 'Coffee table',
+        title: 'Monday morning physics be like',
       },
       {
         img: '../insyderMemes/C867D3A9-05A2-4EEB-9F48-4040C3014DE3 - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: 'rev. 23 years of age - s',
       },
       {
         img: '../insyderMemes/CE7559F1-FDCB-4934-BA1E-FDBD784742FC - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: 'when I realized that I’ve been lied to all along (impossible 101L test question - well I guess not really impossible) - s',
       },
       {
         //
         img: '../insyderMemes/DA96C41A-12CB-4150-A806-58B3462E405A - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: 'Lil Dicky - S',
       },
       {
         img: '../insyderMemes/DC6BE4A8-0878-4D5B-A0BC-6B91DBBAF57B - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: 'Alcoholic Deen - S',
       },
       {
         img: '../insyderMemes/E748DCE8-7166-42A5-BDE1-EA8B054DAD40 - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: 'Who even are these people - S',
       },
       {
         img: '../insyderMemes/F217B6A7-D600-4C1D-999A-BAAA39CE3E15 - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: 'Hey! Let’s use our lego low-fidelity prototype to measure turning radius as that is going to help in a production version :)  - S',
       },
       {
         img: '../insyderMemes/FB5B428B-6512-4223-A60F-87DC27BCC0F4 - Shushawn Saha.jpeg',
-        title: 'Coffee table',
+        title: 'First day of class alarm clock - S',
       },
       {
         img: '../insyderMemes/IMG_2658 - Ananya Jaikumar.JPG',
-        title: 'Coffee table',
+        title: 'CMH students try not to pull fire alarm in the morning challenge (IMPOSSIBLE)',
       },
       {
         img: '../insyderMemes/IMG_7575 - boya zhang.PNG',
-        title: 'Coffee table',
+        title: '✌️✌️✌️',
       },
       {
         img: '../insyderMemes/IMG_8566 - boya zhang.jpg',
-        title: 'Coffee table',
+        title: `Dean's list!!`,
       },
       {
         img: '../insyderMemes/kate - Matthew Ng.jpg',
-        title: 'Coffee table',
+        title: 'Kate, a series in three parts (1/3)',
       },
       {
         img: '../insyderMemes/kate banana - Matthew Ng.jpg',
-        title: 'Coffee table',
+        title: 'Kate 🍌 (2/3)',
       },
       {
         img: '../insyderMemes/kate cake - Matthew Ng.jpg',
-        title: 'Coffee table',
+        title: 'Kate 🎂 (3/3)',
       },
       {
         img: '../insyderMemes/physics - Hargun Sibal.jpg',
-        title: 'Coffee table',
+        title: 'Just imagine...',
       },
       {
         img: '../insyderMemes/PXL_20211102_222822982.PORTRAIT - Hargun Sibal.jpg',
-        title: 'Coffee table',
+        title: 'TsTsians roll out',
       },
       {
         img: '../insyderMemes/rosie red - Matthew Ng.jpg',
-        title: 'Coffee table',
+        title: 'Rosy Rosie',
       },
       {
         img: '../insyderMemes/Snapchat-1537388837 - Hargun Sibal.jpg',
-        title: 'Coffee table',
+        title: 'Marggy Choggy',
       }
       ,
+      {
+        img: '../insyderMemes/IMG_3418.jpg',
+        title: 'When the lunch lady blessed up - S',
+      },
+      {
+        img: '../insyderMemes/syde 161 starter pack.jpeg'
+      }
+
   ];
   

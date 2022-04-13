@@ -1,20 +1,9 @@
-// h1{
-//     margin-left: 5%;
-// }
-
-// .MuiImageListItem-img{
-//     // width: 30% !important;
-// }
-
 html, body{
     margin:0;
     padding:0;
     overflow-x:hidden;
 }
-// .insyderPage{
-//     margin: auto 0;
-//     right: -50%;
-// }
+
 
 :root {
     --bg-colour: #27313B;
@@ -29,14 +18,6 @@ html, body{
     --orange: #FE8C5A;
     --yellow: #FFCE1F;
     --main-text: #fff;
-    
-    // font-size: 18px;
-    // line-height: 22px;
-    // font-family: 'Montserrat';
-    // font-style: normal;
-    
-    // scroll-behavior: smooth;
-    // background-color: var(--bg-colour);
 }
 
 // *{
@@ -189,20 +170,29 @@ html, body{
 }
 
 .image-list-item:hover{
-    opacity: 50%;
-    // max-width: 100%;
-    // height: auto;
-
-    a{
+    filter: brightness(50%);
+    .textOnTop{
         display: block !important;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        opacity: 100%;
+        font-weight: 900;
+        z-index: 2;
+        filter: bightness(250%);
+        letter-spacing: 5%;
+        line-height: 1.25em;
+        font-size: 1.25em;
+        text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
     }
 }
 
-.circle1 {
+.circle1IP {
     position: absolute;
     background-size: cover;
     max-width: 60%;
@@ -213,7 +203,7 @@ html, body{
     left: 0%;
 }
 
-.circle2 {
+.circle2IP {
     position: absolute;
     background-size: cover;
     margin-top: -30vh;
@@ -221,9 +211,10 @@ html, body{
     -webkit-filter: blur(80px);
     z-index: 0;
     right: 0%;
+    top: 200%;
 }
 
-.circle3 {
+.circle3IP {
     position: absolute;
     background-size: cover;
     max-width: 110%;
@@ -232,14 +223,14 @@ html, body{
     filter: blur(8px);
     -webkit-filter: blur(80px);
     z-index: 0;
-    top: 200%;
+    top: 300%;
 }
 
-.circle4{
+.circle4IP{
     position: absolute;
     background-size: cover;
     filter: blur(8px);
     -webkit-filter: blur(80px);
     right: 0%;
-    top: 200%;
+    top: 350%;
 }
