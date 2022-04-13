@@ -15,11 +15,11 @@ function Coop() {
             <Section header="Industries and Jobs" description="Software and Banking/Financial were the top two industries that hired SYDE students. Software is the most popular field this cohort accepted." />
             <Chart type="Stacked" data="IndustryHiring" position="center" />
             <Chart type="Stacked" data="JobAcceptance" position="center" />
-            <Section header="External Factors and Co-op" description="NEED TO COME UP WITH SUMN" />
+            <Section header="External Factors and Co-op" description="Is rags to riches a hoax? Are code monkeys rolling in dough? Did our academic tryhards reap the fruits of their labour? " />
             <Chart type="Box" data="SYDE 121 Average vs Software Coop" position="center" />
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="center" />
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="center" />
-            <Section header="Gender Identity and Co-op" description="SOMETHIN " />
+            <Section header="Gender Identity and Co-op" description="Did Gen Z bring changes to how different gender identities are treated in the workforce? " />
             <Chart type="Multi" data="Gender vs Co-op Type" position="center" />
             <Chart type="Multi" data="Gender Pay vs Round" position="center" />
             <Section header="Weirdest Job Interview Questions" description="" />

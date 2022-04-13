@@ -9,16 +9,16 @@ function Demographics() {
     return (
         <div>
             <ProfileTitle section="demographics" title="Demographics" />
-            <Section header="Gender and Sexuality" description="A close tie between males and females in the ‘26 cohort. This is typical to see amoungst SYDE." />
+            <Section header="Gender and Sexuality" description="A close tie between males and females in the ‘26 cohort. The D in SYDE stands for Diversity!" />
             <Chart type="Pie" data="Identity" position="left" />
             <Chart type="Pie" data="Sexuality" position="right" />
-            <Section header="Ethnicities and Religion" description="Many of the SYDE ‘26 cohort is East or South Asian. A lot of us identify with Christianity as our religion." />
+            <Section header="Ethnicities and Religion" description="Many of the SYDE ‘26 cohort is East or South Asian. The C in SYDE stands for Christianity!" />
             <Chart type="Bar" data="EthnicityIdentity" position="center" />
             <Chart type="Bar" data="ReligionEthnicity" position="center" />
-            <Section header="Hometown and Birth Years" description="A significant amount of us are from the GTA." />
+            <Section header="Hometown and Birth Years" description="A big portion of us are from the GTA, but Toronto mans slang runs through all of our blood." />
             <Chart type="Bar" data="Hometown" position="left" />
             <Chart type="Pie" data="BirthYear" position="right" />
-            <Section header="Parents" description="" />
+            <Section header="Parents" description="Thank you birth givers!" />
             <Chart type="Pie" data="DescribeParents" position="left" />
             <Chart type="Pie" data="Parents Born" position="right" />
             <Chart type="Bar" data="HouseholdIncome" position="center" />

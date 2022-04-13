@@ -11,20 +11,20 @@ function Lifestyles() {
     return (
         <div>
             <ProfileTitle section="lifestyle" title="Lifestyle" />
-            <Section header="Mental Health and Time Outdoors" description="1A engineering was definetly stressful. On the other hand, going outside postively impacted their mental health. Note: this was a hybrid term and many of us were living on campus." />
+            <Section header="Mental Health and Time Outdoors" description="1A hit us like a truck, but going outside to touch some grass positively impacted our mental health." />
             {/* The data here might say PercentageOfHighschoolFriends but it's really stress level of 1A            */}
             <Chart type="Bar" data="PercentageOfHighschoolFriends" position="left" />
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="right" />
-            <Section header="Social and Physical Life" description="We’re not just smart; gym is love, gym is life. We’re known as the most social engineering for a reason, SYDE is one big happy family." />
+            <Section header="Social and Physical Life" description="We pack both brains and brawn. We’re known to be a social program for a reason, SYDE is one big happy family." />
             <Chart type="Pie" data="socialBubble" position="left" />
             <Chart type="Multi" data="FriendsHighschool" position="right" />
             <Section header="Before Coming to Waterloo/1A Have You..." description="Singlehandedly destroying engineering stereotypes 😍" />
             <Chart type="Multi" data="Before 1A" position="center" />
             <Chart type="Multi" data="During 1A" position="center" />
-            <Section header="Did SYDE live up to the hype?" description="NEED TO COME UP WITH SUMN" />
+            <Section header="Did SYDE live up to the hype?" description="That's a great question 😎" />
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="left" />
             <Chart type="Bar" data="FavAssignment" position="right" />
-            <Section header="Describe 1A in one word..." description="1A was “Chaotic” for most of us. " />
+            <Section header="Describe 1A in one word..." description="Well, university definetly didn't expand our vocabulary. " />
             <img src={logo} alt="SYDE 2026's words to describe 1a" className="bottom" />
             <NavArrows navBack="highschool" navForward="coop" />
             <Footer />
