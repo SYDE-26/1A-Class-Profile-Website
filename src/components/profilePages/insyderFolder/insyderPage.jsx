@@ -18,6 +18,7 @@ import circle1 from '../../../images/circle1.svg';
 import circle2 from '../../../images/circle4.svg';
 import circle3 from '../../../images/circle3.svg';
 import circle4 from '../../../images/circle2.svg';
+import InsyderOverlay from "../../insyderOverlay/index.jsx";
 
 
 function Insyderpage() {
@@ -28,6 +29,9 @@ function Insyderpage() {
   const [memeIndex, setMemeIndex] = useState(1);
 
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
+
+  // const [showOverlay, setShowOverlay] = useState(false);
+  // const [showInsyderOverlay, setShowInsyderOverlay] = useState(false);
     
   React.useEffect(() => {
       function watchWidth() {
@@ -47,9 +51,12 @@ function Insyderpage() {
       // }
   }, [])
 
-
     return (
         <div className = "insyderPage">
+          {/* <InsyderOverlay   showOverlay={showOverlay}
+          setShowOverlay={setShowOverlay}
+          showInsyderOverlay={showInsyderOverlay}
+          setShowInsyderOverlay={setShowInsyderOverlay}/> */}
             <h1 className= "insyder--title">Insyder Page</h1>
             {/* <h1 className= "insyder--window">{windowWidth}</h1> */}
             <div className = "insyder--box">
