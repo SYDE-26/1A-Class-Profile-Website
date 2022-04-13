@@ -106,7 +106,7 @@ class BoxPlotChart extends Component {
             borderColor: 'white',
             hoverBackgroundColor: 'white',
             borderWidth: 1.5,
-            outlierColor: this.props.data.color,
+            outlierColor: 'white',
           },
         ],
       },
