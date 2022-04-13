@@ -22,7 +22,7 @@ function Academics() {
             <Section header="Course Difficulty, Usefulness, and Average" description="NEED TO COME UP WITH SUMN." />
             <Chart type="Scatter" data="Course Average vs Difficulty" position="center" />
             <Chart type="Scatter" data="Course Average vs Usefulness" position="center" />
-            <Chart type="Scatter" data="Course Average vs Difficulty" position="center" />
+            <Chart type="Scatter" data=" Course Usefulness vs Difficulty" position="center" />
             <Section header="Study Habits" description="Hopefully they improve by 1B." />
             <Chart type="Pie" data="StudyHabits" position="center" />
             <Section header="Favourite Professors" description="Our SYDE 181 professor (Nasmin Paryab) and SYDE 111 prodessor (Sean Speziale) were the most beloved by the cohort." />

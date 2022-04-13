@@ -85,7 +85,6 @@ export default function SideBar(props) {
     datasets.forEach(function (elem, index) {
       datasets_sorted.push(elem.value);
     });
-    console.log(datasets_sorted)
     return datasets_sorted;
   }
 
@@ -98,7 +97,6 @@ export default function SideBar(props) {
   if (data.barlabel === null) {
     data.barlabel = ["Drunk Alcohol", "Smoked/Vaped", "Done Drugs", "Had First Kiss", "Had Sex"];
   }
-  console.log(data.barlabel)
   return (
     <div>
       <div className="chart">

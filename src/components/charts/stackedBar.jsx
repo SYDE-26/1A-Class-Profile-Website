@@ -83,8 +83,6 @@ export default function StackedBar(props) {
     datasets.forEach(function (elem, index) {
       datasets_sorted.push(elem.value);
     });
-
-    console.log("Data Title: ", data);
     return datasets_sorted;
   }
 
