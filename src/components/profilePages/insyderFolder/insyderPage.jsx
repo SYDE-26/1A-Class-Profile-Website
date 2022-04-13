@@ -32,6 +32,7 @@ function Insyderpage(props) {
 
   function toggleInsyderOverlay() {
     props.setShowInsyderOverlay(prev => !prev)
+    // window.scrollTo(0,0);
   }
 
   React.useEffect(() => {
@@ -43,6 +44,7 @@ function Insyderpage(props) {
     window.addEventListener("resize", watchWidth)
 
     toggleInsyderOverlay()
+    // window.scrollTo(0,0);
 
     return function () {
       // console.log("Cleaning up...")
@@ -61,9 +63,12 @@ function Insyderpage(props) {
       <div className="insyder--box">
         <Box sx={{
           width: 850,
-          height: windowWidth > 1000
-            ? 4400 : windowWidth > 650 ? 4600 : 4900,
-          overflowY: 'scroll'
+          // // height: 
+          // // // windowWidth > 1000
+          // // // ? 4100 : windowWidth > 650 ? 6400 : 8800
+          // // 3000
+          // // ,
+          // overflowY: 'scroll'
         }} className="box">
           {/* <img src = {url} style = {{width: '33%'}}/> */}
           <ImageList variant="masonry" cols={windowWidth > 1000
@@ -105,11 +110,11 @@ function Insyderpage(props) {
 export default Insyderpage;
 
 const itemData = [
-  {
-    img: '../insyderMemes/0BD82D18-F2BB-440F-9FF2-C3EE7ECD3FA1 - Shushawn Saha.jpeg',
-    title: 'For the record, I was trying to waterfall from a brita and it spilled - Shushawn',
-    id: 1,
-  },
+  // {
+  //   img: '../insyderMemes/0BD82D18-F2BB-440F-9FF2-C3EE7ECD3FA1 - Shushawn Saha.jpeg',
+  //   title: 'For the record, I was trying to waterfall from a brita and it spilled - Shushawn',
+  //   id: 1,
+  // },
   {
     img: '../insyderMemes/3BE41539-0698-45B5-B8CD-CDDDF21A1FDD - Roselyn H.jpeg',
     title: 'Mhmm Ontario slush',
@@ -149,6 +154,11 @@ const itemData = [
     img: '../insyderMemes/39A52E27-B829-426F-9357-3A87898C897A - Serena Li.jpeg',
     title: 'What Jada meant by an entanglement',
     id: 9,
+  },
+  {
+    img: '../insyderMemes/0BD82D18-F2BB-440F-9FF2-C3EE7ECD3FA1 - Shushawn Saha.jpeg',
+    title: 'For the record, I was trying to waterfall from a brita and it spilled - Shushawn',
+    id: 1,
   },
   {
     img: '../insyderMemes/34BF3F32-C850-410F-912A-D1B344982C11 - Shushawn Saha.jpeg',
