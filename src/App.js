@@ -37,6 +37,12 @@ function App() {
           showOverlay={showOverlay}
           setShowOverlay={setShowOverlay}
         />
+         <InsyderOverlay
+          showOverlay={showOverlay}
+          setShowOverlay={setShowOverlay}
+          showInsyderOverlay={showInsyderOverlay}
+          setShowInsyderOverlay={setShowInsyderOverlay}
+        />
         <Routes>
           <Route path="/" element={<Navigation />} />
           <Route path="/coop" element={<Coop />} />
@@ -52,12 +58,12 @@ function App() {
           showOverlay={showOverlay}
           setShowOverlay={setShowOverlay}
         />
-        <InsyderOverlay
+        {/* <InsyderOverlay
           showOverlay={showOverlay}
           setShowOverlay={setShowOverlay}
           showInsyderOverlay={showInsyderOverlay}
           setShowInsyderOverlay={setShowInsyderOverlay}
-        />
+        /> */}
       </Router>
 
     </div>

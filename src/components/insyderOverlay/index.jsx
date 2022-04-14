@@ -51,7 +51,7 @@ export default function InsyderOverlay(props) {
                 />
                 <h3 className="main-text">Enter the password to access the Insyder Page</h3>
                 <p className="sub-text">Hint: Check the SYDE 2026 server for the password!</p>
-                <input type="password" onChange={(userInput) => inputChange(userInput)} value={input} className="password-field"/>
+                <input type="password" autoFocus={true} onChange={(userInput) => inputChange(userInput)} value={input} className="password-field"/>
             </div>
         </div>
 
