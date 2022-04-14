@@ -20,57 +20,57 @@ canvas {
 
 .left {
   display: inline-block;
-  width: 23% !important;
+  width: 33% !important;
   padding-right: 2%;
-  margin-left: 25%;
+  margin-left: 15%;
 }
 
 .right {
   display: inline-block;
-  width: 23% !important;
+  width: 33% !important;
   padding-left: 2%;
-  margin-right: 25%;
+  margin-right: 15%;
 }
 
 .center {
-  width: 34% !important;
-  margin-left: 33%;
-  margin-right: 33%;
+  width: 50% !important;
+  margin-left: 25%;
+  margin-right: 25%;
   display: inline-block;
 }
 
 @media screen and (max-width: 1600px) {
   .right {
-    width: 23% !important;
+    width: 33% !important;
     //padding-left: 2%;
-    margin-right: 25%;
+    margin-right: 15%;
   }
 
   .left {
-    width: 23% !important;
+    width: 33% !important;
     //padding-right: 2%;
-    margin-left: 25%;
+    margin-left: 15%;
   }
 
   .center {
-    width: 34% !important;
-    margin-left: 33%;
-    margin-right: 33%;
+    width: 50% !important;
+    margin-left: 25%;
+    margin-right: 25%;
   }
 }
 
 @media screen and (max-width: 1400px) {
 
   .right {
-    width: 28% !important;
+    width: 33% !important;
     //padding-left: 2%;
-    margin-right: 20%;
+    margin-right: 15%;
   }
 
   .left {
-    width: 28% !important;
+    width: 33% !important;
     //padding-right: 2%;
-    margin-left: 20%;
+    margin-left: 15%;
   }
 
   .center {

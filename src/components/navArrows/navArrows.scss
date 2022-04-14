@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend&family=Montserrat&display=swap');
 
-.Wrapper {
+.ButtonWrapper {
   border: 0px hidden transparent;
   border-radius: 20px;
   padding: 2px; //keep as px
@@ -13,7 +13,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin: 0px 25% 6.25rem 25%
+  margin: 0px 15% 6.25rem 15%
 }
 
 #coop {
@@ -44,14 +44,14 @@
 
 
   .NavigationalButtons {
-    margin: 0px 25% 6.25rem 25%
+    margin: 0px 15% 6.25rem 15%
   }
 }
 
 @media screen and (max-width: 1400px) {
 
   .NavigationalButtons {
-    margin: 0px 20% 6.25rem 20%
+    margin: 0px 15% 6.25rem 15%
   }
 }
 
