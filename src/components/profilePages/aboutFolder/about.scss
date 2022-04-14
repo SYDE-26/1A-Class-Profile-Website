@@ -12,13 +12,11 @@
     color: #fff;
     margin-top: 1.65em;
     margin-bottom: 1em;
-    // white-space: nowrap;
 }
 
 .descriptions {
     display: flex;
     width: 65%;
-    // max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -36,7 +34,6 @@
 
 .textBox {
     width: 100%;
-    // max-width: 440px;
     margin-top: 1em;
     font-style: normal;
     font-weight: 400;
@@ -49,10 +46,8 @@
 }
 
 .credit {
-    // margin: 3.55em auto 0 auto;
     display: block;
-    // width: 65%;
-    margin-top: 3.55em;
+    margin-top: 2.25em;
     margin-left: 17.5%;
     margin-right: 10%;
 }
@@ -99,7 +94,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5.5em;
-    padding-top: 0.6em;
+    padding-top: 0.5em;
 }
 
 .links>h3 {
@@ -136,7 +131,6 @@
 @media screen and (max-width: 1340px) {
     .credit {
         margin-top: 2em;
-        // max-width: 400px;
         margin-left: 17.5%;
     }
 
@@ -176,8 +170,7 @@
     }
 
     .textBox {
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-top: 0.75em;
     }
 }
 
@@ -201,18 +194,30 @@
 }
 
 @media screen and (max-width: 600px) {
-    .about {
-        margin-top: 1em;
-    }
-
-    .links {
+   .links {
         margin-bottom: 3em;
     }
 }
 
 @media screen and (max-width: 375px) {
+    .linkText {
+        font-size: 15px;
+    }
+    
     .icon {
         height: 18px;
         width: auto;
     }
+}
+
+@media screen and (max-width: 350px) {
+    .linkText {
+        font-size: 12px;
+    }
+
+    .icon {
+        height: 14px;
+        width: auto;
+    }
+
 }
