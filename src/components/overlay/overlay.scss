@@ -316,3 +316,14 @@
 a{
     text-decoration: none !important;
 }
+
+@media screen and (max-width: 600px){
+    .profile-flexbox {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        margin-top: -1rem;
+        margin-left: 1rem;
+        justify-content: space-between;
+    }
+}
