@@ -21,26 +21,6 @@ html, body{
     --main-text: #fff;
 }
 
-// *{
-//     max-width: 95% !important;
-// }
-
-
-
-// h1.insyder{ 
-//     margin-left: 22%;
-//     margin-right: 22%;
-// }
-
-// body{
-//     overflow: hidden;
-//     // margin-left: 22%;
-// }
-// .insyder--title{
-//     // display: flex;
-//     // justify-content: space-between !important;
-//     margin-left: 22% !important;
-// }
 
 .insyder--window{
     display: flex;
@@ -49,37 +29,11 @@ html, body{
 
 
 .insyder--box{
-    // margin-left: 22%;
-    // margin-right: 22%;
     display: flex;
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
-    // width: 200%;
 }
-
-// .it{
-//     margin-left: 10%;
-//     margin-right: 10%;
-// }
-// .image-list-item{
-//     margin-right: 23px;
-// }
-
-// @media screen and (max-width: 600px) {
-
-//     .body{
-//         width: 33% !important; 
-//     }
-//     .image-list{
-//         width: 33%;
-//     }
-//     // .insyder{
-//     //     position: relative;
-//     //     // max-width: 400px;
-//     // }
-    
-// }
 
 @media only screen and (max-width: 2000px){
     .insyder--title{
@@ -96,11 +50,6 @@ html, body{
 }
 
 @media only screen and (max-width: 1360px){
-    // .box{
-    //     margin-left: 18%;
-    //     margin-right: 18%;
-    //     // width: 200%;
-    // }
     .insyder--title{
         margin-left: 17% !important;
         // margin-right: 18%;
@@ -109,33 +58,18 @@ html, body{
 
 @media only screen and (max-width: 1260px){
    
-    // .box{
-    //     margin-left: 17%;
-    //     // margin-right: 19%;
-    //     // width: 200%;
-    
     .insyder--title{
         margin-left: 11% !important;
     }
 }
 
 @media only screen and (max-width: 1165px){
-    // .box{
-    //     margin-left: 14%;
-    //     // margin-right: 19%;
-    //     // width: 200%;
-    // }
     .insyder--title{
         margin-left: 10% !important;
     }
 }
 
 @media only screen and (max-width: 1065px){
-    // .box{
-    //     margin-left: 10%;
-    //     // margin-right: 19%;
-    //     // width: 200%;
-    // }
     .insyder--title{
         margin-left: 10% !important;
     }
@@ -147,18 +81,6 @@ html, body{
     }
 }
 
-// @media only screen and (max-width: 500px){
-
-//     .insyder--title{
-//         margin-left: 7% !important;
-//     }
-// }
-
-// @media only screen and (max-width: 450px){
-//     .insyder--title{
-//         margin-left: 8% !important;
-//     }
-// }
 
 ::-webkit-scrollbar {
     display: none;
@@ -166,7 +88,6 @@ html, body{
 
 .image-list-item > img{
     max-width: 100% !important;
-    // widht
     height: auto !important;
 }
 
