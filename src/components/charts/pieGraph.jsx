@@ -87,7 +87,7 @@ export default function PieChart(props) {
                     maintainAspectRatio: true,
                     plugins: {
                         legend: {
-                            position: 'right',
+                            position: 'bottom',
                             labels: {
                                 usePointStyle: true,
                                 boxWidth: 8,
