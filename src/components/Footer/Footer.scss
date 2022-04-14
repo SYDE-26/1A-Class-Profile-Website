@@ -13,15 +13,22 @@
   text-align: center;
 }
 
+.ScrollWrapper {
+  border: 0px hidden transparent;
+  border-radius: 50px;
+  padding: 3px; //keep as px
+  margin: 0px
+}
+
 .CreatedBy p {
   margin: 0px;
   padding: 0px;
 }
 
 #ScrollToTop {
-  background-image:linear-gradient(135deg, rgba(118,151,254,1) 0%, rgba(245,132,182,1) 46%, rgba(252,168,62,1) 87%, rgba(254,201,32,1) 100%);
+  background-image: linear-gradient(135deg, rgba(118, 151, 254, 1) 0%, rgba(245, 132, 182, 1) 46%, rgba(252, 168, 62, 1) 87%, rgba(254, 201, 32, 1) 100%);
   display: inline-block;
   position: fixed;
   right: 1.5625rem;
-  bottom: calc(1.5rem - 4px)
+  bottom: 2.5rem
 }

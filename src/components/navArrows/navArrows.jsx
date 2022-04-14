@@ -62,7 +62,9 @@ const NavArrows = ({ navBack, navForward }) => {
             color: "white",
             padding: "16px",
             borderRadius: "18px",
-            textTransform: "none"
+            textTransform: "none",
+            fontSize: "18px",
+            fontFamily: 'Nunito Sans'
           }} variant="outline">&larr; {navBackID}</Button>
         </Link>
       </div>
@@ -73,7 +75,9 @@ const NavArrows = ({ navBack, navForward }) => {
             color: "white",
             padding: "16px",
             borderRadius: "18px",
-            textTransform: "none"
+            textTransform: "none",
+            fontSize: "18px",
+            fontFamily: 'Nunito Sans'
           }} variant="outline">{navForwardID} &rarr;</Button>
         </Link>
       </div>

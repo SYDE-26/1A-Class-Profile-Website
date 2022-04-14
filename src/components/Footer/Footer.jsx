@@ -28,12 +28,12 @@ const Footer = () => {
     <div>
       <div className="Footer">
         Created with <img src={logo} alt="love" className="heart" /> by SYDE 2026
-        {isVisible && <div className="ButtonWrapper" id="ScrollToTop">
+        {isVisible && <div className="ScrollWrapper" id="ScrollToTop">
           <Button onClick={topFunction} sx={{
             backgroundColor: "#27313B",
             color: "white",
-            borderRadius: "20px",
-            padding: "14px"
+            borderRadius: "50px",
+            padding: "16px"
           }} variant="outline"><img src={arrow} alt="up arrow"></img></Button>
         </div>}
       </div>
