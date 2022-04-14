@@ -219,7 +219,7 @@ const HistogramCount = (props) => {
                 }
 
                 data.title = allData.title;
-                data.xAxis = allData.x.label;
+                data.xAxis = allData.x.index;
                 data.yAxis = allData.y.label;
                 data.color = allData.x.color;
                 data.n = allData.n;
