@@ -21,7 +21,7 @@ function Highschool() {
             <Chart type="Stacked" data="Coop Round vs Job Sector" position="right" />
             <Chart type="Bar" data="HighschoolEnrichment" position="left" />
             <Chart type="Bar" data="HighschoolPrior" position="right" />
-            <Section header="Alternate University Choices" description="UofT(ears) and McMaster University were the most popular back-up options, but Waterloo's geese were simply too attractive ." />
+            <Section header="Alternate University Choices" description="UofT(ears) and McMaster University were the most popular back-up options, but Waterloo's geese were simply too attractive." />
             <Chart type="Bar" data="OtherUnis" position="center" />
             <Section header="Advice for Prospective + New SYDE Students" description="What is the biggest piece of advice/wisdom you would give to someone thinking about applying to SYDE? " />
             <Tiles1 />

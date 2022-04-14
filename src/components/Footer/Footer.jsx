@@ -1,6 +1,7 @@
 import Button from '@mui/material/Button';
 import './footer.scss'
 import logo from '../../images/heart.svg';
+import arrow from '../../images/arrowUp.svg';
 import { useState, useEffect } from 'react';
 
 const Footer = () => {
@@ -31,8 +32,9 @@ const Footer = () => {
           <Button onClick={topFunction} sx={{
             backgroundColor: "#27313B",
             color: "white",
-            borderRadius: "18px"
-          }} variant="outline">&uarr;</Button>
+            borderRadius: "20px",
+            padding: "14px"
+          }} variant="outline"><img src={arrow} alt="up arrow"></img></Button>
         </div>}
       </div>
     </div>
