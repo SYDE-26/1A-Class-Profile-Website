@@ -151,18 +151,52 @@ export default function BoxPlot(props) {
               ymax: '',
               n: '',
             };
-            docSnap.data().x.values.forEach((element) => {
-              for (var i = 0; i < element.plotValues.length; i++) {
-                element.plotValues[i] = parseFloat(
-                  element.plotValues[i].toFixed(2)
-                );
+            
+            if (props.datatype !== 'lectureAttendedVSClass') {
+
+              docSnap.data().x.values.forEach((element) => {
+                for (var i = 0; i < element.plotValues.length; i++) {
+                  element.plotValues[i] = parseFloat(
+                    Number(element.plotValues[i]).toFixed(2)
+                  );
+                }
+                data.val.push(element.plotValues);
+                data.label.push(element.index);
+              });
+
+              data.color = docSnap.data().x.color;
+              data.xAxis = docSnap.data().x.label;
+
+            } else {
+
+              const xValues = docSnap.data().x;
+              
+
+              for (var i = 0; i < 6; i++) {
+                const temp = xValues[i].plotValues
+                const temp2 = xValues[i].plotValyes
+                const temp3 = xValues[i].plotValue
+
+                if (i === 3 ) {
+                  data.val.push(temp2);
+                } else if (i === 5) {
+                  data.val.push(temp3);
+                } else {
+                  data.val.push(temp);
+                }
+                
+                data.label.push(xValues[i].index);
               }
-              data.val.push(element.plotValues);
-              data.label.push(element.index);
-            });
-            data.color = docSnap.data().x.color;
+              
+              data.color = docSnap.data().xItem.color;
+              data.xAxis = docSnap.data().xItem.label;
+            }
+            
+            
+
+            //data.color = docSnap.data().x.color;
             data.title = docSnap.data().title;
-            data.xAxis = docSnap.data().x.label;
+            //data.xAxis = docSnap.data().x.label;
             data.yAxis = docSnap.data().y.label;
             data.ymin = docSnap.data().yLimit.min;
             data.ymax = docSnap.data().yLimit.max;

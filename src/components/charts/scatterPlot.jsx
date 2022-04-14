@@ -276,7 +276,7 @@ export default function Scatterplot(props) {
                                         } else {
                                             if (tick % 2 === 0 && data.y_enums1[tick] !== undefined) {
                                                 if (data.y_enums[tick] !== "") {
-                                                    q.ticks[tick].label = data.y_enums[tick];
+                                                    q.ticks[tick].label = data.y_enums1[tick];
                                                 }
                                                 //q.ticks[tick].label = data.y_enums1[tick];
                                             }

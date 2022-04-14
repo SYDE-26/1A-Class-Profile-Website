@@ -14,7 +14,7 @@ function Lifestyles() {
             <Section header="Mental Health and Time Outdoors" description="1A hit us like a truck, but going outside to touch some grass positively impacted our mental health." />
             {/* The data here might say PercentageOfHighschoolFriends but it's really stress level of 1A            */}
             <Chart type="Bar" data="PercentageOfHighschoolFriends" position="left" />
-            <Chart type="Stacked" data="Coop Round vs Job Sector" position="right" />
+            <Chart type="Box" data="StressLevelVSOutside" position="right" />
             <Section header="Social and Physical Life" description="We pack both brains and brawn. We’re known to be a social program for a reason, SYDE is one big happy family." />
             <Chart type="Pie" data="socialBubble" position="left" />
             <Chart type="Multi" data="FriendsHighschool" position="right" />
