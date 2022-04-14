@@ -55,7 +55,7 @@ const NavArrows = ({ navBack, navForward }) => {
   }
   return (
     <div className="NavigationalButtons">
-      <div className="Wrapper" id={navBack}>
+      <div className="ButtonWrapper" id={navBack}>
         <Link to={`/${navBack}`}>
           <Button sx={{
             backgroundColor: "#27313B",
@@ -66,7 +66,7 @@ const NavArrows = ({ navBack, navForward }) => {
           }} variant="outline">&larr; {navBackID}</Button>
         </Link>
       </div>
-      <div className="Wrapper" id={navForward}>
+      <div className="ButtonWrapper" id={navForward}>
         <Link to={`/${navForward}`}>
           <Button sx={{
             backgroundColor: "#27313B",

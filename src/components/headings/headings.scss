@@ -16,7 +16,7 @@ h1 {
     font-size: 2.125rem;
     line-height: 2.625rem;
     letter-spacing: -0.01em;
-    margin: 5rem 25% 3rem 25%;
+    margin: 5rem 15% 3rem 15%;
     /*Background will depend on which section*/
 }
 
@@ -61,7 +61,7 @@ caption {
 
 //
 .graphDescription {
-    margin: 0px 25% 2rem 25%
+    margin: 0px 15% 2rem 15%
 }
 
 h3.sectionHeader {
@@ -73,7 +73,7 @@ h3.sectionHeader {
     font-size: 1.5rem;
     line-height: 30px;
     letter-spacing: -0.01em;
-    margin: 0px 25% 1rem 25%
+    margin: 0px 15% 1rem 15%
 }
 
 h1.demographics {
@@ -118,31 +118,31 @@ h1.admissions {
 
 @media screen and (max-width: 1600px) {
     .graphDescription {
-        margin: 0px 25% 2rem 25%
+        margin: 0px 15% 2rem 15%
     }
 
     h3.sectionHeader {
-        margin: 0px 25% 1rem 25%
+        margin: 0px 15% 1rem 15%
     }
 
     h1 {
-        margin-left: 25%;
-        margin-right: 25%;
+        margin-left: 15%;
+        margin-right: 15%;
     }
 }
 
 @media screen and (max-width: 1400px) {
     .graphDescription {
-        margin: 0px 20% 2rem 20%
+        margin: 0px 15% 2rem 15%
     }
 
     h3.sectionHeader {
-        margin: 0px 20% 1rem 20%
+        margin: 0px 15% 1rem 15%
     }
 
     h1 {
-        margin-left: 20%;
-        margin-right: 20%;
+        margin-left: 15%;
+        margin-right: 15%;
     }
 }
 

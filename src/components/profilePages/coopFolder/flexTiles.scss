@@ -3,7 +3,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
   column-gap: 1rem;
-  margin: 0 25% 64px 25%;
+  margin: 0 15% 64px 15%;
 }
 
 .flexTiles {
@@ -20,14 +20,14 @@
 
 @media screen and (max-width: 1600px) {
   .tileBox {
-    margin: 0 25% 4rem 25%;
+    margin: 0 15% 4rem 15%;
   }
 
 }
 
 @media screen and (max-width: 1400px) {
   .tileBox {
-    margin: 0 20% 4rem 20%;
+    margin: 0 15% 4rem 15%;
   }
 }
 

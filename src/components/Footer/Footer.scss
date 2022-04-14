@@ -9,7 +9,7 @@
   border: none;
   color: #fff;
   margin: 0px auto 2.5rem auto;
-  width: 50%;
+  width: 70%;
   text-align: center;
 }
 
@@ -21,7 +21,7 @@
 #ScrollToTop {
   background-image: conic-gradient(from 180deg at 50% 50%, #749BFF 0deg, #C067E2 93.75deg, #FF76A5 183.75deg, #FE8C5A 273.75deg, #FFCE1F 360deg);
   display: inline-block;
-  position: sticky;
+  position: fixed;
   right: 1.5625rem;
   bottom: 2.5rem;
 }
