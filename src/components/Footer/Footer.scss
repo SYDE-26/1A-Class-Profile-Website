@@ -23,5 +23,5 @@
   display: inline-block;
   position: fixed;
   right: 1.5625rem;
-  bottom: 2.5rem;
+  bottom: calc(1.5rem - 4px)
 }
