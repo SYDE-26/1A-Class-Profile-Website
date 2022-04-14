@@ -13,11 +13,11 @@ function Academics() {
             <ProfileTitle section="academics" title="Academics" />
             <Section header="1A Class Average" description="The cohort finished with a high 80 average, with the help of online schooling. Note: just under half the cohort responded about their average..." />
             <Chart type="Histogram" data="Average1A" position="left" />
-            <Chart type="Stacked" data="Coop Round vs Job Sector" position="right" />
+            <Chart type="Box" data="courseAverageDistribution" position="right" />
             <Section header="High School Programs and University Averages" description="Students who took IB in high school typically had higher averages in university. What doesn't kill you makes you stronger 😢" />
-            <Chart type="Stacked" data="Coop Round vs Job Sector" position="center" />
+            <Chart type="Box" data="enrichmentVSUniAverage" position="center" />
             <Section header="Lecture Attendance" description="SYDE 111 had the highest number of attendees while SYDE 101 had the lowest. Sorry Dr. Mercer, it's not personal." />
-            <Chart type="Stacked" data="Coop Round vs Job Sector" position="left" />
+            <Chart type="Box" data="lectureAttendedVSClass" position="left" />
             <Chart type="Stacked" data="LecturesAttendedByFormat" position="right" />
             <Section header="Course Difficulty, Usefulness, and Average" description="We're trying to justify to ourselves why we're paying 17.5k a year." />
             <Chart type="Scatter" data="Course Average vs Difficulty" position="center" />
