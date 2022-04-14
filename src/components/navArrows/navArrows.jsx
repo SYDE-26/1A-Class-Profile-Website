@@ -60,10 +60,10 @@ const NavArrows = ({ navBack, navForward }) => {
           <Button sx={{
             backgroundColor: "#27313B",
             color: "white",
-            padding: "16px",
+            padding: "1rem",
             borderRadius: "18px",
             textTransform: "none",
-            fontSize: "18px",
+            fontSize: "1.125rem",
             fontFamily: 'Nunito Sans'
           }} variant="outline">&larr; {navBackID}</Button>
         </Link>
@@ -73,10 +73,10 @@ const NavArrows = ({ navBack, navForward }) => {
           <Button sx={{
             backgroundColor: "#27313B",
             color: "white",
-            padding: "16px",
+            padding: "1rem",
             borderRadius: "18px",
             textTransform: "none",
-            fontSize: "18px",
+            fontSize: "1.125rem",
             fontFamily: 'Nunito Sans'
           }} variant="outline">{navForwardID} &rarr;</Button>
         </Link>
