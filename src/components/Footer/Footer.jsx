@@ -34,7 +34,7 @@ const Footer = () => {
             color: "white",
             borderRadius: "50px",
             padding: "16px"
-          }} variant="outline"><img src={arrow} alt="up arrow"></img></Button>
+          }} variant="outline"><img src={arrow} alt="up arrow" className='arrow'></img></Button>
         </div>}
       </div>
     </div>
