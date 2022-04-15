@@ -278,7 +278,39 @@ const itemData = [
     title: 'When the lunch lady blessed up - S',
   },
   {
-    img: '../insyderMemes/syde 161 starter pack.jpeg'
-  }
+    img: '../insyderMemes/syde 161 starter pack.jpeg',
+    // title: 'Matty B',
+  },
+  {
+    img: '../insyderMemes/IMG_4818.jpg',
+    title: 'Most likely to miss an interview: Benjamin Robert David Chung',
+  },
+  
+  {
+    img: '../insyderMemes/302650CD-EF2E-4362-AFA1-4984091CCF8E.jpg',
+    title: 'Most goofy: Deen Parak',
+  },
+  
+  {
+    img: '../insyderMemes/023BB0E3-744D-48A2-9B65-A278B120C5FA_Original.jpg',
+    title: 'Most likely to spend all their money on food: Anna Yang',
+  },
+  
+  {
+    img: '../insyderMemes/2F3A7CD0-CEF4-4A56-9768-AFADF20785D3.jpg',
+    title: 'Most likely to clap when the plane lands: Logan Long',
+  },
+  {
+    img: '../insyderMemes/syde 101 starter pack.jpeg'
+  },
+  {
+    img: '../insyderMemes/syde 111 starter pack.jpeg'
+  },
+  {
+    img: '../insyderMemes/syde 113 starter pack.jpeg'
+  },
+  {
+    img: '../insyderMemes/syde 121 starter pack.jpeg'
+  },
 
 ];
