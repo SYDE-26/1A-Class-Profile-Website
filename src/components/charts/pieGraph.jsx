@@ -91,21 +91,32 @@ export default function PieChart(props) {
                             labels: {
                                 usePointStyle: true,
                                 boxWidth: 8,
-                                padding: 8,
-                                font: {
-                                    family: 'Lexend',
-                                    size: 12
+                                padding: 20,
+                                font: function(context) {
+                                    var width = context.chart.width;
+                                    var size = Math.round(width / 45);
+                    
+                                    return {
+                                        family: 'Lexend',
+                                        size: size
+                                    };
                                 },
                                 color: '#a0a0a0',
                             },
                             display: true,
+                            
                         },
                         title: {
                             display: true,
                             text: data.title,
-                            font: {
-                                family: 'Lexend',
-                                size: 15
+                            font: function(context) {
+                                var width = context.chart.width;
+                                var size = Math.round(width / 32);
+                
+                                return {
+                                    family: 'Lexend',
+                                    size: size
+                                };
                             },
                             color: '#ffffff',
                             size: 14,
@@ -113,11 +124,19 @@ export default function PieChart(props) {
                         },
                         subtitle: {
                             display: true,
-                            font: {
-                                family: 'Lexend',
-                                size: 13
+                            font: function(context) {
+                                var width = context.chart.width;
+                                var size = Math.round(width / 40);
+                
+                                return {
+                                    family: 'Lexend',
+                                    size: size
+                                };
                             },
                             text: 'number of respondents: ' + data.n,
+                            padding: {
+                                bottom: 20
+                            }
                         }
 
                     }

@@ -16,7 +16,7 @@ class BoxPlotChart extends Component {
     this.myChart.data.labels = this.props.data.label;
     this.myChart.data.datasets[0].data = this.props.data.val;
     this.myChart.data.datasets[0].backgroundColor = this.props.data.color;
-    this.myChart.data.datasets[0].outlierColor = this.props.data.color;
+    this.myChart.data.datasets[0].outlierColor = 'white';
     this.myChart.options.plugins.title.text = this.props.data.title;
     this.myChart.options.plugins.subtitle.text = 'number of respondents: ' + this.props.data.n;
     this.myChart.options.scales.x.title.text = this.props.data.xAxis;
@@ -38,19 +38,32 @@ class BoxPlotChart extends Component {
             display: true,
             text: this.props.data.title,
             color: '#ffffff',
-            font: {
-              family: 'Lexend',
-              size: 15
-            },
+            font: function(context) {
+              var width = context.chart.width;
+              var size = Math.round(width / 32);
+
+              return {
+                  family: 'Lexend',
+                  size: size
+              };
+          },
             padding: 14,
           },
           subtitle: {
             display: true,
-            font: {
-              family: 'Lexend',
-              size: 13
-            },
+            font: function(context) {
+              var width = context.chart.width;
+              var size = Math.round(width / 40);
+
+              return {
+                  family: 'Lexend',
+                  size: size
+              };
+          },
             text: 'number of respondents: ' + this.props.data.n,
+            padding: {
+              bottom: 20
+            }
           }
         },
         scales: {
@@ -64,10 +77,15 @@ class BoxPlotChart extends Component {
                 display: true,
                 text: this.props.data.xAxis,
                 color: '#ffffff',
-                font: {
-                  family: 'Lexend',
-                  size: 15
-                },
+                font: function(context) {
+                  var width = context.chart.width;
+                  var size = Math.round(width / 32);
+  
+                  return {
+                      family: 'Lexend',
+                      size: size
+                  };
+              },
               },
               ticks: {
                 color: '#ffffff',
@@ -83,10 +101,15 @@ class BoxPlotChart extends Component {
                 display: true,
                 text: this.props.data.yAxis,
                 color: '#ffffff',
-                font: {
-                  family: 'Lexend',
-                  size: 15
-                },
+                font: function(context) {
+                  var width = context.chart.width;
+                  var size = Math.round(width / 32);
+  
+                  return {
+                      family: 'Lexend',
+                      size: size
+                  };
+              },
               },
               ticks: {
                 color: '#ffffff',

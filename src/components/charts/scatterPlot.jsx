@@ -141,9 +141,14 @@ export default function Scatterplot(props) {
                                 usePointStyle: true,
                                 boxWidth: 8,
                                 padding: 8,
-                                font: {
-                                    family: 'Lexend',
-                                    size: 12
+                                font: function(context) {
+                                    var width = context.chart.width;
+                                    var size = Math.round(width / 45);
+                    
+                                    return {
+                                        family: 'Lexend',
+                                        size: size
+                                    };
                                 },
                                 color: "#a0a0a0",
                             },
@@ -151,20 +156,33 @@ export default function Scatterplot(props) {
                         title: {
                             display: true,
                             text: data.title,
-                            font: {
-                                family: 'Lexend',
-                                size: 15
+                            font: function(context) {
+                                var width = context.chart.width;
+                                var size = Math.round(width / 32);
+                
+                                return {
+                                    family: 'Lexend',
+                                    size: size
+                                };
                             },
                             color: "#ffffff",
                             padding: 14,
                         },
                         subtitle: {
                             display: true,
-                            font: {
-                                family: 'Lexend',
-                                size: 13,
+                            font: function(context) {
+                                var width = context.chart.width;
+                                var size = Math.round(width / 40);
+                
+                                return {
+                                    family: 'Lexend',
+                                    size: size
+                                };
                             },
                             text: 'number of respondents: ' + data.n,
+                            padding: {
+                                bottom: 20
+                            }
                         },
                         tooltip: {
                             enabled: true,
@@ -209,9 +227,14 @@ export default function Scatterplot(props) {
                             title: {
                                 display: true,
                                 text: data.xAxis,
-                                font: {
-                                    family: 'Lexend',
-                                    size: 15
+                                font: function(context) {
+                                    var width = context.chart.width;
+                                    var size = Math.round(width / 32);
+                    
+                                    return {
+                                        family: 'Lexend',
+                                        size: size
+                                    };
                                 },
                                 color: "#ffffff",
                             },
@@ -260,9 +283,14 @@ export default function Scatterplot(props) {
                             title: {
                                 display: true,
                                 text: data.yAxis,
-                                font: {
-                                    family: 'Lexend',
-                                    size: 15
+                                font: function(context) {
+                                    var width = context.chart.width;
+                                    var size = Math.round(width / 32);
+                    
+                                    return {
+                                        family: 'Lexend',
+                                        size: size
+                                    };
                                 },
                                 color: "#ffffff",
                             },

@@ -119,9 +119,14 @@ export default function StackedBar(props) {
                   usePointStyle: true,
                   boxWidth: 8,
                   padding: 8,
-                  font: {
-                    family: 'Lexend',
-                    size: 12
+                  font: function(context) {
+                    var width = context.chart.width;
+                    var size = Math.round(width / 45);
+    
+                    return {
+                        family: 'Lexend',
+                        size: size
+                    };
                   },
                   color: '#a0a0a0',
                 },
@@ -130,19 +135,32 @@ export default function StackedBar(props) {
                 display: true,
                 text: data.title,
                 color: '#ffffff',
-                font: {
-                  family: 'Lexend',
-                  size: 15
+                font: function(context) {
+                  var width = context.chart.width;
+                  var size = Math.round(width / 32);
+  
+                  return {
+                      family: 'Lexend',
+                      size: size
+                  };
                 },
                 padding: 14,
               },
               subtitle: {
                 display: true,
-                font: {
-                  family: 'Lexend',
-                  size: 13
+                font: function(context) {
+                  var width = context.chart.width;
+                  var size = Math.round(width / 40);
+  
+                  return {
+                      family: 'Lexend',
+                      size: size
+                  };
                 },
                 text: 'number of respondents: ' + data.n,
+                padding: {
+                  bottom: 20
+                }
               },
             },
             scales: {
@@ -152,10 +170,15 @@ export default function StackedBar(props) {
                   display: true,
                   text: data.xAxis,
                   color: '#ffffff',
-                  font: {
-                    family: 'Lexend',
-                    size: 15
-                  },
+                  font: function(context) {
+                    var width = context.chart.width;
+                    var size = Math.round(width / 32);
+    
+                    return {
+                        family: 'Lexend',
+                        size: size
+                    };
+                },
                 },
                 ticks: {
                   color: '#ffffff',
@@ -167,10 +190,15 @@ export default function StackedBar(props) {
                   display: true,
                   text: data.yAxis,
                   color: '#ffffff',
-                  font: {
-                    family: 'Lexend',
-                    size: 15
-                  },
+                  font: function(context) {
+                    var width = context.chart.width;
+                    var size = Math.round(width / 32);
+    
+                    return {
+                        family: 'Lexend',
+                        size: size
+                    };
+                },
                 },
                 ticks: {
                   beginAtZero: true,
