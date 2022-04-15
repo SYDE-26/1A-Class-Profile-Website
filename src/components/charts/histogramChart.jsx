@@ -305,6 +305,9 @@ const HistogramCount = (props) => {
                                     };
                                 },
                                 text: 'number of respondents: ' + data.n,
+                                padding: {
+                                    bottom: 20
+                                }
                             },
                         },
                         scales: {
