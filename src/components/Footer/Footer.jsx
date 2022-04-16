@@ -33,7 +33,8 @@ const Footer = () => {
             backgroundColor: "#27313B",
             color: "white",
             borderRadius: "50px",
-            padding: "1rem"
+            padding: "1rem",
+            minWidth: "0px"
           }} variant="outline"><img src={arrow} alt="up arrow" className='arrow'></img></Button>
         </div>}
       </div>
