@@ -46,7 +46,7 @@ export default function Slider() {
       <BtnSlider moveSlide={nextSlide} direction={"next"} />
       <BtnSlider moveSlide={prevSlide} direction={"prev"} />
 
-      <div className="container-dots">
+      <div className="container-dots-photo">
         {Array.from({ length: 25 }).map((item, index) => (
           <div
             onClick={() => moveDot(index + 1)}
