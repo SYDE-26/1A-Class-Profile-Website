@@ -74,14 +74,14 @@ const GradientBackground = () => {
     return (
         <div className='UltimateWrapper'>
             <div className='InstructionWrapper'>
-                <img src={Vector} />
+                <img src={Vector} alt="Vector" />
                 <p>Click a circle below to go to each section</p>
-                <img src={Vector} />
+                <img src={Vector} alt="Vector" />
             </div>
             <div className='Wrapper'>
                 {Pages.map((page, index) => (
                     <section className={`CircleWrapper ${page.text}`}>
-                        <div onClick={() => setOnClickChange(ClickGradient[index])} className={change.includes('Translate1') ? `${GradientSelection[index]} Translate1` : GradientSelection[index]} onMouseOver={() => setOnClickChange(ClickGradient[index])}>        
+                        <div onClick={() => setOnClickChange(ClickGradient[index])} className={change.includes('Translate1') ? `${GradientSelection[index]} Translate1` : GradientSelection[index]} onMouseOver={() => setOnClickChange(ClickGradient[index])} onMouseLeave={() => setOnClickChange(`${GradientSelection[index]} notVisible`)}>        
                             <div id={page.id}className={onClickChange.includes(ClickGradient[index]) ? `${ClickGradient[index]} BlackCircle`: 'BlackCircle'}>
                                 <div className='Text'>
                                     <Link to={page.link}><p>{page.text}</p></Link>
