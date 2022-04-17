@@ -274,40 +274,6 @@ html {
     }
 }
 
-@media screen and (max-width: 1200px) {
-    // .circle1 {
-    //     width: 50vw;
-    //     height: 50vh;
-    //     margin-left: 10%;
-    // }
-
-    // .circle2 {
-    //     width: 50vw;
-    //     height: 50vh;
-    //     margin-top: -8rem;
-    // }
-
-    // .circle3 {
-    //     width: 50vw;
-    //     height: 50vh;
-    // }
-    // .headingLeft {
-    //     margin-top: 1.65em;
-    //     margin-right: 114%;
-    //     position: absolute;
-    //     right:8%;
-    //     top: 15%;
-    // }
-
-    // .headingLeftDec {
-    //     margin-top: 1.65em;
-    //     margin-right: 108%;
-    //     position: absolute;
-    //     right: 5%;
-    //     top: 15%;
-    // }
-}
-
 @media only screen and (max-width:1590px) {
     :root {
         h1.gallery {
@@ -318,15 +284,20 @@ html {
 }
 
 
-@media screen and (min-width: 2000px) {
-    // :root {
-    //   font-size: 18px;
-    // }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .headingLeft {
+        margin-top: 1.65em;
+        margin-right: 114%;
+        position: absolute;
+        right: 1em;
+        top: 15%;
+    }
 
-    // .container {
-    //     width: 160%;
-    //     padding-left: 160px;
-    //     margin-left: -80%;
-    //     padding-right: 50px;
-    // }
+    .headingLeftDec {
+        margin-top: 1.65em;
+        margin-right: 108%;
+        position: absolute;
+        right: 1em;
+        top: 15%;
+    }
 }
