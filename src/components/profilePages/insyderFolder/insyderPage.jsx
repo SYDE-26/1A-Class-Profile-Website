@@ -1,4 +1,5 @@
 import React from 'react';
+import useDocumentTitle from '../../../useDocumentTitle'
 import ProfileTitle from '../../headings/ProfileTitle.jsx';
 import Footer from '../../footer/footer.jsx';
 import '../../footer/footer.scss';
@@ -22,6 +23,8 @@ import InsyderOverlay from "../../insyderOverlay/index.jsx";
 
 
 function Insyderpage(props) {
+
+  useDocumentTitle('SYDE \'26 | Insyder');
 
   const [url, setUrl] = React.useState();
 

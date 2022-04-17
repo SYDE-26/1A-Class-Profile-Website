@@ -1,4 +1,5 @@
 import React from 'react';
+import useDocumentTitle from '../../../useDocumentTitle'
 import NavArrows from '../../navArrows/navArrows';
 import Footer from '../../footer/footer';
 import ProfileTitle from '../../headings/ProfileTitle'
@@ -9,6 +10,9 @@ import '../img.scss'
 import FlexTiles from './flexTiles';
 
 function Coop() {
+
+    useDocumentTitle('SYDE \'26 | Co-op');
+
     return (
         <div>
             <ProfileTitle section="coop" title="Co-op" />

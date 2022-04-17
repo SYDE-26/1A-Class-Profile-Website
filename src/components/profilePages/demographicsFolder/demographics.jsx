@@ -1,4 +1,5 @@
 import React from 'react';
+import useDocumentTitle from '../../../useDocumentTitle'
 import Footer from '../../footer/footer';
 import NavArrows from '../../navArrows/navArrows';
 import ProfileTitle from '../../headings/ProfileTitle'
@@ -6,6 +7,9 @@ import Section from '../../headings/section';
 import Chart from '../../charts/chart';
 
 function Demographics() {
+
+    useDocumentTitle('SYDE \'26 | Demographics');
+
     return (
         <div>
             <ProfileTitle section="demographics" title="Demographics" />

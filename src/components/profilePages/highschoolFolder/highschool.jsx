@@ -1,4 +1,5 @@
 import React from 'react';
+import useDocumentTitle from '../../../useDocumentTitle'
 import NavArrows from '../../navArrows/navArrows';
 import Footer from '../../footer/footer';
 import ProfileTitle from '../../headings/ProfileTitle'
@@ -10,6 +11,9 @@ import '../img.scss'
 import { Tiles1, Tiles2 } from './tiles';
 
 function Highschool() {
+
+    useDocumentTitle('SYDE \'26 | High School');
+
     return (
         <div>
             <ProfileTitle section="admissions" title="High School" />

@@ -1,4 +1,5 @@
 import React from 'react';
+import useDocumentTitle from '../../../useDocumentTitle'
 import ClassPic from './classPic.png'
 import CircleImage from '../../circleImage'
 import Footer from '../../footer/footer';
@@ -10,6 +11,9 @@ import { dataTeam } from './avatarInfo.jsx'
 import { softwareTeam } from './avatarInfo.jsx'
 
 function About() {
+
+    useDocumentTitle('SYDE \'26 | About');
+    
     const designAvatars = designTeam.map(item => {
         return <CircleImage name={item.name} linkedin={item.linkedin} imagePath={`../credit/design/img${item.id}.png`} />
     })

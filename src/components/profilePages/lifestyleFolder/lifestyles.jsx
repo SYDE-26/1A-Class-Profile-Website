@@ -1,4 +1,5 @@
 import React from 'react';
+import useDocumentTitle from '../../../useDocumentTitle'
 import NavArrows from '../../navArrows/navArrows';
 import Footer from '../../footer/footer';
 import ProfileTitle from '../../headings/ProfileTitle'
@@ -8,6 +9,9 @@ import logo from '../../../images/Goose word cloud.svg'
 import '../img.scss'
 
 function Lifestyles() {
+
+    useDocumentTitle('SYDE \'26 | Lifestyle');
+
     return (
         <div>
             <ProfileTitle section="lifestyle" title="Lifestyle" />

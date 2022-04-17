@@ -1,4 +1,5 @@
 import React from 'react';
+import useDocumentTitle from '../../../useDocumentTitle'
 import './photoGallery.scss';
 import ProfileTitle from '../../headings/ProfileTitle';
 import SliderSept from '../../carousel/carouselSlideSept';
@@ -13,6 +14,9 @@ import circleThree from '../../../images/circle3.svg';
 import circleFour from '../../../images/circle2.svg';
 
 function PhotoGallery() {
+
+    useDocumentTitle('SYDE \'26 | Photo Gallery');
+
     return (
         <div>
             <ProfileTitle title="1A Photo Gallery" section="gallery" />
