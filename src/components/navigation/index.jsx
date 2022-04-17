@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navigation.scss';
-import BtnSlider from '../carousel/buttonSlider';
+import BtnSlider from './button';
 import Vector from '../../images/HomePageVector.svg';
 
 const GradientBackground = () => {
@@ -62,6 +62,12 @@ const GradientBackground = () => {
     }
     const moveDot = index => {
         setSlideIndex(index)
+        if (slideIndex === 2) {
+            setChange('')
+        }
+        else if (slideIndex === 1) {
+            setChange('Translate1')
+        }
         setPhoneSlideIndex(index)
     }
 
