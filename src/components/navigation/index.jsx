@@ -9,7 +9,7 @@ const GradientBackground = () => {
     const [onClickChange, setOnClickChange] = useState('');
     const [change, setChange] = useState('');
     const [slideIndex, setSlideIndex] = useState(1);  
-    const [slideIndex2, setSlideIndex2] = useState(1);
+    const [phoneSlideIndex, setPhoneSlideIndex] = useState(1);
     
     const Pages = [
         { id: 1, text: 'Co-op', link: '/coop', blurb: 'Class average, courses, attendance, etc.' },
@@ -29,29 +29,46 @@ const GradientBackground = () => {
     };
 
     const nextSlide = () => {
-        if (slideIndex !== Pages.length - 1) {
-          setSlideIndex(slideIndex + 1)
-          setSlideIndex2(slideIndex2 + 1)
-        }
-        else if (slideIndex === Pages.length - 1) {
-          setSlideIndex(2)
-          setSlideIndex2(1)
-        }
-      }
-    
-    const prevSlide = () => {
         if (slideIndex !== 1) {
-        setSlideIndex(slideIndex - 1)
-        setSlideIndex2(slideIndex2 - 1)
+          setSlideIndex(1)
+          setChange('')
         }
         else if (slideIndex === 1) {
-        setSlideIndex(Pages.length - 2)
-        setSlideIndex2(Pages.length)
+          setSlideIndex(2)
+          setChange('Translate1')
         }
+    }
+    console.log(change)
+    const prevSlide = () => {
+        if (slideIndex !== 1) {
+        setSlideIndex(1)
+        setChange('')        }
+        else if (slideIndex === 1) {
+        setSlideIndex(2)
+        setChange('Translate1')
+        }
+    }
+
+    const phoneNextSlide = () => {
+        if (phoneSlideIndex !== Pages.length) {
+            setPhoneSlideIndex(phoneSlideIndex + 1)
+        }
+        else if (phoneSlideIndex === Pages.length) {
+            setPhoneSlideIndex(1)
+        }
+    }
+
+    const phonePrevSlide = () => {
+        if (phoneSlideIndex !== 1) {
+            setPhoneSlideIndex(phoneSlideIndex - 1)
+          }
+          else if (phoneSlideIndex === 1) {
+            setPhoneSlideIndex(Pages.length)
+          }
     }
     const moveDot = index => {
         setSlideIndex(index)
-        setSlideIndex2(index)
+        setPhoneSlideIndex(index)
     }
 
     const clickButton = () => {
@@ -63,17 +80,7 @@ const GradientBackground = () => {
         }
     }
 
-    const screenClassName = (slideIndex) => {
-        console.log(slideIndex)
-        if (slideIndex2 % 2 == 0) {
-            setChange('Translate1')
-        }
-        else {
-            setChange(null)
-        }
-    } 
-
-    //console.log(slideIndex)
+    console.log(phoneSlideIndex)
 
     return (
         <div className='UltimateWrapper'>
@@ -101,7 +108,7 @@ const GradientBackground = () => {
                 {Pages.map((page, index) => (
                     <section className={`CircleWrapper ${page.text}`}>
                         <div onClick={() => setOnClickChange(ClickGradient[index])} className={change.includes('Translate1') ? `${GradientSelection[index]} Translate1` : GradientSelection[index]}>        
-                            <div id={page.id}className={onClickChange.includes(ClickGradient[index]) ? `${ClickGradient[index]} BlackCircle`: 'BlackCircle'}>
+                            <div id={page.id} className={onClickChange.includes(ClickGradient[index]) ? `${ClickGradient[index]} BlackCircle`: 'BlackCircle'}>
                                 <div className='Text'>
                                     <Link to={page.link}><p>{page.text}</p></Link>
                                     {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}><p className='Blurb'>{page.blurb}</p></Link> : ''}
@@ -112,6 +119,36 @@ const GradientBackground = () => {
                     </section>
                 ))}
             </div>
+            <div className='PhoneWrapper'>
+                {Pages.map((page, index) => (
+                    // <section className={phoneSlideIndex === index + 1 ?`CircleWrapper ${page.text}`: ''}>
+                        <div onClick={() => setOnClickChange(ClickGradient[index])} className={phoneSlideIndex === index + 1 ? GradientSelection[index] : `${GradientSelection[index]} notVisible`}>        
+                            <div id={page.id}className={onClickChange.includes(ClickGradient[index]) ?`${ClickGradient[index]} BlackCircle` : 'BlackCircle'}>
+                                <div className='Text'>
+                                    <Link to={page.link}><p>{page.text}</p></Link>
+                                    {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}><p className='Blurb'>{page.blurb}</p></Link> : ''}
+                                    {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}>< img src="../navarrow.png" alt="Arrows" /></Link> : ''}
+                                </div>
+                            </div>
+                        </div>
+                    // </section>     
+                ))}
+            </div> 
+            {/* <div className='PhoneWrapper'>
+                {Pages.map((page, index) => (
+                    <section className={phoneSlideIndex === index + 1 ? `CircleWrapper ${page.text}` : ''}>
+                        <div onClick={() => setOnClickChange(ClickGradient[index])} className={phoneSlideIndex === index + 1 ? `${GradientSelection[index]}` : ''}>        
+                            <div id={page.id} className={phoneSlideIndex === index + 1 ? `${ClickGradient[index]} BlackCircle`: 'BlackCircle'}>
+                                <div className='Text'>
+                                    <Link to={page.link}><p>{page.text}</p></Link>
+                                    {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}><p className='Blurb'>{page.blurb}</p></Link> : ''}
+                                    {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}>< img src="../navarrow.png" alt="Arrows" /></Link> : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                ))}
+            </div> */}
             <div className='buttonSlider'>
                 <div className="container-dots">
                     {Array.from({ length: 2 }).map((item, index) => (
@@ -121,38 +158,21 @@ const GradientBackground = () => {
                     ></div>
                     ))}
                 </div>
-                <BtnSlider className='button' onClick={() => screenClassName(slideIndex)} direction={"prev"} moveSlide={prevSlide}/>
-                <BtnSlider className='button' onClick={() => screenClassName(slideIndex)} direction={"next"} moveSlide={nextSlide}/>
-            </div>
-            {/*
-            <div className='PhoneWrapper'>
-                {Pages?.slice((slideIndex2 - 1) * 1, (slideIndex2) * 1).map((page, index) => (
-                    <section className={`CircleWrapper ${page.text}`}>
-                        <div onClick={() => setOnClickChange(ClickGradient[index])} className={GradientSelection[index + slideIndex - 2]}>        
-                            <div id={page.id}className={onClickChange.includes(ClickGradient[index]) ? `${ClickGradient[index + slideIndex - 2]} BlackCircle`: 'BlackCircle'}>
-                                <div className='Text'>
-                                    <Link to={page.link}><p>{page.text}</p></Link>
-                                    {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}><p className='Blurb'>{page.blurb}</p></Link> : ''}
-                                    {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}>< img src="../navarrow.png" alt="Arrows" /></Link> : ''}
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                ))}
+                <BtnSlider className='button' direction={"prev"} moveSlide={prevSlide}/>
+                <BtnSlider className='button' direction={"next"} moveSlide={nextSlide}/>
             </div>
             <div className='phoneButtonSlider'>
                 <div className="container-dots2">
                     {Array.from({ length: 5 }).map((item, index) => (
                     <div
                         onClick={() => moveDot(index + 1)}
-                        className={slideIndex2 === index + 1 ? "dot active" : "dot"}
+                        className={phoneSlideIndex === index + 1 ? "dot active" : "dot"}
                     ></div>
                     ))}
                 </div>
-                <BtnSlider className='button' onClick={() => clickButton} direction={"prev"} moveSlide={prevSlide}/>
-                <BtnSlider className='button' onClick={() => clickButton} direction={"next"} moveSlide={nextSlide}/>
+                <BtnSlider className='button' direction={"prev"} moveSlide={phonePrevSlide}/>
+                <BtnSlider className='button' direction={"next"} moveSlide={phoneNextSlide}/>
             </div>
-            */}
             <div className='DescriptionWrapper'>
                 <div className='BottomCircle'>
                     <div className='DescriptionTextWrapper'>
