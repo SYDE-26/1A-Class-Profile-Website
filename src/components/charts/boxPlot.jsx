@@ -16,7 +16,7 @@ class BoxPlotChart extends Component {
     this.myChart.data.labels = this.props.data.label;
     this.myChart.data.datasets[0].data = this.props.data.val;
     this.myChart.data.datasets[0].backgroundColor = this.props.data.color;
-    this.myChart.data.datasets[0].outlierColor = 'white';
+    this.myChart.data.datasets[0].outlierColor = 'rgb(255, 99, 132)';
     this.myChart.options.plugins.title.text = this.props.data.title;
     this.myChart.options.plugins.subtitle.text = 'number of respondents: ' + this.props.data.n;
     this.myChart.options.scales.x.title.text = this.props.data.xAxis;
@@ -129,7 +129,14 @@ class BoxPlotChart extends Component {
             borderColor: 'white',
             hoverBackgroundColor: 'white',
             borderWidth: 1.5,
-            outlierColor: 'white',
+            marker: {
+              color: 'rgb(8,81,156)',
+              outliercolor: 'rgba(219, 64, 82, 0.6)',
+              line: {
+                outliercolor: 'rgba(219, 64, 82, 1.0)',
+                outlierwidth: 2
+              }
+            },
           },
         ],
       },
@@ -151,7 +158,6 @@ class BoxPlotChart extends Component {
 
 export default function BoxPlot(props) {
 
-  console.log(props)
   const [data, setData] = useState({
     val: [],
     label: [],
@@ -226,7 +232,6 @@ export default function BoxPlot(props) {
             data.n = docSnap.data().n;
             setId(id + 1);
             setData(data);
-            console.log(data)
           } else {
             console.log("No such document!");
           }

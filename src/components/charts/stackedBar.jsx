@@ -20,7 +20,6 @@ export default function StackedBar(props) {
 
     getDoc(doc(db, "1A Data", props.datatype)).then(docSnap => {
       if (docSnap.exists()) {
-        console.log("Document data:", docSnap.data());
 
         let data = {
           barlabel: [],
@@ -92,12 +91,6 @@ export default function StackedBar(props) {
       .sort((a, b) => a.value[key] - b.value[key]);
   }
 
-  const optionInformation = {
-
-
-  }
-
-  console.log("Options: ", optionInformation);
   return (
     <div className="chart">
       <Bar
