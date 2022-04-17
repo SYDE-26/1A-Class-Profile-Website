@@ -20,6 +20,53 @@
     background-color: var(--bg-colour);
 }
 
+.btn-slide {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.prev {
+    top: 50%;
+    left: -5px;
+    transform: translateY(-60%);
+}
+
+.next {
+    top: 50%;
+    right: -5px;
+    transform: translateY(-60%);
+}
+
+.container-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.dot {
+    width: 1.2vh;
+    height: 1.2vh;
+    border-radius: 50%;
+    margin: 0 3.5px 10px;
+    background: #616161;
+}
+
+.dot.active {
+    background: #FFFFFF;
+}
+
 .UltimateWrapper {
     max-height: 90vh;
     overflow: hidden;
