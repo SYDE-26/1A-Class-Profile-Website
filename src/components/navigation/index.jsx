@@ -5,7 +5,6 @@ import BtnSlider from '../carousel/buttonSlider';
 import Vector from '../../images/HomePageVector.svg';
 
 const GradientBackground = () => {
-    const [className, setClassName] = useState(0)
     const [onClickChange, setOnClickChange] = useState('');
     const [change, setChange] = useState('');
     const [slideIndex, setSlideIndex] = useState(1);  
@@ -19,14 +18,9 @@ const GradientBackground = () => {
         { id: 5, text: 'Lifestyle', link: '/lifestyles', blurb: 'Mental health, sleep, social life, etc.' }
     ] 
     
-    //console.log(Pages.text)
     const GradientSelection = ['CoopGradient', 'AcademicsGradient', 'DemographicsGradient', 'HighSchoolGradient', 'LifeStyleGradient'];
     
     const ClickGradient = ['CoopChange', 'AcademicsChange', 'DemographicsChange', 'HighSchoolChange', 'LifeStyleChange']; 
-
-    const toggleClass = (page, index) => {
-        console.log(index)
-    };
 
     const nextSlide = () => {
         if (slideIndex !== 1) {
@@ -38,7 +32,7 @@ const GradientBackground = () => {
           setChange('Translate1')
         }
     }
-    console.log(change)
+
     const prevSlide = () => {
         if (slideIndex !== 1) {
         setSlideIndex(1)
@@ -71,17 +65,6 @@ const GradientBackground = () => {
         setPhoneSlideIndex(index)
     }
 
-    const clickButton = () => {
-        if (slideIndex === 1){
-            setClassName = 0
-        }
-        else if (slideIndex === 2){
-            setClassName = 1
-        }
-    }
-
-    console.log(phoneSlideIndex)
-
     return (
         <div className='UltimateWrapper'>
             <div className='InstructionWrapper'>
@@ -92,7 +75,7 @@ const GradientBackground = () => {
             <div className='Wrapper'>
                 {Pages.map((page, index) => (
                     <section className={`CircleWrapper ${page.text}`}>
-                        <div onClick={() => setOnClickChange(ClickGradient[index])} className={GradientSelection[index]} onMouseOver={() => setOnClickChange(ClickGradient[index])}>        
+                        <div onClick={() => setOnClickChange(ClickGradient[index])} className={change.includes('Translate1') ? `${GradientSelection[index]} Translate1` : GradientSelection[index]} onMouseOver={() => setOnClickChange(ClickGradient[index])}>        
                             <div id={page.id}className={onClickChange.includes(ClickGradient[index]) ? `${ClickGradient[index]} BlackCircle`: 'BlackCircle'}>
                                 <div className='Text'>
                                     <Link to={page.link}><p>{page.text}</p></Link>
@@ -104,24 +87,8 @@ const GradientBackground = () => {
                     </section>
                 ))}
             </div> 
-            <div className='MobileWrapper'>
-                {Pages.map((page, index) => (
-                    <section className={`CircleWrapper ${page.text}`}>
-                        <div onClick={() => setOnClickChange(ClickGradient[index])} className={change.includes('Translate1') ? `${GradientSelection[index]} Translate1` : GradientSelection[index]}>        
-                            <div id={page.id} className={onClickChange.includes(ClickGradient[index]) ? `${ClickGradient[index]} BlackCircle`: 'BlackCircle'}>
-                                <div className='Text'>
-                                    <Link to={page.link}><p>{page.text}</p></Link>
-                                    {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}><p className='Blurb'>{page.blurb}</p></Link> : ''}
-                                    {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}>< img src="../navarrow.png" alt="Arrows" /></Link> : ''}
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                ))}
-            </div>
             <div className='PhoneWrapper'>
                 {Pages.map((page, index) => (
-                    // <section className={phoneSlideIndex === index + 1 ?`CircleWrapper ${page.text}`: ''}>
                         <div onClick={() => setOnClickChange(ClickGradient[index])} className={phoneSlideIndex === index + 1 ? GradientSelection[index] : `${GradientSelection[index]} notVisible`}>        
                             <div id={page.id}className={onClickChange.includes(ClickGradient[index]) ?`${ClickGradient[index]} BlackCircle` : 'BlackCircle'}>
                                 <div className='Text'>
@@ -130,25 +97,9 @@ const GradientBackground = () => {
                                     {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}>< img src="../navarrow.png" alt="Arrows" /></Link> : ''}
                                 </div>
                             </div>
-                        </div>
-                    // </section>     
+                        </div>   
                 ))}
             </div> 
-            {/* <div className='PhoneWrapper'>
-                {Pages.map((page, index) => (
-                    <section className={phoneSlideIndex === index + 1 ? `CircleWrapper ${page.text}` : ''}>
-                        <div onClick={() => setOnClickChange(ClickGradient[index])} className={phoneSlideIndex === index + 1 ? `${GradientSelection[index]}` : ''}>        
-                            <div id={page.id} className={phoneSlideIndex === index + 1 ? `${ClickGradient[index]} BlackCircle`: 'BlackCircle'}>
-                                <div className='Text'>
-                                    <Link to={page.link}><p>{page.text}</p></Link>
-                                    {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}><p className='Blurb'>{page.blurb}</p></Link> : ''}
-                                    {onClickChange.includes(ClickGradient[index]) ? <Link to={page.link}>< img src="../navarrow.png" alt="Arrows" /></Link> : ''}
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                ))}
-            </div> */}
             <div className='buttonSlider'>
                 <div className="container-dots">
                     {Array.from({ length: 2 }).map((item, index) => (
