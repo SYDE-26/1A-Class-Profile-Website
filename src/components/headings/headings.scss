@@ -76,6 +76,16 @@ h3.sectionHeader {
     margin: 0px 15% 1rem 15%
 }
 
+h3.Title {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19.5px;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
 h1.demographics {
     background: linear-gradient(90deg, var(--pink) 0%, var(--purple) 100%);
     background-clip: text;

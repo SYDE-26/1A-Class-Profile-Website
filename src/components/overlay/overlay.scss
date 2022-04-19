@@ -120,7 +120,7 @@
         font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
-        margin-bottom: auto;
+        margin-bottom: 4vh;
         line-height: 25px;
     }
 }
@@ -142,7 +142,7 @@
         font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
-        margin-bottom: auto;
+        margin-bottom: 4vh;
         line-height: 25px;
     }
 }
@@ -164,7 +164,7 @@
         font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
-        margin-bottom: auto;
+        margin-bottom: 4vh;
         line-height: 25px;
     }
 }
@@ -187,7 +187,7 @@
         font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
-        margin-bottom: auto;
+        margin-bottom: 4vh;
         line-height: 25px;
     }
 }
@@ -208,7 +208,7 @@
         font-size: 1.75vmax;
         text-align: center;
         margin-top: 0;
-        margin-bottom: auto;
+        margin-bottom: 4vh;
         line-height: 25px;
     }
 }
@@ -229,7 +229,7 @@
         color: white;
         font-weight: 300;
         margin-left: 5%;
-        margin-top: 6vh;
+        margin-top: 3vh;
         margin-bottom: auto;
     }
 
@@ -239,6 +239,7 @@
         font-weight: 300;
         margin-left: max(40px,2.5%);
         margin-right: auto;
+        margin-top: 1vh;
     }
 }
 
@@ -258,7 +259,7 @@
         color: white;
         font-weight: 300;
         margin-left: 5%;
-        margin-top: 6vh;
+        margin-top: 3vh;
         margin-bottom: auto;
     }
 
@@ -269,6 +270,7 @@
         margin-left: max(40px,2.5%);
         margin-right: auto;
         flex-shrink: 1;
+        margin-top: 1vh;
     }
 }
 
@@ -288,7 +290,7 @@
         color: white;
         font-weight: 300;
         margin-left: 5%;
-        margin-top: 6vh;
+        margin-top: 3vh;
         margin-bottom: auto;
     }
 
@@ -298,14 +300,15 @@
         font-weight: 300;
         margin-left: max(40px,2.5%);
         margin-right: min(25px, 5%);
+        margin-top: 1vh;
     }
 
     .lock-icon {
         margin-right: auto;
-        margin-top: 2.5vh;
-        margin-bottom: 0;
-        max-width: 10vw;
-        max-height: 10vh;
+        margin-top: -6.3vh;
+        margin-bottom: -1.4vh;
+        max-width: 8vw;
+        max-height: 8vh;
     }
 }
 
