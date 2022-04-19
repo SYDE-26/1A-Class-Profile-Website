@@ -27,6 +27,13 @@ html, body{
     justify-content: center;
 }
 
+.insyder--title{
+    color: #fff;
+}
+
+// .insyder--description{
+
+// }
 
 .insyder--box{
     display: flex;
@@ -89,31 +96,40 @@ html, body{
 .image-list-item > img{
     max-width: 100% !important;
     height: auto !important;
+    z-index: -10;
+    // opacity: 0;
 }
 
-.image-list-item:hover{
-    filter: brightness(50%);
-    .textOnTop{
+.insyderImageOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    opacity: 0;
+}
+
+.insyderImageOverlay:hover{
+    opacity: 1;
+}
+.textOnTop{
         display: block !important;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        opacity: 100%;
-        font-weight: 900;
-        z-index: 2;
-        filter: bightness(250%);
         letter-spacing: 5%;
-        line-height: 1.25em;
-        font-size: 1.25em;
-        text-shadow:
-        0.07em 0 black,
-        0 0.07em black,
-        -0.07em 0 black,
-        0 -0.07em black;
-        font-family: 'Lexend';
-    }
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.4vh;
+        line-height: 3.2vh;
+        color: #FFFFFF;
 }
+
+
 
 .circle1IP {
     position: absolute;

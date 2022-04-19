@@ -61,7 +61,14 @@ function Insyderpage(props) {
 
   return (
     <div className="insyderPage">
-      <h1 className="insyder--title">Insyder Page</h1>
+      {/* <h2 className="insyder--title">Insyder Page</h2> */}
+      {/* <ProfileTitle title="Insyder Page" section="insyder" /> */}
+      <h2 className = "insyder--title">Insyder Page</h2>
+
+      <a className = "insyder--title">Click on each image to read a story behind it!</a>
+      <br></br>
+      <br></br>
+     
       {/* <h1 className= "insyder--window">{windowWidth}</h1> */}
       <div className="insyder--box">
         <Box sx={{
@@ -82,7 +89,9 @@ function Insyderpage(props) {
             <img src={circle3} className="circle3IP" alt="Circles" />
             <img src={circle4} className="circle4IP" alt="Circles" />
             {itemData.map((item) => (
+            
               <ImageListItem key={item.id} className="image-list-item">
+                {/* <div className = "imageOverlay"> */}
                 <img
                   src=
                   {`${item.img}?w=${windowWidth > 600
@@ -94,9 +103,13 @@ function Insyderpage(props) {
                   alt=''
                   loading="lazy"
                 />
-
-                <a className="textOnTop" style={{ display: 'none' }}>{item.title}</a>
+                {/* </div> */}
+                {/* <div className = "textOverlay"> */}
+                  {/* <a className="textOnTop" style={{ display: 'none' }}>{item.title}</a> */}
+                {/* </div> */}
+                <div className = "insyderImageOverlay"> <a className="textOnTop">{item.title}</a></div>
               </ImageListItem>
+                // <div className = "insyderImageOverlay"></div>
             ))}
           </ImageList>
           {/* <img src={circle3} className="circle3" alt="Circles"/> */}
@@ -228,10 +241,6 @@ const itemData = [
     title: 'Who even are these people - S',
   },
   {
-    img: '../insyderMemes/F217B6A7-D600-4C1D-999A-BAAA39CE3E15 - Shushawn Saha.jpeg',
-    title: 'Hey! Let’s use our lego low-fidelity prototype to measure turning radius as that is going to help in a production version :)  - S',
-  },
-  {
     img: '../insyderMemes/FB5B428B-6512-4223-A60F-87DC27BCC0F4 - Shushawn Saha.jpeg',
     title: 'First day of class alarm clock - S',
   },
@@ -303,17 +312,17 @@ const itemData = [
     img: '../insyderMemes/2F3A7CD0-CEF4-4A56-9768-AFADF20785D3.jpg',
     title: 'Most likely to clap when the plane lands: Logan Long',
   },
-  {
-    img: '../insyderMemes/syde 101 starter pack.jpeg'
-  },
-  {
-    img: '../insyderMemes/syde 111 starter pack.jpeg'
-  },
-  {
-    img: '../insyderMemes/syde 113 starter pack.jpeg'
-  },
-  {
-    img: '../insyderMemes/syde 121 starter pack.jpeg'
-  },
+  // {
+  //   img: '../insyderMemes/syde 101 starter pack.jpeg'
+  // },
+  // {
+  //   img: '../insyderMemes/syde 111 starter pack.jpeg'
+  // },
+  // {
+  //   img: '../insyderMemes/syde 113 starter pack.jpeg'
+  // },
+  // {
+  //   img: '../insyderMemes/syde 121 starter pack.jpeg'
+  // },
 
 ];
