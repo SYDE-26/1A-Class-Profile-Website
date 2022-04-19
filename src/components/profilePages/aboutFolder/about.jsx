@@ -57,6 +57,7 @@ function About() {
                     </div>
                 </div>
             </div>
+            <br></br>
             <div className='credit'>
                 <h3>Credits</h3>
                 <div className='design'>
@@ -72,6 +73,7 @@ function About() {
                     <div className='avatarRow'>{softwareAvatars}</div>
                 </div>              
             </div>
+            <br></br>
             <div className='links'>
                 <h3>Links</h3>
                 <div className='github'>
@@ -80,9 +82,10 @@ function About() {
                 </div>
                 <div className='report'>
                     <img src={reportIcon} className='icon' />
-                    <p className="linkText"><a target="_blank" className="linkText">Data Science Report (PDF)</a></p>
+                    <p className="linkText"><a href="https://docs.google.com/presentation/d/13G85Vr0ENwXGMMs6w6fZRIwf0ntUBoixa8SOwOz9IJY/edit#slide=id.p" target="_blank" className="linkText">Data Science Report</a></p>
                 </div>
             </div>
+            <br></br>
             <Footer />
         </div>
     );

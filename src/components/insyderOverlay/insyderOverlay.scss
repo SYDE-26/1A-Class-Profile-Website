@@ -74,6 +74,7 @@
 
 .password-field {
     color: white;
+    text-align: center;
     font-size: 1.8vw;
     border-style: normal;
     border: double 0.2px transparent;
@@ -85,6 +86,12 @@
     height: 5vh;
     width: 50%;
 }
+
+.password-field:focus { 
+    outline: none !important;
+    border-color: #719ece42;
+    box-shadow: 0 0 10px #719ece42;
+ }
 
 @media screen and (max-width: 600px){
     .password-field{

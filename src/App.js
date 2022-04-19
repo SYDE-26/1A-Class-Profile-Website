@@ -48,32 +48,11 @@ function App() {
           showOverlay={showOverlay}
           setShowOverlay={setShowOverlay}
         />
-        {/* <InsyderOverlay
-          showOverlay={showOverlay}
-          setShowOverlay={setShowOverlay}
-          showInsyderOverlay={showInsyderOverlay}
-          setShowInsyderOverlay={setShowInsyderOverlay}
-        /> */}
       </Router>
 
     </div>
 
   );
 }
-
-/*
-function App() {
-  return (
-    <div>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Navigation />} />
-        </Routes>
-      </Router>
-      <Footer navBack="Go back" navForward="Go forward" />
-    </div>
-  );
-}
-*/
 
 export default App;
