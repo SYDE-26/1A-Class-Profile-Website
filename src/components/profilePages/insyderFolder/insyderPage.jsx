@@ -182,19 +182,19 @@ const itemData = [
   },
   {
     img: '../insyderMemes/409693E2-3C9F-44EC-BC11-C0B96063C4D6 - Shushawn Saha.jpeg',
-    title: 'Josh and Deen got even closer at the hotel - S',
+    title: 'Josh and Deen got even closer at the hotel',
   },
   {
     img: '../insyderMemes/14664094-8E61-4A10-BC1D-42BB5FC14756 - Shushawn Saha.jpeg',
-    title: 'when you message the wrong group chart … - s',
+    title: 'when you message the wrong group chart …',
   },
   {
     img: '../insyderMemes/A3AABD92-45D9-4471-94FB-7A242BCE05D1 - Shushawn Saha.jpeg',
-    title: 'Seungwoo got the cracked girl vibes - S',
+    title: 'Seungwoo got the cracked girl vibes',
   },
   {
     img: '../insyderMemes/AFE32FDF-E064-43DC-87EC-59103C5A8B02 - Shushawn Saha.jpeg',
-    title: 'take your shoes off!!!! - s',
+    title: 'take your shoes off!!!!',
   },
   {
     img: '../insyderMemes/C0249AAA-A903-4A5B-8660-ED7DD1175E7B - Serena Li.jpeg',
@@ -202,28 +202,28 @@ const itemData = [
   },
   {
     img: '../insyderMemes/C867D3A9-05A2-4EEB-9F48-4040C3014DE3 - Shushawn Saha.jpeg',
-    title: 'rev. 23 years of age - s',
+    title: 'rev. 23 years of age',
   },
   {
     img: '../insyderMemes/CE7559F1-FDCB-4934-BA1E-FDBD784742FC - Shushawn Saha.jpeg',
-    title: 'when I realized that I’ve been lied to all along (impossible 101L test question - well I guess not really impossible) - s',
+    title: 'when I realized that I’ve been lied to all along (impossible 101L test question - well I guess not really impossible)',
   },
   {
     //
     img: '../insyderMemes/DA96C41A-12CB-4150-A806-58B3462E405A - Shushawn Saha.jpeg',
-    title: 'Lil Dicky - S',
+    title: 'Lil Dicky',
   },
   {
     img: '../insyderMemes/DC6BE4A8-0878-4D5B-A0BC-6B91DBBAF57B - Shushawn Saha.jpeg',
-    title: 'Alcoholic Deen - S',
+    title: 'Alcoholic Deen',
   },
   {
     img: '../insyderMemes/E748DCE8-7166-42A5-BDE1-EA8B054DAD40 - Shushawn Saha.jpeg',
-    title: 'Who even are these people - S',
+    title: 'Who even are these people',
   },
   {
     img: '../insyderMemes/FB5B428B-6512-4223-A60F-87DC27BCC0F4 - Shushawn Saha.jpeg',
-    title: 'First day of class alarm clock - S',
+    title: 'First day of class alarm clock',
   },
   {
     img: '../insyderMemes/IMG_2658 - Ananya Jaikumar.JPG',
@@ -268,7 +268,7 @@ const itemData = [
   ,
   {
     img: '../insyderMemes/IMG_3418.jpg',
-    title: 'When the lunch lady blessed up - S',
+    title: 'When the lunch lady blessed up',
   },
   {
     img: '../insyderMemes/syde 161 starter pack.jpeg',
@@ -276,37 +276,41 @@ const itemData = [
   },
   {
     img: '../insyderMemes/IMG_4818.jpg',
-    title: 'Most likely to miss an interview: Benjamin Robert David Chung',
+    title: 'Most likely to miss an interview: Benjamin Robert David Chung 👑',
   },
   
   {
     img: '../insyderMemes/302650CD-EF2E-4362-AFA1-4984091CCF8E.jpg',
-    title: 'Most goofy: Deen Parak',
+    title: 'Most goofy: Deen Parak 👑',
   },
   
   {
     img: '../insyderMemes/023BB0E3-744D-48A2-9B65-A278B120C5FA_Original.jpg',
-    title: 'Most likely to spend all their money on food: Anna Yang',
+    title: 'Most likely to spend all their money on food: Anna Yang 👑',
   },
   
   {
     img: '../insyderMemes/2F3A7CD0-CEF4-4A56-9768-AFADF20785D3.jpg',
-    title: 'Most likely to clap when the plane lands: Logan Long',
+    title: 'Most likely to clap when the plane lands: Logan Long 👏',
   },
   {
     img: '../insyderMemes/squydegamewinners.jpg',
     title: 'Squyde game winners: Jinal and Kelly!',
   },
   {
-    img: '../insyderMemes/syde 101 starter pack.jpeg'
+    img: '../insyderMemes/syde 101 starter pack.jpeg',
+    title: '💀',
   },
   {
-    img: '../insyderMemes/syde 111 starter pack.jpeg'
+    img: '../insyderMemes/syde 111 starter pack.jpeg',
+    title: '💀💀💀',
   },
   {
-    img: '../insyderMemes/syde 113 starter pack.jpeg'
+    img: '../insyderMemes/syde 113 starter pack.jpeg',
+    title: '💀💀💀💀',
   },
   {
-    img: '../insyderMemes/syde 121 starter pack.jpeg'
+    img: '../insyderMemes/syde 121 starter pack.jpeg',
+    title: '💀💀',
   },
 ];
