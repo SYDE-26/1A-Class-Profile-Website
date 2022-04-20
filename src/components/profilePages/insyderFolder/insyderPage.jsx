@@ -58,7 +58,8 @@ function Insyderpage(props) {
   return (
     <div className="insyderPage">
  
-      <h2 className = "insyder--title">Insyder Page</h2>
+      {/* <h2 className = "insyder--title">Insyder Page</h2> */}
+      <ProfileTitle title="Insyder Page"/>
 
       <a className = "insyder--title">Click on each image to read a story behind it!</a>
       <br></br>

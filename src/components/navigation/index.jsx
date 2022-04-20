@@ -11,8 +11,8 @@ const GradientBackground = () => {
     const [phoneSlideIndex, setPhoneSlideIndex] = useState(1);
     
     const Pages = [
-        { id: 1, text: 'Co-op', link: '/coop', blurb: 'Class average, courses, attendance, etc.' },
-        { id: 2, text: 'Academics', link: '/academics', blurb: 'Balance between co-op \n and academics, etc.' },
+        { id: 1, text: 'Co-op', link: '/coop', blurb: 'Balance between co-op \n and academics, etc.' },
+        { id: 2, text: 'Academics', link: '/academics', blurb: 'Class average, courses, attendance, etc.' },
         { id: 3, text: 'Demographics', link: '/demographics', blurb: 'Gender, ethnicities, \n hometown, etc.' },
         { id: 4, text: 'High School', link: '/highschool', blurb: 'Admissions, \n extracurriculars, advice \n from the cohort, etc.' },
         { id: 5, text: 'Lifestyle', link: '/lifestyles', blurb: 'Mental health, sleep, social life, etc.' }

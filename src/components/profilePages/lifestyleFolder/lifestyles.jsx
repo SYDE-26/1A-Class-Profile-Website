@@ -28,7 +28,7 @@ function Lifestyles() {
             <Section header="Did SYDE live up to the hype?" description="We do love SYDE 😎" />
             <Chart type="Multi" data="SYDEHype" position="left" />
             <Chart type="Bar" data="FavAssignment" position="right" />
-            <Section header="Describe 1A in one word..." description="Well, university definetly didn't expand our vocabulary. " />
+            <Section header="Describe 1A in one word..." description="Well, university definitely didn't expand our vocabulary. " />
             <img src={logo} alt="SYDE 2026's words to describe 1a" className="bottom" />
             <NavArrows navBack="highschool" navForward="coop" />
             <Footer />

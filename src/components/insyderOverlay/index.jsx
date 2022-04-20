@@ -26,10 +26,37 @@ export default function InsyderOverlay(props) {
     function inputChange(userInput) {
         changeInput(userInput.target.value)
 
-        if (userInput.target.value == "password") {
+        if (userInput.target.value === "password") {
             toggleInsyderOverlay()
             changeInput("")
   
+        }
+    }
+
+    document.oncontextmenu = (e) => {
+        e.preventDefault();
+    }
+
+    document.onkeydown = function (e) {
+
+        // disable F12 key
+        if (e.keyCode === 123) {
+            return false;
+        }
+
+        // disable I key
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+            return false;
+        }
+
+        // disable J key
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+            return false;
+        }
+
+        // disable U key
+        if (e.ctrlKey && e.keyCode === 85) {
+            return false;
         }
     }
 
@@ -51,7 +78,7 @@ export default function InsyderOverlay(props) {
                 />
                 <h3 className="main-text">Enter the password to access the Insyder Page</h3>
                 <p className="sub-text">Hint: Check the SYDE 2026 server for the password!</p>
-                <input type="password" autoFocus={true} onChange={(userInput) => inputChange(userInput)} value={input} className="password-field"/>
+                <input type="password" autoFocus={true} onChange={(userInput) => inputChange(userInput)} value={input} className="password-field" />
             </div>
         </div>
 

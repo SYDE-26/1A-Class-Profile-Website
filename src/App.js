@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import logo from './logo.svg';
-import Footer from './components/footer/footer';
 import Navbar from './components/navbar';
 import Overlay from './components/overlay';
 import InsyderOverlay from './components/insyderOverlay';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import Navigation from './components/navigation/index';
 import Coop from './components/profilePages/coopFolder/coop';
 import Academics from './components/profilePages/academicFolder/academics';
