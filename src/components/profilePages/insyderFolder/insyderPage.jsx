@@ -5,7 +5,6 @@ import Footer from '../../footer/footer.jsx';
 import '../../footer/footer.scss';
 import './insyderPage.scss';
 import '../../headings/headings.scss';
-// import { ImageList,ImageListeItem }from '@mui/material';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Box from '@mui/material/Box';
@@ -13,7 +12,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { db } from "../../../firebase-config.js";
-// import { initializeApp } from "firebase/app";
 import { getStorage, ref, getDownloadUrl, getDownloadURL } from "firebase/storage";
 import circle1 from '../../../images/circle1.svg';
 import circle2 from '../../../images/circle4.svg';
@@ -35,7 +33,7 @@ function Insyderpage(props) {
 
   function toggleInsyderOverlay() {
     props.setShowInsyderOverlay(prev => !prev)
-    // window.scrollTo(0,0);
+
   }
 
   React.useEffect(() => {
@@ -47,43 +45,34 @@ function Insyderpage(props) {
     window.addEventListener("resize", watchWidth)
 
     toggleInsyderOverlay()
-    // window.scrollTo(0,0);
+
 
     return function () {
-      // console.log("Cleaning up...")
+  
       window.removeEventListener("resize", watchWidth)
     }
 
-    // if (windowWidth > 600){
-    //     const isSixHundred = true;
-    // }
+   
   }, [])
 
   return (
     <div className="insyderPage">
-      {/* <h2 className="insyder--title">Insyder Page</h2> */}
-      {/* <ProfileTitle title="Insyder Page" section="insyder" /> */}
+ 
       <h2 className = "insyder--title">Insyder Page</h2>
 
       <a className = "insyder--title">Click on each image to read a story behind it!</a>
       <br></br>
       <br></br>
      
-      {/* <h1 className= "insyder--window">{windowWidth}</h1> */}
+ 
       <div className="insyder--box">
         <Box sx={{
           width: 850,
-          // // height: 
-          // // // windowWidth > 1000
-          // // // ? 4100 : windowWidth > 650 ? 6400 : 8800
-          // // 3000
-          // // ,
-          // overflowY: 'scroll'
         }} className="box">
-          {/* <img src = {url} style = {{width: '33%'}}/> */}
+       
           <ImageList variant="masonry" cols={windowWidth > 1000
             ? 3 : windowWidth > 650 ? 2 : 1} gap={8} className="image-list">
-            {/* <img ></img> */}
+         
             <img src={circle1} className="circle1IP" alt="Circles" />
             <img src={circle2} className="circle2IP" alt="Circles" />
             <img src={circle3} className="circle3IP" alt="Circles" />
@@ -91,32 +80,28 @@ function Insyderpage(props) {
             {itemData.map((item) => (
             
               <ImageListItem key={item.id} className="image-list-item">
-                {/* <div className = "imageOverlay"> */}
+         
                 <img
                   src=
                   {`${item.img}?w=${windowWidth > 600
                     ? 33 : windowWidth < 375 ? 148 : 48}&fit=crop&auto=format`}
-                  // {`${url}`}
-                  // {`${url}?w=248&fit=crop&auto=format`}
+              
                   srcSet={`${item.img}?w=${windowWidth > 600
                     ? 248 : windowWidth < 375 ? 148 : 48}&fit=crop&auto=format&dpr=2 2x`}
                   alt=''
                   loading="lazy"
                 />
-                {/* </div> */}
-                {/* <div className = "textOverlay"> */}
-                  {/* <a className="textOnTop" style={{ display: 'none' }}>{item.title}</a> */}
-                {/* </div> */}
+           
                 <div className = "insyderImageOverlay"> <a className="textOnTop">{item.title}</a></div>
               </ImageListItem>
-                // <div className = "insyderImageOverlay"></div>
+       
             ))}
           </ImageList>
-          {/* <img src={circle3} className="circle3" alt="Circles"/> */}
+   
         </Box>
       </div>
       <div>
-        {/* <NavArrows navBack="highschool" navForward="coop" /> */}
+    
         <Footer />
       </div>
     </div>
@@ -126,11 +111,6 @@ function Insyderpage(props) {
 export default Insyderpage;
 
 const itemData = [
-  // {
-  //   img: '../insyderMemes/0BD82D18-F2BB-440F-9FF2-C3EE7ECD3FA1 - Shushawn Saha.jpeg',
-  //   title: 'For the record, I was trying to waterfall from a brita and it spilled - Shushawn',
-  //   id: 1,
-  // },
   {
     img: '../insyderMemes/3BE41539-0698-45B5-B8CD-CDDDF21A1FDD - Roselyn H.jpeg',
     title: 'Mhmm Ontario slush',
@@ -312,17 +292,20 @@ const itemData = [
     img: '../insyderMemes/2F3A7CD0-CEF4-4A56-9768-AFADF20785D3.jpg',
     title: 'Most likely to clap when the plane lands: Logan Long',
   },
-  // {
-  //   img: '../insyderMemes/syde 101 starter pack.jpeg'
-  // },
-  // {
-  //   img: '../insyderMemes/syde 111 starter pack.jpeg'
-  // },
-  // {
-  //   img: '../insyderMemes/syde 113 starter pack.jpeg'
-  // },
-  // {
-  //   img: '../insyderMemes/syde 121 starter pack.jpeg'
-  // },
-
+  {
+    img: '../insyderMemes/squydegamewinners.jpg',
+    title: 'Squyde game winners: Jinal and Kelly!',
+  },
+  {
+    img: '../insyderMemes/syde 101 starter pack.jpeg'
+  },
+  {
+    img: '../insyderMemes/syde 111 starter pack.jpeg'
+  },
+  {
+    img: '../insyderMemes/syde 113 starter pack.jpeg'
+  },
+  {
+    img: '../insyderMemes/syde 121 starter pack.jpeg'
+  },
 ];
