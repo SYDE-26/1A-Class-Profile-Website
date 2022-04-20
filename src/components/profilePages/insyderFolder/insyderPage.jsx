@@ -272,7 +272,7 @@ const itemData = [
   },
   {
     img: '../insyderMemes/syde 161 starter pack.jpeg',
-    // title: 'Matty B',
+    title: '💀💀💀💀💀💀💀💀',
   },
   {
     img: '../insyderMemes/IMG_4818.jpg',
